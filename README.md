@@ -32,7 +32,7 @@ window.PROFILE_NEWS = [
 ];
 ```
 
-The entries above are examples, not actual announcements. The initial list is empty.
+The entries above are format examples. Keep existing announcements when adding a new entry.
 
 - `date`: the event month, in `YYYY-MM` format; displayed as `MM.YYYY`.
 - `text`: the announcement, as plain text.
@@ -44,6 +44,8 @@ The entries above are examples, not actual announcements. The initial list is em
 For the local preview, save and refresh the page. To update the public site, edit this file directly in the GitHub repository using its pencil button and commit the change to `main`. GitHub Pages will redeploy the site; no HTML edits are needed for routine updates.
 
 The section has no entry limit. It remains a simple list, like the reference academic homepage.
+
+To attach a PDF, upload it to `assets/` in this repository, then use its full public URL in the update's `url`, for example `https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf`. Set `linkText` to a clear description such as `AGU invitation letter (PDF)`. The file becomes publicly accessible after deployment.
 
 ## Preview
 

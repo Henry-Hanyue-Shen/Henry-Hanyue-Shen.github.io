@@ -47,6 +47,14 @@ window.PROFILE_NEWS = [
 - 正文中的英文双引号写成 `\"`，或者改用弯引号 `“ ”`，避免破坏字符串格式。
 - 修改动态：直接修改相应记录。删除动态：删除该记录。清空列表后显示 `No updates yet.`。
 
+### 为动态附上 PDF
+
+1. 打开仓库的 [assets 文件夹](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/tree/main/assets)，选择 **Add file → Upload files**，上传 PDF 并提交到 `main`。使用简洁的英文文件名。
+2. 在动态的 `url` 中填写 `https://henry-hanyue-shen.github.io/assets/文件名.pdf`，把 `linkText` 写成文件说明，例如 `AGU invitation letter (PDF)`。
+3. 提交动态，等待部署成功后，打开网站上的文件链接确认。
+
+例如，本次 AGU26 文件的地址是 `https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf`。附件会公开，链接文字应准确说明文件类型。
+
 ## 3. 修改简介、研究方向和联系方式
 
 [直接编辑 index.html](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/index.html)

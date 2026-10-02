@@ -13,4 +13,10 @@
 // },
 
 window.PROFILE_NEWS = [
+  {
+    date: "2026-10",
+    text: "Our abstract, “Probabilistic Atmospheric Model for Cloud Field Prediction,” coauthored with Xinling Liao (Lfff09), was accepted for an online poster presentation at AGU26. Acceptance notification received October 1, 2026.",
+    url: "https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf",
+    linkText: "AGU invitation letter (PDF)"
+  }
 ];
