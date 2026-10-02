@@ -34,10 +34,11 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-05",
-    text: "I presented “The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles” in the technical program at IEEE OCEANS 2026 Sanya (May 25–28), with a paper published in the conference proceedings. An author-maintained citation erratum is available.",
+    text: "I presented “The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles” in the technical program at IEEE OCEANS 2026 Sanya (May 25–28), with a paper published in the conference proceedings. DOI: 10.1109/OCEANS66983.2026.11617166. An author-maintained citation erratum is available.",
     inlineLinks: [
       { text: "The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles", url: "https://ieeexplore.ieee.org/document/11617166/" },
       { text: "IEEE OCEANS 2026 Sanya", url: "https://sanya26.oceansconference.org/" },
+      { text: "10.1109/OCEANS66983.2026.11617166", url: "https://doi.org/10.1109/OCEANS66983.2026.11617166" },
       { text: "author-maintained citation erratum", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/OCEANS26A/Citation_Erratum_20260924" }
     ],
     url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/OCEANS26A/OCEANS_SANYA_Hydrodynamics1_HenryShen.pdf",
