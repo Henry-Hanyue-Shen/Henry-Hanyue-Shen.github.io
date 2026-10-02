@@ -20,13 +20,13 @@ Edit `news-data.js`. Put your updates between the square brackets, using this fo
 ```js
 window.PROFILE_NEWS = [
   {
-    date: "2026-10",
+    date: "2026-10-01",
     text: "Write your actual update here.",
     url: "https://example.com/",
     linkText: "Details"
   },
   {
-    date: "2026-09",
+    date: "2026-09-24",
     text: "Write another actual update here."
   }
 ];
@@ -34,11 +34,11 @@ window.PROFILE_NEWS = [
 
 The entries above are format examples. Keep existing announcements when adding a new entry.
 
-- `date`: the event month, in `YYYY-MM` format; displayed as `MM.YYYY`.
+- `date`: the actual event or notification date, in `YYYY-MM-DD` format; displayed in that same unambiguous format. Older month-only `YYYY-MM` entries still work when the day is unknown.
 - `text`: the announcement, as plain text.
 - `inlineLinks`: optional links for phrases within `text`, for example `[{ text: "Lfff09", url: "https://github.com/Lfff09" }]`. Each link applies to the first matching phrase.
 - `url` and `linkText`: optional. Omit them when no link is needed.
-- The page sorts months from newest to oldest. Within one month, it keeps the order you entered.
+- The page sorts dates from newest to oldest. Entries on the same day keep the order you entered. Use separate entries for presentations on different dates.
 - Add a comma between entries. Keep double quotes around values; write `\"` for a double quote inside a value.
 - To edit or remove an update, change or remove its entry and save.
 
@@ -48,7 +48,7 @@ For conference updates, use the optional fields below to keep titles, publicatio
 
 ```js
 {
-  date: "2026-10",
+  date: "2026-10-01",
   title: "Conference name",
   conferenceUrl: "https://example.com/conference",
   text: "Describe the presentation and its actual publication status.",
@@ -65,7 +65,7 @@ For conference updates, use the optional fields below to keep titles, publicatio
 }
 ```
 
-Only `date` and `text` are required. `title` adds an event heading; `conferenceUrl` adds its website link beside that heading. Each object in `papers` needs a title and may include `text`, `inlineLinks`, `reference`, `doi`, and `resources`. For a registered DOI, set `doi` to the identifier alone, such as `10.1109/OCEANS66983.2026.11617166`; the page displays it and generates its DOI link automatically. Only add a DOI that belongs to that paper.
+Only `date` and `text` are required. `title` adds an event heading; `conferenceUrl` adds a “Conference program” link beside that heading. Link to the official session or paper page that lists your paper title, rather than the conference homepage. Each object in `papers` needs a title and may include `text`, `inlineLinks`, `reference`, `doi`, and `resources`. For a registered DOI, set `doi` to the identifier alone, such as `10.1109/OCEANS66983.2026.11617166`; the page displays it and generates its DOI link automatically. Only add a DOI that belongs to that paper.
 
 `resources` is a list of `{ label, url }` links and can also be placed directly on an event. The original `url` / `linkText` format still works for simple announcements. The section has no entry limit.
 

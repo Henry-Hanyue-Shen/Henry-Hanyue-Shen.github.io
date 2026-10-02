@@ -20,30 +20,30 @@
 
 [直接编辑 news-data.js](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/news-data.js)
 
-页面上的栏目名是 **Updates**，内容存放在 `news-data.js`。普通动态只需月份和正文，也可以添加链接。例如：
+页面上的栏目名是 **Updates**，内容存放在 `news-data.js`。普通动态只需具体日期和正文，也可以添加链接。例如：
 
 ```js
 window.PROFILE_NEWS = [
   {
-    date: "2026-10",
+    date: "2026-10-01",
     text: "在这里写真实的动态内容。",
     url: "https://example.com/",
     linkText: "Details"
   },
   {
-    date: "2026-09",
+    date: "2026-09-24",
     text: "另一条不带链接的动态。"
   }
 ];
 ```
 
-上面只是格式示例，请替换成真实的月份、内容和链接。
+上面只是格式示例，请替换成真实的日期、内容和链接。
 
-- `date` 使用 `YYYY-MM`，例如 `2026-10`，页面会显示为 `10.2026`。
+- `date` 使用 `YYYY-MM-DD`，例如 `2026-10-01`，页面按相同格式显示年月日。填写实际报告日期或收到通知的日期，不用整个会议的起止日期代替。旧的 `YYYY-MM` 格式仍可使用；确实不知道哪一天时，不要编造日期。
 - `text` 是动态正文，支持中文和英文。网站当前正文为英文，可保持一致。
 - `inlineLinks` 可以给正文中的名字添加链接。例如 `inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],` 会把正文中第一次出现的 `Lfff09` 变成可点击链接。不需要时可省略。
 - `url` 是完整的 `https://...` 链接；`linkText` 是显示文字，例如 `Paper`、`Slides` 或 `Details`。不需要链接时可以省略这两项。
-- 月份会自动从新到旧排序。同一个月有多条时，按文件中的先后顺序显示。
+- 日期会自动从新到旧排序。同一天有多条时，按文件中的先后顺序显示。不同日期的报告分别建立动态，例如现有的两条 FEDSM 报告。
 - 每条记录用 `{ ... }` 包裹，记录之间加逗号。保留最外层的 `window.PROFILE_NEWS = [ ... ];`。
 - 正文中的英文双引号写成 `\"`，或者改用弯引号 `“ ”`，避免破坏字符串格式。
 - 修改动态：直接修改相应记录。删除动态：删除该记录。清空列表后显示 `No updates yet.`。
@@ -54,7 +54,7 @@ window.PROFILE_NEWS = [
 
 ```js
 {
-  date: "2026-10",
+  date: "2026-10-01",
   title: "Conference name",
   conferenceUrl: "https://example.com/conference",
   text: "在这里说明报告情况和真实的发表状态。",
@@ -71,9 +71,9 @@ window.PROFILE_NEWS = [
 }
 ```
 
-- `title` 是会议或动态标题；`conferenceUrl` 会在标题旁显示会议官网链接。不需要的字段可以省略。
+- `title` 是会议或动态标题；`conferenceUrl` 会在标题旁显示 `Conference program` 链接，填写列有自己论文名称的官方分会场、议程或论文详情页。不需要的字段可以省略。
 - `text` 用于正文或发表状态。论文尚未出版时应保留 `pending publication`，正式出版后再修改。
-- `papers` 中每个 `{ ... }` 对应一篇论文。可以像现有 FEDSM 条目一样添加多篇，每篇都有自己的 `title` 和资料链接。
+- `papers` 中每个 `{ ... }` 对应一篇论文。同一天的多篇论文可以放在同一条动态中，每篇都有自己的 `title` 和资料链接。
 - `reference` 是可选的论文编号。已注册 DOI 的论文可另加 `doi: "该论文的 DOI 编号",`；只填编号，不填 `https://doi.org/`，网页会自动生成可见链接。
 - `resources` 中每个 `{ label, url }` 是一个链接。`label` 为显示文字，`url` 为完整网址。它既可以属于某篇论文，也可以直接属于整条动态。
 - 论文还可以添加 `text` 和 `inlineLinks`，例如现有 AGU 条目的合作者说明及 GitHub 链接。
@@ -159,7 +159,7 @@ git push origin main
 
 - 先确认修改已提交到 `main`，再检查 Actions 最新部署是否成功。
 - 部署成功但仍看到旧内容时，等待几分钟，再使用 `Ctrl+F5` 或无痕窗口查看。
-- 动态突然消失时，检查 `news-data.js` 的逗号、双引号、括号和月份格式。本地可以运行 `node --check news-data.js` 检查语法（需要 Node.js）。
+- 动态突然消失时，检查 `news-data.js` 的逗号、双引号、括号和日期格式，日期必须真实存在。本地可以运行 `node --check news-data.js` 检查语法（需要 Node.js）。
 - 需要恢复某个文件时，打开该文件的 **History**，找到之前版本，将旧内容复制回当前文件并提交。使用新提交恢复即可，无需重写 Git 历史。
 
 GitHub 官方参考：[Pages 快速入门](https://docs.github.com/en/pages/quickstart)。

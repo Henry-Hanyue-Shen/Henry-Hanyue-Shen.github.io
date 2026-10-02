@@ -4,6 +4,13 @@
   if (!container) return;
   const hasText = value => typeof value === 'string' && value.trim().length > 0;
 
+  function validDate(value) {
+    if (typeof value !== 'string' || !/^\d{4}-(0[1-9]|1[0-2])(?:-(0[1-9]|[12]\d|3[01]))?$/.test(value)) return false;
+    const fullDate = value.length === 7 ? `${value}-01` : value;
+    const parsed = new Date(`${fullDate}T00:00:00Z`);
+    return !Number.isNaN(parsed.getTime()) && parsed.toISOString().slice(0, 10) === fullDate;
+  }
+
   function makeLink(urlValue, label) {
     if (!hasText(urlValue) || !hasText(label)) return null;
     try {
@@ -54,7 +61,7 @@
 
   const source = Array.isArray(window.PROFILE_NEWS) ? window.PROFILE_NEWS : [];
   const entries = source.filter(item => item &&
-    /^\d{4}-(0[1-9]|1[0-2])$/.test(item.date) && hasText(item.text)
+    validDate(item.date) && hasText(item.text)
   ).sort((a, b) => b.date.localeCompare(a.date));
   if (!entries.length) return;
 
@@ -66,7 +73,7 @@
     const date = document.createElement('time');
     date.className = 'news-date';
     date.dateTime = item.date;
-    date.textContent = `${item.date.slice(5)}.${item.date.slice(0, 4)}`;
+    date.textContent = item.date;
     const content = document.createElement('div');
     content.className = 'news-body';
 
@@ -76,7 +83,7 @@
       const title = document.createElement('h3');
       title.textContent = item.title.trim();
       header.append(title);
-      const conference = makeLink(item.conferenceUrl, 'Conference website');
+      const conference = makeLink(item.conferenceUrl, 'Conference program');
       if (conference) header.append(conference);
       content.append(header);
     }
