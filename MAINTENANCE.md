@@ -41,6 +41,7 @@ window.PROFILE_NEWS = [
 
 - `date` 使用 `YYYY-MM`，例如 `2026-10`，页面会显示为 `10.2026`。
 - `text` 是动态正文，支持中文和英文。网站当前正文为英文，可保持一致。
+- `inlineLinks` 可以给正文中的名字添加链接。例如 `inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],` 会把正文中第一次出现的 `Lfff09` 变成可点击链接。不需要时可省略。
 - `url` 是完整的 `https://...` 链接；`linkText` 是显示文字，例如 `Paper`、`Slides` 或 `Details`。不需要链接时可以省略这两项。
 - 月份会自动从新到旧排序。同一个月有多条时，按文件中的先后顺序显示。
 - 每条记录用 `{ ... }` 包裹，记录之间加逗号。保留最外层的 `window.PROFILE_NEWS = [ ... ];`。

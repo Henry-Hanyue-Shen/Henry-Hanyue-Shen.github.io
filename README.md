@@ -36,6 +36,7 @@ The entries above are format examples. Keep existing announcements when adding a
 
 - `date`: the event month, in `YYYY-MM` format; displayed as `MM.YYYY`.
 - `text`: the announcement, as plain text.
+- `inlineLinks`: optional links for phrases within `text`, for example `[{ text: "Lfff09", url: "https://github.com/Lfff09" }]`. Each link applies to the first matching phrase.
 - `url` and `linkText`: optional. Omit them when no link is needed.
 - The page sorts months from newest to oldest. Within one month, it keeps the order you entered.
 - Add a comma between entries. Keep double quotes around values; write `\"` for a double quote inside a value.

@@ -2,6 +2,7 @@
 // Dates use YYYY-MM; the page displays MM.YYYY, with newest entries first.
 // Use one object per update and put a comma between objects.
 // text is plain text. The optional link appears after it.
+// inlineLinks can link a phrase in text: [{ text: "Name", url: "https://..." }].
 // Keep new entries above older ones when their dates are in the same month.
 //
 // Copy this template into the array and replace the example values:
@@ -16,6 +17,7 @@ window.PROFILE_NEWS = [
   {
     date: "2026-10",
     text: "Our abstract, “Probabilistic Atmospheric Model for Cloud Field Prediction,” coauthored with Xinling Liao (Lfff09), was accepted for an online poster presentation at AGU26. Acceptance notification received October 1, 2026.",
+    inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
     url: "https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf",
     linkText: "AGU invitation letter (PDF)"
   }

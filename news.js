@@ -21,6 +21,26 @@
     content.className = 'news-text';
     content.textContent = item.text.trim();
 
+    for (const reference of Array.isArray(item.inlineLinks) ? item.inlineLinks : []) {
+      if (!reference || typeof reference.text !== 'string' || !reference.text.trim() ||
+          typeof reference.url !== 'string') continue;
+      try {
+        const url = new URL(reference.url);
+        if (url.protocol !== 'https:' && url.protocol !== 'http:') continue;
+        for (const node of Array.from(content.childNodes)) {
+          if (node.nodeType !== Node.TEXT_NODE) continue;
+          const position = node.textContent.indexOf(reference.text);
+          if (position < 0) continue;
+          const link = document.createElement('a');
+          link.href = url.href;
+          link.textContent = reference.text;
+          node.replaceWith(node.textContent.slice(0, position), link,
+            node.textContent.slice(position + reference.text.length));
+          break;
+        }
+      } catch { /* Preserve plain text if an inline link is invalid. */ }
+    }
+
     if (typeof item.url === 'string') {
       try {
         const url = new URL(item.url);
