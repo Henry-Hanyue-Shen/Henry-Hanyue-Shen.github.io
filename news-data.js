@@ -23,7 +23,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07",
-    text: "I presented two papers in the technical publication track at ASME FEDSM 2026 in Bellevue, WA (July 26–29): “Residual Manifolds and Cloud Uncertainty” (184498) and “One Wing for Two Worlds” (184505). Presentation slides: 184498 PDF and 184505 PDF.",
+    text: "I presented two papers at ASME FEDSM 2026 in Bellevue, WA (July 26–29): “Residual Manifolds and Cloud Uncertainty” (184498) and “One Wing for Two Worlds” (184505). Both were accepted in the Technical Paper Publication category and are pending publication. Presentation slides: 184498 PDF and 184505 PDF.",
     inlineLinks: [
       { text: "ASME FEDSM 2026", url: "https://event.asme.org/FEDSM" },
       { text: "Residual Manifolds and Cloud Uncertainty", url: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23874/application/184498" },
