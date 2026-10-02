@@ -20,7 +20,7 @@
 
 [直接编辑 news-data.js](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/news-data.js)
 
-页面上的栏目名是 **Updates**，内容存放在 `news-data.js`。每条动态有月份、正文和可选链接。例如：
+页面上的栏目名是 **Updates**，内容存放在 `news-data.js`。普通动态只需月份和正文，也可以添加链接。例如：
 
 ```js
 window.PROFILE_NEWS = [
@@ -48,10 +48,43 @@ window.PROFILE_NEWS = [
 - 正文中的英文双引号写成 `\"`，或者改用弯引号 `“ ”`，避免破坏字符串格式。
 - 修改动态：直接修改相应记录。删除动态：删除该记录。清空列表后显示 `No updates yet.`。
 
+### 为会议动态整理论文和链接
+
+会议动态可以分为会议标题、发表状态、论文和资料链接。将下面这样的记录添加到现有 `window.PROFILE_NEWS` 数组中，记得在相邻记录之间加逗号：
+
+```js
+{
+  date: "2026-10",
+  title: "Conference name",
+  conferenceUrl: "https://example.com/conference",
+  text: "在这里说明报告情况和真实的发表状态。",
+  papers: [
+    {
+      title: "Paper title",
+      reference: "可选的论文编号",
+      resources: [
+        { label: "Paper record", url: "https://example.com/paper" },
+        { label: "Presentation slides (PDF)", url: "https://example.com/slides.pdf" }
+      ]
+    }
+  ]
+}
+```
+
+- `title` 是会议或动态标题；`conferenceUrl` 会在标题旁显示会议官网链接。不需要的字段可以省略。
+- `text` 用于正文或发表状态。论文尚未出版时应保留 `pending publication`，正式出版后再修改。
+- `papers` 中每个 `{ ... }` 对应一篇论文。可以像现有 FEDSM 条目一样添加多篇，每篇都有自己的 `title` 和资料链接。
+- `reference` 是可选的论文编号。已注册 DOI 的论文可另加 `doi: "该论文的 DOI 编号",`；只填编号，不填 `https://doi.org/`，网页会自动生成可见链接。
+- `resources` 中每个 `{ label, url }` 是一个链接。`label` 为显示文字，`url` 为完整网址。它既可以属于某篇论文，也可以直接属于整条动态。
+- 论文还可以添加 `text` 和 `inlineLinks`，例如现有 AGU 条目的合作者说明及 GitHub 链接。
+- 只发一条简短动态时，继续使用前面的简单格式即可，无需填写论文结构。
+
+修改这些内容后，日期列、标题和链接的排版会自动保持一致，不需要编辑 HTML 或 CSS。
+
 ### 为动态附上 PDF
 
 1. 打开仓库的 [assets 文件夹](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/tree/main/assets)，选择 **Add file → Upload files**，上传 PDF 并提交到 `main`。使用简洁的英文文件名。
-2. 在动态的 `url` 中填写 `https://henry-hanyue-shen.github.io/assets/文件名.pdf`，把 `linkText` 写成文件说明，例如 `AGU invitation letter (PDF)`。
+2. 在对应动态或论文的 `resources` 中添加 `{ label: "文件说明 (PDF)", url: "https://henry-hanyue-shen.github.io/assets/文件名.pdf" }`。使用简单格式的动态也可以继续填写 `url` 和 `linkText`。
 3. 提交动态，等待部署成功后，打开网站上的文件链接确认。
 
 例如，本次 AGU26 文件的地址是 `https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf`。附件会公开，链接文字应准确说明文件类型。
@@ -94,7 +127,7 @@ window.PROFILE_NEWS = [
 ## 5. 更换照片或调整外观
 
 - 照片：将新照片以 `assets/portrait.jpg` 路径上传并提交，保持文件名和 JPG 格式一致。可在仓库首页使用 **Add file → Upload files**，上传含该文件的 `assets` 文件夹；提交前确认路径。若改用 PNG 等其他格式，需同步修改 `index.html` 中图片的 `src`。
-- 字体、颜色、宽度和留白：编辑 [styles.css](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/styles.css)。例如顶部的 `--link` 控制链接颜色，`--measure` 控制正文最大宽度。
+- 字体、颜色、宽度和留白：编辑 [styles.css](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/styles.css)。例如顶部的 `--link` 控制链接颜色，`--measure` 控制正文最大宽度，`--section-gap` 控制桌面端栏目间距。正文使用 `text-align: justify` 两端对齐，并启用英文自动断词；段落末行保持自然长度。
 - 动态的显示逻辑位于 `news.js`，正常添加动态时不需要修改。
 
 ## 6. 本地修改与发布

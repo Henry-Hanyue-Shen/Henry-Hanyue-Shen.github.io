@@ -9,7 +9,7 @@ A plain static academic website. The Updates section uses two small local JavaSc
 - `index.html`: profile text, research entries, and links.
 - `styles.css`: layout, typography, print styles, and responsive behavior.
 - `news-data.js`: the entries in the Updates section.
-- `news.js`: displays updates in reverse chronological order.
+- `news.js`: displays updates in reverse chronological order, with separate event, paper, and resource rows.
 - `assets/portrait.jpg`: the existing public GitHub profile photograph, used without alteration.
 - `.nojekyll`: serve the files directly with GitHub Pages.
 
@@ -44,9 +44,32 @@ The entries above are format examples. Keep existing announcements when adding a
 
 For the local preview, save and refresh the page. To update the public site, edit this file directly in the GitHub repository using its pencil button and commit the change to `main`. GitHub Pages will redeploy the site; no HTML edits are needed for routine updates.
 
-The section has no entry limit. It remains a simple list, like the reference academic homepage.
+For conference updates, use the optional fields below to keep titles, publication status, and links organized. Insert an object like this alongside the existing entries in `window.PROFILE_NEWS`:
 
-To attach a PDF, upload it to `assets/` in this repository, then use its full public URL in the update's `url`, for example `https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf`. Set `linkText` to a clear description such as `AGU invitation letter (PDF)`. The file becomes publicly accessible after deployment.
+```js
+{
+  date: "2026-10",
+  title: "Conference name",
+  conferenceUrl: "https://example.com/conference",
+  text: "Describe the presentation and its actual publication status.",
+  papers: [
+    {
+      title: "Paper title",
+      reference: "Optional paper number",
+      resources: [
+        { label: "Paper record", url: "https://example.com/paper" },
+        { label: "Presentation slides (PDF)", url: "https://example.com/slides.pdf" }
+      ]
+    }
+  ]
+}
+```
+
+Only `date` and `text` are required. `title` adds an event heading; `conferenceUrl` adds its website link beside that heading. Each object in `papers` needs a title and may include `text`, `inlineLinks`, `reference`, `doi`, and `resources`. For a registered DOI, set `doi` to the identifier alone, such as `10.1109/OCEANS66983.2026.11617166`; the page displays it and generates its DOI link automatically. Only add a DOI that belongs to that paper.
+
+`resources` is a list of `{ label, url }` links and can also be placed directly on an event. The original `url` / `linkText` format still works for simple announcements. The section has no entry limit.
+
+To attach a PDF, upload it to `assets/` in this repository, then add its full public URL to a resource, for example `{ label: "AGU invitation letter (PDF)", url: "https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf" }`. The file becomes publicly accessible after deployment.
 
 ## Preview
 
