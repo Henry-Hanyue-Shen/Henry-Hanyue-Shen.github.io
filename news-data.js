@@ -20,5 +20,27 @@ window.PROFILE_NEWS = [
     inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
     url: "https://henry-hanyue-shen.github.io/assets/agu26-invitation-2070697.pdf",
     linkText: "AGU invitation letter (PDF)"
+  },
+  {
+    date: "2026-07",
+    text: "I presented two papers in the technical publication track at ASME FEDSM 2026 in Bellevue, WA (July 26–29): “Residual Manifolds and Cloud Uncertainty” (184498) and “One Wing for Two Worlds” (184505). Presentation slides: 184498 PDF and 184505 PDF.",
+    inlineLinks: [
+      { text: "ASME FEDSM 2026", url: "https://event.asme.org/FEDSM" },
+      { text: "Residual Manifolds and Cloud Uncertainty", url: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23874/application/184498" },
+      { text: "One Wing for Two Worlds", url: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23903/application/184505" },
+      { text: "184498 PDF", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/FEDSM26/FEDSM-26_184498_PPT.pdf" },
+      { text: "184505 PDF", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/FEDSM26/FEDSM-26_184505_PPT.pdf" }
+    ]
+  },
+  {
+    date: "2026-05",
+    text: "I presented “The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles” in the technical program at IEEE OCEANS 2026 Sanya (May 25–28), with a paper published in the conference proceedings. An author-maintained citation erratum is available.",
+    inlineLinks: [
+      { text: "The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles", url: "https://ieeexplore.ieee.org/document/11617166/" },
+      { text: "IEEE OCEANS 2026 Sanya", url: "https://sanya26.oceansconference.org/" },
+      { text: "author-maintained citation erratum", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/OCEANS26A/Citation_Erratum_20260924" }
+    ],
+    url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/OCEANS26A/OCEANS_SANYA_Hydrodynamics1_HenryShen.pdf",
+    linkText: "Presentation slides (PDF)"
   }
 ];

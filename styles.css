@@ -64,7 +64,6 @@ li + li { margin-top: 8px; }
 .research-entry > p:not(.work-type) { margin-bottom: 8px; }
 .resource-links { font-size: 16px; }
 .resource-links a { display: inline-flex; align-items: center; min-height: 32px; }
-.presentations { margin: 24px 0 0; }
 .software-list li + li { margin-top: 12px; }
 .contact-list { margin: 0; }
 .contact-list > div { display: flex; gap: 16px; margin: 0 0 8px; }
