@@ -90,16 +90,26 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-06-23",
-    title: "ASME IMECE 2026 · Paper acceptance",
-    conferenceUrl: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780",
-    text: "Accepted in the Technical Paper Publication category; pending publication. Presentation scheduled for November 11, 2026, in Vancouver, Canada. The date follows ASME’s scheduled draft-paper decision notification.",
+    title: "ASME IMECE 2026 · Two paper acceptances",
+    text: "Two papers accepted in the Technical Paper Publication category; both pending publication. The date follows ASME’s scheduled draft-paper decision notification.",
     inlineLinks: [{ text: "scheduled draft-paper decision notification", url: "https://imece.secure-platform.com/a/page/publication_schedule" }],
     papers: [
       {
         title: "Complex Spectral Binding Networks for High-Entropy Fluid Dynamics: Solving the Spectral Fidelity Paradox in Atmospheric Gravity Waves",
+        text: "Presentation scheduled for November 11, 2026, at 14:21 in Vancouver, Canada (local time).",
         reference: "IMECE2026-192090",
         resources: [
-          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" }
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" },
+          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780" }
+        ]
+      },
+      {
+        title: "A Speed-Gradient Operator for Asymptotic Static State Recovery in Unsteady Viscous Flows",
+        text: "Presentation scheduled for November 11, 2026, at 14:42 in Vancouver, Canada (local time).",
+        reference: "IMECE2026-192091",
+        resources: [
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781/application/192091" },
+          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781" }
         ]
       }
     ]
