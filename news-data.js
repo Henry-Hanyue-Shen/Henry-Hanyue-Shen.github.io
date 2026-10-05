@@ -89,6 +89,22 @@ window.PROFILE_NEWS = [
     ]
   },
   {
+    date: "2026-06-23",
+    title: "ASME IMECE 2026 · Paper acceptance",
+    conferenceUrl: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780",
+    text: "Accepted in the Technical Paper Publication category; pending publication. Presentation scheduled for November 11, 2026, in Vancouver, Canada. The date follows ASME’s scheduled draft-paper decision notification.",
+    inlineLinks: [{ text: "scheduled draft-paper decision notification", url: "https://imece.secure-platform.com/a/page/publication_schedule" }],
+    papers: [
+      {
+        title: "Complex Spectral Binding Networks for High-Entropy Fluid Dynamics: Solving the Spectral Fidelity Paradox in Atmospheric Gravity Waves",
+        reference: "IMECE2026-192090",
+        resources: [
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-05-27",
     title: "IEEE OCEANS 2026 Sanya",
     conferenceUrl: "https://program-sanya26.oceanstechnical.org/glance.cfm#:~:text=The%20Critical%20Maneuverability%20Theorem",
