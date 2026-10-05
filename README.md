@@ -82,5 +82,3 @@ Repository: `Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io`.
 Site URL: `https://henry-hanyue-shen.github.io/`.
 
 GitHub Pages serves the repository root from `main`. Committing changes to `main` triggers deployment. See the repository's Actions tab for deployment status. The `.nojekyll` file keeps this a plain static website.
-
-The layout takes inspiration from the restrained academic style of https://yue-ning.github.io/. All page markup and styles were authored for this website; no biography, research records, photographs, or other content from that reference site are reused.

@@ -55,6 +55,40 @@ window.PROFILE_NEWS = [
     ]
   },
   {
+    date: "2026-07-01",
+    title: "IEEE OCEANS 2026 Monterey · Paper acceptances",
+    conferenceUrl: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thc6_04",
+    text: "Three coauthored papers were accepted to IEEE OCEANS 2026 Monterey. They were not presented at the conference. The date follows the official author-notification schedule.",
+    inlineLinks: [{ text: "official author-notification schedule", url: "https://monterey26.oceansconference.org/important-dates/" }],
+    papers: [
+      {
+        title: "Physics-Regularized Sea State Classification on an 8-Bit Microcontroller",
+        text: "Xinling Liao (Lfff09), Yuyan Lin, and Henry Shen.",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
+        reference: "OCEANS26B-0157",
+        resources: [
+          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thc6_04" }
+        ]
+      },
+      {
+        title: "An Analytic Acoustic Evaluation of Cavitator Geometries for Supercavitating Vehicles",
+        text: "Ruoyu Zhang, Xinjia Zhang, and Henry Shen.",
+        reference: "OCEANS26B-0162",
+        resources: [
+          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thb5_04" }
+        ]
+      },
+      {
+        title: "Physics-Regularized ConvLSTM for Long-Lead ENSO Prediction from ERSSTv5",
+        text: "Jiayi Hao, Ziyi Weng, and Henry Shen.",
+        reference: "OCEANS26B-0164",
+        resources: [
+          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thb9_01" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-05-27",
     title: "IEEE OCEANS 2026 Sanya",
     conferenceUrl: "https://program-sanya26.oceanstechnical.org/glance.cfm#:~:text=The%20Critical%20Maneuverability%20Theorem",
