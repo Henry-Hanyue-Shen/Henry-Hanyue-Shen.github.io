@@ -8,6 +8,25 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-10-06",
+    title: "IMDC 2027 · Abstract acceptance",
+    text: "Our abstract was accepted for further development into a full paper for the International Marine Design Conference (IMDC) 2027. We were invited to submit the draft full paper.",
+    papers: [
+      {
+        title: "Fixed-Prototype Spatial Voting for Visual Sea-State Classification",
+        text: "Coauthored with Xinling Liao (Lfff09) and Raju Datla (Stevens Institute of Technology).",
+        inlineLinks: [
+          { text: "Lfff09", url: "https://github.com/Lfff09" },
+          { text: "Raju Datla", url: "https://www.stevens.edu/profile/rdatla" }
+        ],
+        reference: "Abstract ID: IMDC-2027-161",
+        resources: [
+          { label: "Conference and submission information", url: "https://sites.mit.edu/imdc/abstract-paper-presentation-info/" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-10-01",
     title: "AGU26 · Online poster acceptance",
     text: "Our abstract was accepted for an online poster presentation. Notification received October 1, 2026.",
