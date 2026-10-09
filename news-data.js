@@ -15,6 +15,7 @@ window.PROFILE_NEWS = [
       {
         title: "A sharp minimum for cube-apex bodies in every dimension",
         text: "Coauthored with Pavel B. Dubovski.",
+        inlineLinks: [{ text: "Pavel B. Dubovski", url: "https://www.stevens.edu/profile/pdubovsk" }],
         reference: "arXiv:2610.11014 [math.MG]",
         resources: [
           { label: "arXiv preprint", url: "https://arxiv.org/abs/2610.11014" },
