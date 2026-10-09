@@ -8,6 +8,22 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-10-07",
+    title: "arXiv · New preprint",
+    text: "Our preprint is now available on arXiv. First submitted October 7, 2026.",
+    papers: [
+      {
+        title: "A sharp minimum for cube-apex bodies in every dimension",
+        text: "Coauthored with Pavel B. Dubovski.",
+        reference: "arXiv:2610.11014 [math.MG]",
+        resources: [
+          { label: "arXiv preprint", url: "https://arxiv.org/abs/2610.11014" },
+          { label: "Lean 4 formalization and code", url: "https://github.com/Henry-Hanyue-Shen/A-sharp-minimum-for-cube-apex-bodies-in-every-dimension" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-10-06",
     title: "IMDC 2027 · Abstract acceptance",
     text: "Our abstract was accepted for further development into a full paper for the International Marine Design Conference (IMDC) 2027. We were invited to submit the draft full paper.",
