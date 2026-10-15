@@ -90,6 +90,33 @@
           "primary": true
         }
       ]
+    },
+    {
+      "id": "icml-2026",
+      "name": "ICML",
+      "edition": "ICML 2026",
+      "full": "43rd International Conference on Machine Learning",
+      "submissionNote": "Abstract submission: January 23, 2026. Full paper submission: January 28, 2026. Both deadlines are AoE and have passed.",
+      "confirmed": true,
+      "start": "2026-07-06",
+      "end": "2026-07-11",
+      "location": "Seoul, South Korea",
+      "url": "https://icml.cc/Conferences/2026",
+      "source": "https://icml.cc/Conferences/2026/CallForPapers",
+      "deadlines": [
+        {
+          "label": "Abstract submission",
+          "date": "2026-01-23",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper submission",
+          "date": "2026-01-28",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
     }
   ],
   "journals": [
