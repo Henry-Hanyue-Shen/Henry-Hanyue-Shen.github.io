@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-10';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-11';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -134,7 +134,9 @@ function renderJournals(journals) {
     const article=node('article','directory-entry'); const h=node('h2'); h.append(link(j.name,j.url)); badges(h,j); article.append(h);
     article.append(node('p','venue-full',j.full),node('p','journal-meta',`${j.publisher}${j.since ? ` · Since ${j.since}` : ''}`));
     article.append(node('p','journal-meta',`${j.submission} · ${j.openAccess ? 'Open access' : 'Check access options with publisher'}`));
-    const links=node('div','detail-links'); links.append(link('Journal website ↗',j.url)); article.append(links); fragment.append(article);
+    const links=node('div','detail-links'); links.append(link('Journal website ↗',j.url));
+    for (const extra of j.additionalLinks || []) links.append(link(`${extra.label} ↗`,extra.url));
+    article.append(links); fragment.append(article);
   }
   $('#stage').replaceChildren(journals.length ? fragment : empty());
 }
@@ -222,4 +224,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-10').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-11').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});

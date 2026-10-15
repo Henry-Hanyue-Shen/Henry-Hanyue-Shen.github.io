@@ -68,7 +68,7 @@
       "name": "CVPR",
       "edition": "CVPR 2027",
       "full": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
-      "submissionNote": "Paper enrollment: November 10, 2026. Full paper submission: November 16, 2026. Both deadlines are AoE.",
+      "submissionNote": "Paper enrollment: November 10, 2026. Full paper submission: November 16, 2026. Supplementary materials: November 23, 2026. All deadlines are AoE.",
       "confirmed": true,
       "start": "2027-06-20",
       "end": "2027-06-25",
@@ -86,6 +86,12 @@
         {
           "label": "Full paper submission",
           "date": "2026-11-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Supplementary materials",
+          "date": "2026-11-23",
           "tz": "AoE",
           "primary": true
         }
@@ -142,6 +148,87 @@
           "date": "2026-10-30",
           "time": "20:00",
           "tz": "UTC",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "bigcomp-2027",
+      "name": "BigComp",
+      "edition": "IEEE BigComp 2027",
+      "full": "IEEE International Conference on Big Data and Smart Computing",
+      "submissionNote": "Title and abstract registration: October 16, 2026. Full paper submission: October 30, 2026 (extended). Both dates are AoE. New submissions registered after October 16 may not be accepted.",
+      "confirmed": true,
+      "start": "2027-01-25",
+      "end": "2027-01-28",
+      "location": "Fukuoka International Congress Center, Fukuoka, Japan",
+      "url": "https://bigcomp2027-website.pages.dev/",
+      "source": "https://bigcomp2027-website.pages.dev/call-for-papers/",
+      "deadlines": [
+        {
+          "label": "Title and abstract registration",
+          "date": "2026-10-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper submission",
+          "date": "2026-10-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eurosp-2027",
+      "name": "EuroS&P",
+      "edition": "IEEE EuroS&P 2027",
+      "full": "IEEE European Symposium on Security and Privacy",
+      "submissionNote": "Mandatory paper registration: November 25, 2026. Full paper submission: December 2, 2026. Both deadlines are AoE.",
+      "confirmed": true,
+      "start": "2027-07-05",
+      "end": "2027-07-09",
+      "location": "Madrid, Spain",
+      "url": "https://eurosp2027.ieee-security.org/",
+      "source": "https://eurosp2027.ieee-security.org/cfp.html",
+      "deadlines": [
+        {
+          "label": "Paper registration",
+          "date": "2026-11-25",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper submission",
+          "date": "2026-12-02",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "asiaccs-2027-cycle-2",
+      "name": "AsiaCCS",
+      "edition": "ACM AsiaCCS 2027 · Cycle 2",
+      "full": "ACM Asia Conference on Computer and Communications Security",
+      "submissionNote": "Second submission cycle: full papers due December 11, 2026 (AoE).",
+      "confirmed": true,
+      "start": "2027-07-12",
+      "end": "2027-07-16",
+      "location": "Wynn Palace, Macau, China",
+      "url": "https://asiaccs2027.cityu.edu.mo/",
+      "source": "https://asiaccs2027.cityu.edu.mo/call-for-papers/index.html",
+      "additionalLinks": [
+        {
+          "label": "Conference venue",
+          "url": "https://asiaccs2027.cityu.edu.mo/conference-venue/index.html"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Full paper submission (Cycle 2)",
+          "date": "2026-12-11",
+          "tz": "AoE",
           "primary": true
         }
       ]
@@ -427,6 +514,21 @@
       "url": "https://cacm.acm.org/",
       "openAccess": true,
       "submission": "See journal website for submission cycles"
+    },
+    {
+      "id": "jgr-atmospheres",
+      "name": "JGR: Atmospheres",
+      "full": "Journal of Geophysical Research: Atmospheres",
+      "publisher": "American Geophysical Union (AGU) / Wiley",
+      "url": "https://agupubs.onlinelibrary.wiley.com/hub/journal/21698996/journal-overview",
+      "openAccess": false,
+      "submission": "Rolling submissions year-round",
+      "additionalLinks": [
+        {
+          "label": "Submit a manuscript",
+          "url": "https://jgr-atmospheres-submit.agu.org/cgi-bin/main.plex"
+        }
+      ]
     }
   ]
 }
