@@ -529,6 +529,44 @@
           "url": "https://jgr-atmospheres-submit.agu.org/cgi-bin/main.plex"
         }
       ]
+    },
+    {
+      "id": "ieee-joe",
+      "name": "IEEE JOE",
+      "full": "IEEE Journal of Oceanic Engineering",
+      "publisher": "IEEE Oceanic Engineering Society",
+      "url": "https://ieeeoes.org/publication/ieee-joe/",
+      "openAccess": false,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Submit a manuscript",
+          "url": "https://controls.papercept.net/journals/joe/"
+        },
+        {
+          "label": "Guide for authors",
+          "url": "https://ieeeoes.org/publication/ieee-joe/guide-for-authors-ieee-joe/"
+        }
+      ]
+    },
+    {
+      "id": "ipl",
+      "name": "IPL",
+      "full": "Information Processing Letters",
+      "publisher": "Elsevier",
+      "url": "https://www.sciencedirect.com/journal/information-processing-letters",
+      "openAccess": false,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Submit a manuscript",
+          "url": "https://submit.elsevier.com/IPL"
+        },
+        {
+          "label": "Guide for authors",
+          "url": "https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors"
+        }
+      ]
     }
   ]
 }
