@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-8';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-9';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -55,7 +55,7 @@ function detailPanel(e) {
   if (e.deadlines.length) {
     const table = node('table','detail-table');
     const head = node('thead'); const tr = node('tr');
-    for (const heading of ['Milestone','As listed by venue',`Time in ${zone}`]) tr.append(node('th','',heading));
+    for (const heading of ['Milestone',e.confirmed ? 'As listed by venue' : 'Tentative date',`Time in ${zone}`]) tr.append(node('th','',heading));
     head.append(tr); table.append(head); const tbody = node('tbody');
     for (const d of [...e.deadlines].sort((a,b)=>deadlineInstant(a)-deadlineInstant(b))) {
       const instant = deadlineInstant(d); const row = node('tr',instant <= clock ? 'closed' : '');
@@ -218,4 +218,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-8').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-9').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
