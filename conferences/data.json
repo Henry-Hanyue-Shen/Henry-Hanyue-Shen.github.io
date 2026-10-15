@@ -1,0 +1,6752 @@
+{
+  "snapshotDate": "2026-10-15",
+  "areas": {
+    "ai": {
+      "label": "Artificial intelligence",
+      "short": "ai",
+      "group": "AI"
+    },
+    "ml": {
+      "label": "Machine learning",
+      "short": "ml",
+      "group": "AI"
+    },
+    "nlp": {
+      "label": "Natural language",
+      "short": "nlp",
+      "group": "AI"
+    },
+    "cv": {
+      "label": "Computer vision",
+      "short": "vision",
+      "group": "AI"
+    },
+    "agents": {
+      "label": "Agents",
+      "short": "agents",
+      "group": "AI"
+    },
+    "robotics": {
+      "label": "Robotics",
+      "short": "robotics",
+      "group": "AI"
+    },
+    "ir": {
+      "label": "Web and retrieval",
+      "short": "ir",
+      "group": "AI"
+    },
+    "dm": {
+      "label": "Data mining",
+      "short": "data mining",
+      "group": "AI"
+    },
+    "systems": {
+      "label": "Operating and distributed systems",
+      "short": "systems",
+      "group": "Systems"
+    },
+    "arch": {
+      "label": "Computer architecture",
+      "short": "architecture",
+      "group": "Systems"
+    },
+    "networks": {
+      "label": "Networks",
+      "short": "networks",
+      "group": "Systems"
+    },
+    "db": {
+      "label": "Databases",
+      "short": "databases",
+      "group": "Systems"
+    },
+    "security": {
+      "label": "Security and privacy",
+      "short": "security",
+      "group": "Systems"
+    },
+    "se": {
+      "label": "Software engineering",
+      "short": "se",
+      "group": "Systems"
+    },
+    "pl": {
+      "label": "Programming languages",
+      "short": "pl",
+      "group": "Systems"
+    },
+    "verification": {
+      "label": "Formal methods",
+      "short": "formal methods",
+      "group": "Theory"
+    },
+    "theory": {
+      "label": "Algorithms and complexity",
+      "short": "theory",
+      "group": "Theory"
+    },
+    "logic": {
+      "label": "Logic and automated reasoning",
+      "short": "logic",
+      "group": "Theory"
+    },
+    "crypto": {
+      "label": "Cryptography",
+      "short": "crypto",
+      "group": "Theory"
+    },
+    "hci": {
+      "label": "Human-computer interaction",
+      "short": "hci",
+      "group": "Interdisciplinary"
+    }
+  },
+  "groups": [
+    "AI",
+    "Systems",
+    "Theory",
+    "Interdisciplinary"
+  ],
+  "editions": [
+    {
+      "id": "aaai-2027",
+      "name": "AAAI",
+      "full": "AAAI Conference on Artificial Intelligence",
+      "edition": "AAAI-27",
+      "areas": [
+        "ml",
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1980,
+      "url": "https://aaai.org/conference/aaai/aaai-27/",
+      "start": "2027-02-16",
+      "end": "2027-02-23",
+      "location": "Montréal, Canada",
+      "confirmed": true,
+      "source": "https://aaai.org/conference/aaai/aaai-27/",
+      "deadlines": [
+        {
+          "label": "notification",
+          "date": "2026-11-30",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aaai-2028",
+      "name": "AAAI",
+      "full": "AAAI Conference on Artificial Intelligence",
+      "edition": "AAAI-28",
+      "areas": [
+        "ml",
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1980,
+      "url": "https://aaai.org/aaai-conference/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://aaai.org/conference/aaai/aaai-27/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-07-20",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-07-27",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "aamas-2027",
+      "name": "AAMAS",
+      "full": "International Conference on Autonomous Agents and Multiagent Systems",
+      "edition": "AAMAS 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 2002,
+      "url": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
+      "start": "2027-05-03",
+      "end": "2027-05-07",
+      "location": "Hanoi, Vietnam",
+      "confirmed": true,
+      "source": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-08",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "workshop proposals",
+          "date": "2026-10-29",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "blue sky abstract",
+          "date": "2026-11-05",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "blue sky paper",
+          "date": "2026-11-12",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "tutorial proposals",
+          "date": "2026-12-10",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "AAAI fast track",
+          "date": "2026-12-11",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aamas-2028",
+      "name": "AAMAS",
+      "full": "International Conference on Autonomous Agents and Multiagent Systems",
+      "edition": "AAMAS 2028",
+      "areas": [
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 2002,
+      "url": "https://www.ifaamas.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://warwick.ac.uk/fac/sci/dcs/aamas2027/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-10-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-10-08",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "acl-2027",
+      "name": "ACL",
+      "full": "Annual Meeting of the Association for Computational Linguistics",
+      "edition": "ACL 2027",
+      "areas": [
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1962,
+      "url": "https://2027.aclweb.org/",
+      "start": "2027-08-17",
+      "end": "2027-08-22",
+      "location": "Kyoto, Japan",
+      "confirmed": true,
+      "source": "https://2027.aclweb.org/",
+      "deadlines": [
+        {
+          "label": "ARR submission",
+          "date": "2027-01-04",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cais-2027",
+      "name": "ACM CAIS",
+      "full": "ACM Conference on AI and Agentic Systems",
+      "edition": "CAIS 2027",
+      "areas": [
+        "agents",
+        "systems",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2026,
+      "url": "https://www.caisconf.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.caisconf.org/pages/cfp/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-27",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "agent-2027",
+      "name": "AGENT",
+      "full": "International Workshop on Agentic Engineering (ICSE)",
+      "edition": "AGENT 2027",
+      "areas": [
+        "se",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2026,
+      "url": "https://conf.researchr.org/home/icse-2027/agent-2027",
+      "start": null,
+      "end": null,
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/track/icse-2027/agent-2027-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-13",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "agent-2028",
+      "name": "AGENT",
+      "full": "International Workshop on Agentic Engineering (ICSE)",
+      "edition": "AGENT 2028",
+      "areas": [
+        "se",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2026,
+      "url": "https://conf.researchr.org/series/agent",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/track/icse-2027/agent-2027-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-26",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai-summit-2027",
+      "name": "Agentic AI Summit",
+      "full": "Berkeley Agentic AI Summit",
+      "edition": "Agentic AI Summit 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://rdi.berkeley.edu/events/agentic-ai-summit-2026",
+      "start": null,
+      "end": null,
+      "location": "Berkeley, USA",
+      "confirmed": false,
+      "source": "https://newsroom.haas.berkeley.edu/2026-agentic-ai-summit-brings-top-minds-to-campus/",
+      "deadlines": []
+    },
+    {
+      "id": "agents4science-next",
+      "name": "Agents4Science",
+      "full": "Open Conference of AI Agents for Science",
+      "edition": "Agents4Science (next edition)",
+      "areas": [
+        "agents",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2025,
+      "url": "https://agents4science.stanford.edu",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://agents4science.stanford.edu",
+      "deadlines": []
+    },
+    {
+      "id": "agentverify-2027",
+      "name": "AGENTVERIFY",
+      "full": "International Workshop on Infrastructure for Trustworthy Software Agents (ICSE)",
+      "edition": "AGENTVERIFY 2027",
+      "areas": [
+        "se",
+        "agents",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2027,
+      "url": "https://agentverify2027.github.io/",
+      "start": "2027-04-25",
+      "end": "2027-04-25",
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://agentverify2027.github.io/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-11-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-11-06",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "agntcon-eu-2027",
+      "name": "AGNTCon + MCPCon",
+      "full": "AGNTCon + MCPCon and MCP Dev Summits (Agentic AI Foundation)",
+      "edition": "AGNTCon + MCPCon Europe 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://events.linuxfoundation.org/aaif-events/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://events.linuxfoundation.org/agntcon-mcpcon-europe/program/cfp",
+      "deadlines": []
+    },
+    {
+      "id": "agntcon-na-2026",
+      "name": "AGNTCon + MCPCon",
+      "full": "AGNTCon + MCPCon and MCP Dev Summits (Agentic AI Foundation)",
+      "edition": "AGNTCon + MCPCon North America 2026",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "start": "2026-10-22",
+      "end": "2026-10-23",
+      "location": "San Jose, USA",
+      "confirmed": true,
+      "source": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "deadlines": []
+    },
+    {
+      "id": "agntcon-na-2027",
+      "name": "AGNTCon + MCPCon",
+      "full": "AGNTCon + MCPCon and MCP Dev Summits (Agentic AI Foundation)",
+      "edition": "AGNTCon + MCPCon North America 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://events.linuxfoundation.org/agntcon-mcpcon-north-america/",
+      "deadlines": []
+    },
+    {
+      "id": "mcpdevsummit-nyc-2027",
+      "name": "AGNTCon + MCPCon",
+      "full": "AGNTCon + MCPCon and MCP Dev Summits (Agentic AI Foundation)",
+      "edition": "MCP Dev Summit New York 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://events.linuxfoundation.org/aaif-events/",
+      "start": null,
+      "end": null,
+      "location": "New York, USA",
+      "confirmed": false,
+      "source": "https://aaif.io/press/agentic-ai-foundation-announces-global-2026-events-program-anchored-by-agntcon-mcpcon-north-america-and-europe/",
+      "deadlines": []
+    },
+    {
+      "id": "aidev-sf-2027",
+      "name": "AI Dev",
+      "full": "AI Dev (DeepLearning.AI developer conference)",
+      "edition": "AI Dev 27 San Francisco",
+      "areas": [
+        "agents",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://ai-dev.deeplearning.ai/",
+      "start": null,
+      "end": null,
+      "location": "San Francisco, USA",
+      "confirmed": false,
+      "source": "https://ai-dev.deeplearning.ai/past-events/sf",
+      "deadlines": []
+    },
+    {
+      "id": "aidev-nyc-2026",
+      "name": "AI Dev",
+      "full": "AI Dev (DeepLearning.AI developer conference)",
+      "edition": "AI Dev NYC 2026",
+      "areas": [
+        "agents",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://ai-dev.deeplearning.ai/",
+      "start": "2026-11-30",
+      "end": "2026-12-01",
+      "location": "New York, USA",
+      "confirmed": true,
+      "source": "https://ai-dev.deeplearning.ai/",
+      "deadlines": []
+    },
+    {
+      "id": "aidev-nyc-2027",
+      "name": "AI Dev",
+      "full": "AI Dev (DeepLearning.AI developer conference)",
+      "edition": "AI Dev NYC 2027",
+      "areas": [
+        "agents",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://ai-dev.deeplearning.ai/",
+      "start": null,
+      "end": null,
+      "location": "New York, USA",
+      "confirmed": false,
+      "source": "https://ai-dev.deeplearning.ai/past-events/nyc",
+      "deadlines": []
+    },
+    {
+      "id": "aie-europe-2027",
+      "name": "AI Engineer Europe",
+      "full": "AI Engineer Europe",
+      "edition": "AI Engineer Europe 2027",
+      "areas": [
+        "agents",
+        "systems"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2023,
+      "url": "https://ai.engineer/europe/2027",
+      "start": "2027-02-17",
+      "end": "2027-02-19",
+      "location": "London, UK",
+      "confirmed": false,
+      "source": "https://ai.engineer/europe/2027",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-01-06",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aie-nyc-2026",
+      "name": "AI Engineer NYC",
+      "full": "AI Engineer New York",
+      "edition": "AI Engineer NYC 2026",
+      "areas": [
+        "agents",
+        "systems"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2023,
+      "url": "https://www.ai.engineer/nyc/2026",
+      "start": "2026-10-12",
+      "end": "2026-10-14",
+      "location": "New York, USA",
+      "confirmed": true,
+      "source": "https://www.ai.engineer/nyc",
+      "deadlines": []
+    },
+    {
+      "id": "aiewf-2027",
+      "name": "AI Engineer World's Fair",
+      "full": "AI Engineer World's Fair",
+      "edition": "AI Engineer World's Fair 2027",
+      "areas": [
+        "agents",
+        "systems",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2023,
+      "url": "https://www.ai.engineer/worldsfair/2027",
+      "start": "2027-06-29",
+      "end": "2027-07-01",
+      "location": "San Francisco, USA",
+      "confirmed": false,
+      "source": "https://www.ai.engineer/worldsfair/2027",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-05-30",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "ai4math-2027",
+      "name": "AI for Math Workshop",
+      "full": "AI for Math Workshop (ICML)",
+      "edition": "AI for Math Workshop @ ICML 2027",
+      "areas": [
+        "ml",
+        "verification"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2024,
+      "url": "https://icml.cc/virtual/2026/84161",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://icml.cc/virtual/2026/84161",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-05-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "aie-code-2026",
+      "name": "AIE Code Summit",
+      "full": "AI Engineer Code Summit",
+      "edition": "AIE CODE Summit SF 2026",
+      "areas": [
+        "agents",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2023,
+      "url": "https://www.ai.engineer/code/2026",
+      "start": "2026-11-10",
+      "end": "2026-11-12",
+      "location": "San Francisco, USA",
+      "confirmed": true,
+      "source": "https://www.ai.engineer/code/2026",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2026-10-11",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aie-code-2027",
+      "name": "AIE Code Summit",
+      "full": "AI Engineer Code Summit",
+      "edition": "AIE Code Summit 2027",
+      "areas": [
+        "agents",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2023,
+      "url": "https://www.ai.engineer/code",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://sessionize.com/aiecode26/",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-10-11",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aistats-2027",
+      "name": "AISTATS",
+      "full": "International Conference on Artificial Intelligence and Statistics",
+      "edition": "AISTATS 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1985,
+      "url": "https://virtual.aistats.org/Conferences/2027",
+      "start": "2027-05-03",
+      "end": "2027-05-06",
+      "location": "Montréal, Canada",
+      "confirmed": true,
+      "source": "https://virtual.aistats.org/Conferences/2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-06",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "notification",
+          "date": "2027-01-20",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "aistats-2028",
+      "name": "AISTATS",
+      "full": "International Conference on Artificial Intelligence and Statistics",
+      "edition": "AISTATS 2028",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1985,
+      "url": "https://aistats.org",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://virtual.aistats.org/Conferences/2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-28",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-10-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "aitp-2027",
+      "name": "AITP",
+      "full": "Conference on Artificial Intelligence and Theorem Proving",
+      "edition": "AITP 2027",
+      "areas": [
+        "verification",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2016,
+      "url": "http://aitp-conference.org/",
+      "start": "2027-08-29",
+      "end": "2027-09-03",
+      "location": "Aussois, France",
+      "confirmed": false,
+      "source": "http://aitp-conference.org/2026/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "aiware-2027",
+      "name": "AIware",
+      "full": "ACM International Conference on AI-powered Software",
+      "edition": "AIware 2027",
+      "areas": [
+        "se",
+        "ml",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://conf.researchr.org/series/aiware",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/track/aiware-2026/aiware-2026-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-15",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ase-2026",
+      "name": "ASE",
+      "full": "IEEE/ACM International Conference on Automated Software Engineering",
+      "edition": "ASE 2026",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1986,
+      "url": "https://conf.researchr.org/home/ase-2026",
+      "start": "2026-10-12",
+      "end": "2026-10-16",
+      "location": "Munich, Germany",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/dates/ase-2026",
+      "deadlines": []
+    },
+    {
+      "id": "ase-2027",
+      "name": "ASE",
+      "full": "IEEE/ACM International Conference on Automated Software Engineering",
+      "edition": "ASE 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1986,
+      "url": "https://conf.researchr.org/series/ase",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/series/ase",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-03-26",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "automl-2027",
+      "name": "AutoML Conf",
+      "full": "International Conference on Automated Machine Learning",
+      "edition": "AutoML 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://automl.cc/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://mldeadlines.com/conference/automl/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cain-2027",
+      "name": "CAIN",
+      "full": "IEEE/ACM International Conference on AI Engineering – Software Engineering for AI",
+      "edition": "CAIN 2027",
+      "areas": [
+        "se",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://conf.researchr.org/home/cain-2027",
+      "start": null,
+      "end": null,
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/track/cain-2027/cain-2027-call-for-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cain-2028",
+      "name": "CAIN",
+      "full": "IEEE/ACM International Conference on AI Engineering – Software Engineering for AI",
+      "edition": "CAIN 2028",
+      "areas": [
+        "se",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://conf.researchr.org/series/cain",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/series/cain",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-10-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cav-2027",
+      "name": "CAV",
+      "full": "International Conference on Computer-Aided Verification",
+      "edition": "CAV 2027",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1989,
+      "url": "https://conferences.i-cav.org/2027/",
+      "start": "2027-07-19",
+      "end": "2027-07-23",
+      "location": "Amsterdam, Netherlands",
+      "confirmed": true,
+      "source": "https://conferences.i-cav.org/2027/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-01-20",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "clear-2027",
+      "name": "CLeaR",
+      "full": "Conference on Causal Learning and Reasoning",
+      "edition": "CLeaR 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://www.cclear.cc/2027",
+      "start": "2027-05-03",
+      "end": "2027-05-05",
+      "location": "Paris, France",
+      "confirmed": true,
+      "source": "https://www.cclear.cc/2027/CallforPapers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "notification",
+          "date": "2027-02-22",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "clear-2028",
+      "name": "CLeaR",
+      "full": "Conference on Causal Learning and Reasoning",
+      "edition": "CLeaR 2028",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://www.cclear.cc/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://mldeadlines.com/conference/clear/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-15",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "collas-2027",
+      "name": "CoLLAs",
+      "full": "Conference on Lifelong Learning Agents",
+      "edition": "CoLLAs 2027",
+      "areas": [
+        "ml",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://lifelong-ml.cc/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://aihub.org/events/conference-on-lifelong-learning-agents-collas-2026/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-15",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colm-2026",
+      "name": "COLM",
+      "full": "Conference on Language Modeling",
+      "edition": "COLM 2026",
+      "areas": [
+        "nlp",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://colm.cc/",
+      "start": "2026-10-06",
+      "end": "2026-10-09",
+      "location": "San Francisco, USA",
+      "confirmed": true,
+      "source": "https://colm.cc/",
+      "deadlines": []
+    },
+    {
+      "id": "colm-2027",
+      "name": "COLM",
+      "full": "Conference on Language Modeling",
+      "edition": "COLM 2027",
+      "areas": [
+        "nlp",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://colm.cc/",
+      "start": "2027-10-05",
+      "end": "2027-10-08",
+      "location": null,
+      "confirmed": false,
+      "source": "https://mldeadlines.com/conference/colm/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-26",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-31",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "colt-2027",
+      "name": "COLT",
+      "full": "Conference on Learning Theory",
+      "edition": "COLT 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1988,
+      "url": "https://learningtheory.org/colt2027/",
+      "start": "2027-06-28",
+      "end": "2027-07-02",
+      "location": "Tokyo, Japan",
+      "confirmed": false,
+      "source": "https://learningtheory.org/colt2027/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-04",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cpal-2027",
+      "name": "CPAL",
+      "full": "Conference on Parsimony and Learning",
+      "edition": "CPAL 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://cpal.cc/",
+      "start": "2027-03-23",
+      "end": "2027-03-26",
+      "location": "Tokyo, Japan",
+      "confirmed": true,
+      "source": "https://cpal.cc/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-11-23",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-12-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "recent spotlight track",
+          "date": "2027-01-18",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "cpal-2028",
+      "name": "CPAL",
+      "full": "Conference on Parsimony and Learning",
+      "edition": "CPAL 2028",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://cpal.cc/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://cpal.cc/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-11-23",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-12-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cpp-2027",
+      "name": "CPP",
+      "full": "ACM SIGPLAN International Conference on Certified Programs and Proofs",
+      "edition": "CPP 2027",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2011,
+      "url": "https://popl27.sigplan.org/home/CPP-2027",
+      "start": "2027-01-11",
+      "end": "2027-01-12",
+      "location": "Mexico City, Mexico",
+      "confirmed": true,
+      "source": "https://popl27.sigplan.org/home/CPP-2027",
+      "deadlines": []
+    },
+    {
+      "id": "cpp-2028",
+      "name": "CPP",
+      "full": "ACM SIGPLAN International Conference on Certified Programs and Proofs",
+      "edition": "CPP 2028",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2011,
+      "url": "https://www.sigplan.org/Conferences/CPP/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://popl27.sigplan.org/home/CPP-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-02",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-09-09",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "deeptest-2027",
+      "name": "DeepTest",
+      "full": "International Workshop on Deep Learning for Testing and Testing for Deep Learning (ICSE)",
+      "edition": "DeepTest 2027",
+      "areas": [
+        "se",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2019,
+      "url": "https://conf.researchr.org/series/deeptest",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/deeptest-2026",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-26",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "deeptest-2028",
+      "name": "DeepTest",
+      "full": "International Workshop on Deep Learning for Testing and Testing for Deep Learning (ICSE)",
+      "edition": "DeepTest 2028",
+      "areas": [
+        "se",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2019,
+      "url": "https://conf.researchr.org/series/deeptest",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/deeptest-2026",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-10-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eacl-2027",
+      "name": "EACL",
+      "full": "Conference of the European Chapter of the ACL",
+      "edition": "EACL 2027",
+      "areas": [
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1983,
+      "url": "https://2027.eacl.org/",
+      "start": "2027-03-09",
+      "end": "2027-03-14",
+      "location": "Athens, Greece",
+      "confirmed": true,
+      "source": "https://2027.eacl.org/calls/papers/",
+      "deadlines": [
+        {
+          "label": "commitment",
+          "date": "2026-10-11",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "notification",
+          "date": "2026-11-12",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "emnlp-2026",
+      "name": "EMNLP",
+      "full": "Conference on Empirical Methods in Natural Language Processing",
+      "edition": "EMNLP 2026",
+      "areas": [
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1996,
+      "url": "https://2026.emnlp.org/",
+      "start": "2026-10-24",
+      "end": "2026-10-29",
+      "location": "Budapest, Hungary",
+      "confirmed": true,
+      "source": "https://2026.emnlp.org/",
+      "deadlines": []
+    },
+    {
+      "id": "emnlp-2027",
+      "name": "EMNLP",
+      "full": "Conference on Empirical Methods in Natural Language Processing",
+      "edition": "EMNLP 2027",
+      "areas": [
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1996,
+      "url": "https://www.aclweb.org/portal/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://aclrollingreview.org/dates",
+      "deadlines": [
+        {
+          "label": "ARR submission",
+          "date": "2027-05-24",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "commitment",
+          "date": "2027-08-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "fm-2027",
+      "name": "FM",
+      "full": "International Symposium on Formal Methods",
+      "edition": "FM 2027",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1987,
+      "url": "https://www.fmeurope.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.fmeurope.org/2025/09/14/fm-2027-call-for-organizers/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "fmcad-2027",
+      "name": "FMCAD",
+      "full": "Formal Methods in Computer-Aided Design",
+      "edition": "FMCAD 2027",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "B",
+      "since": 1996,
+      "url": "https://fmcad.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://fmcad.forsyte.at/FMCAD26/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-03",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-10",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "forge-2027",
+      "name": "FORGE",
+      "full": "ACM International Conference on AI Foundation Models and Software Engineering",
+      "edition": "FORGE 2027",
+      "areas": [
+        "se",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://conf.researchr.org/home/forge-2027",
+      "start": "2027-04-26",
+      "end": "2027-04-27",
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/forge-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-10-25",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-10-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "forge-2028",
+      "name": "FORGE",
+      "full": "ACM International Conference on AI Foundation Models and Software Engineering",
+      "edition": "FORGE 2028",
+      "areas": [
+        "se",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://conf.researchr.org/series/forge",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/forge-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-10-24",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-10-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "fse-2027",
+      "name": "FSE",
+      "full": "ACM International Conference on the Foundations of Software Engineering (formerly ESEC/FSE)",
+      "edition": "FSE 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1993,
+      "url": "https://conf.researchr.org/home/fse-2027",
+      "start": "2027-07-12",
+      "end": "2027-07-16",
+      "location": "Shenzhen, China",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/dates/fse-2027",
+      "deadlines": []
+    },
+    {
+      "id": "fse-2028",
+      "name": "FSE",
+      "full": "ACM International Conference on the Foundations of Software Engineering (formerly ESEC/FSE)",
+      "edition": "FSE 2028",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1993,
+      "url": "https://conf.researchr.org/series/fse",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/series/fse",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-10-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "iclr-2027",
+      "name": "ICLR",
+      "full": "International Conference on Learning Representations",
+      "edition": "ICLR 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 2013,
+      "url": "https://iclr.cc/Conferences/2027",
+      "start": "2027-04-26",
+      "end": "2027-04-30",
+      "location": "California, USA",
+      "confirmed": true,
+      "source": "https://iclr.cc/Conferences/2027/Dates",
+      "deadlines": [
+        {
+          "label": "decision",
+          "date": "2026-12-16",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "iclr-2028",
+      "name": "ICLR",
+      "full": "International Conference on Learning Representations",
+      "edition": "ICLR 2028",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 2013,
+      "url": "https://iclr.cc",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://iclr.cc/Conferences/2027/Dates",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-17",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-09-24",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icml-2027",
+      "name": "ICML",
+      "full": "International Conference on Machine Learning",
+      "edition": "ICML 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1980,
+      "url": "https://icml.cc",
+      "start": null,
+      "end": null,
+      "location": "South America (city TBA)",
+      "confirmed": false,
+      "source": "https://icml.cc/Conferences/FutureMeetings",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-22",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-01-28",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icse-2027",
+      "name": "ICSE",
+      "full": "IEEE/ACM International Conference on Software Engineering",
+      "edition": "ICSE 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://conf.researchr.org/home/icse-2027",
+      "start": "2027-04-25",
+      "end": "2027-05-01",
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/track/icse-2027/icse-2027-research-track",
+      "deadlines": []
+    },
+    {
+      "id": "icse-2028",
+      "name": "ICSE",
+      "full": "IEEE/ACM International Conference on Software Engineering",
+      "edition": "ICSE 2028",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://icse-conferences.org/",
+      "start": "2028-04-30",
+      "end": "2028-05-06",
+      "location": "Waikoloa, Hawaii, USA",
+      "confirmed": false,
+      "source": "https://icse-conferences.org/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-06-22",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-06-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icsme-2027",
+      "name": "ICSME",
+      "full": "IEEE International Conference on Software Maintenance and Evolution",
+      "edition": "ICSME 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1983,
+      "url": "https://conf.researchr.org/home/icsme-2027",
+      "start": "2027-09-07",
+      "end": "2027-09-11",
+      "location": "Toronto, Canada",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/icsme-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icst-2027",
+      "name": "ICST",
+      "full": "IEEE International Conference on Software Testing, Verification and Validation",
+      "edition": "ICST 2027",
+      "areas": [
+        "se",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2008,
+      "url": "https://conf.researchr.org/home/icst-2027",
+      "start": "2027-05-17",
+      "end": "2027-05-21",
+      "location": "San Sebastian, Spain",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/icst-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-02",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icst-2028",
+      "name": "ICST",
+      "full": "IEEE International Conference on Software Testing, Verification and Validation",
+      "edition": "ICST 2028",
+      "areas": [
+        "se",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2008,
+      "url": "https://conf.researchr.org/series/icst",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/icst-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ijcai-2027",
+      "name": "IJCAI",
+      "full": "International Joint Conference on Artificial Intelligence",
+      "edition": "IJCAI-27",
+      "areas": [
+        "ml",
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1969,
+      "url": "https://www.ijcai.org/future_conferences",
+      "start": "2027-08-07",
+      "end": "2027-08-17",
+      "location": "Kyoto, Japan and Hengqin, China",
+      "confirmed": false,
+      "source": "https://www.ijcai.org/future_conferences",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-01-19",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "interrupt-2027",
+      "name": "Interrupt",
+      "full": "Interrupt: The Agent Conference by LangChain",
+      "edition": "Interrupt 2027",
+      "areas": [
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://interrupt.langchain.com/",
+      "start": "2027-05-13",
+      "end": "2027-05-14",
+      "location": "San Francisco, USA",
+      "confirmed": false,
+      "source": "https://blog.langchain.com/previewing-interrupt-2026-agents-at-enterprise-scale",
+      "deadlines": []
+    },
+    {
+      "id": "issre-2026",
+      "name": "ISSRE",
+      "full": "IEEE International Symposium on Software Reliability Engineering",
+      "edition": "ISSRE 2026",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1990,
+      "url": "https://cyprusconferences.org/issre2026/",
+      "start": "2026-10-20",
+      "end": "2026-10-23",
+      "location": "Limassol, Cyprus",
+      "confirmed": true,
+      "source": "https://cyprusconferences.org/issre2026/",
+      "deadlines": []
+    },
+    {
+      "id": "issre-2027",
+      "name": "ISSRE",
+      "full": "IEEE International Symposium on Software Reliability Engineering",
+      "edition": "ISSRE 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1990,
+      "url": "https://conf.researchr.org/series/issre",
+      "start": "2027-10-19",
+      "end": "2027-10-22",
+      "location": "Macao, China",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/series/issre",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "issta-2026",
+      "name": "ISSTA",
+      "full": "ACM SIGSOFT International Symposium on Software Testing and Analysis",
+      "edition": "ISSTA 2026",
+      "areas": [
+        "se",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1989,
+      "url": "https://conf.researchr.org/home/issta-2026",
+      "start": "2026-10-04",
+      "end": "2026-10-09",
+      "location": "Oakland, USA",
+      "confirmed": true,
+      "source": "https://2026.splashcon.org/dates",
+      "deadlines": []
+    },
+    {
+      "id": "issta-2027",
+      "name": "ISSTA",
+      "full": "ACM SIGSOFT International Symposium on Software Testing and Analysis",
+      "edition": "ISSTA 2027",
+      "areas": [
+        "se",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1989,
+      "url": "https://conf.researchr.org/home/issta-2027",
+      "start": "2027-09-07",
+      "end": "2027-09-10",
+      "location": "Singapore",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/issta-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-08",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-01-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "kdd-2027",
+      "name": "KDD",
+      "full": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "edition": "KDD 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1995,
+      "url": "https://kdd2027.kdd.org/",
+      "start": "2027-08-01",
+      "end": "2027-08-05",
+      "location": "San Jose, USA",
+      "confirmed": false,
+      "source": "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-01-31",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-02-07",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "kdd-2028",
+      "name": "KDD",
+      "full": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "edition": "KDD 2028",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1995,
+      "url": "https://kdd.org/conferences",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-07-18",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-07-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "l4dc-2027",
+      "name": "L4DC",
+      "full": "Learning for Dynamics and Control Conference",
+      "edition": "L4DC 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2019,
+      "url": "https://l4dc2027.control.ee.ethz.ch",
+      "start": "2027-06-16",
+      "end": "2027-06-18",
+      "location": "Stockholm, Sweden",
+      "confirmed": true,
+      "source": "https://l4dc2027.control.ee.ethz.ch",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-13",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "late-breaking results",
+          "date": "2027-04-05",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "llm4code-2027",
+      "name": "LLM4Code",
+      "full": "International Workshop on Large Language Models for Code (ICSE)",
+      "edition": "LLM4Code 2027",
+      "areas": [
+        "se",
+        "ml",
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://llm4code.github.io/",
+      "start": null,
+      "end": null,
+      "location": "Dublin, Ireland",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/dates/icse-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-13",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "llm4code-2028",
+      "name": "LLM4Code",
+      "full": "International Workshop on Large Language Models for Code (ICSE)",
+      "edition": "LLM4Code 2028",
+      "areas": [
+        "se",
+        "ml",
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://llm4code.github.io/",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/dates/icse-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "log-2026",
+      "name": "LoG",
+      "full": "Learning on Graphs Conference",
+      "edition": "LoG 2026",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://logconference.org/",
+      "start": "2026-11-20",
+      "end": "2026-11-22",
+      "location": "Boston, USA",
+      "confirmed": true,
+      "source": "https://logconference.org/cfp/",
+      "deadlines": []
+    },
+    {
+      "id": "log-2027",
+      "name": "LoG",
+      "full": "Learning on Graphs Conference",
+      "edition": "LoG 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://logconference.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://logconference.org/cfp/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-08-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-08-07",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "mathai-2026",
+      "name": "MATH-AI",
+      "full": "Workshop on Mathematical Reasoning and AI (NeurIPS)",
+      "edition": "MATH-AI 2026",
+      "areas": [
+        "ml",
+        "verification"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2021,
+      "url": "https://mathai-2026.github.io/",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "location": "Atlanta, USA",
+      "confirmed": true,
+      "source": "https://mathai-2026.github.io/",
+      "deadlines": []
+    },
+    {
+      "id": "mathai-2027",
+      "name": "MATH-AI",
+      "full": "Workshop on Mathematical Reasoning and AI (NeurIPS)",
+      "edition": "MATH-AI 2027",
+      "areas": [
+        "ml",
+        "verification"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2021,
+      "url": "https://mathai-2026.github.io/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://mathai-2026.github.io/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-09-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "mlops-world-2026",
+      "name": "MLOps World",
+      "full": "MLOps World | GenAI Summit",
+      "edition": "MLOps World | GenAI Summit 2026",
+      "areas": [
+        "systems",
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2020,
+      "url": "https://mlopsworld.com/",
+      "start": "2026-11-17",
+      "end": "2026-11-18",
+      "location": "Austin, USA",
+      "confirmed": true,
+      "source": "https://mlopsworld.com/",
+      "deadlines": []
+    },
+    {
+      "id": "mlops-world-2027",
+      "name": "MLOps World",
+      "full": "MLOps World | GenAI Summit",
+      "edition": "MLOps World | GenAI Summit 2027",
+      "areas": [
+        "systems",
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2020,
+      "url": "https://mlopsworld.com/",
+      "start": null,
+      "end": null,
+      "location": "Austin, USA",
+      "confirmed": false,
+      "source": "https://mlopsworld.com/",
+      "deadlines": []
+    },
+    {
+      "id": "mlsys-2027",
+      "name": "MLSys",
+      "full": "Conference on Machine Learning and Systems",
+      "edition": "MLSys 2027",
+      "areas": [
+        "ml",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2018,
+      "url": "https://mlsys.org/",
+      "start": "2027-06-21",
+      "end": "2027-06-25",
+      "location": "Bellevue, USA",
+      "confirmed": true,
+      "source": "https://mlsys.org/Conferences/2027/Dates",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-30",
+          "tz": "12:00 PDT",
+          "primary": true
+        },
+        {
+          "label": "notification",
+          "date": "2027-02-28",
+          "tz": "13:00 PST",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "mlsys-2028",
+      "name": "MLSys",
+      "full": "Conference on Machine Learning and Systems",
+      "edition": "MLSys 2028",
+      "areas": [
+        "ml",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2018,
+      "url": "https://mlsys.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://mlsys.org/Conferences/2027/Dates",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-10-29",
+          "tz": "12:00 PDT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "msr-2027",
+      "name": "MSR",
+      "full": "International Conference on Mining Software Repositories",
+      "edition": "MSR 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2004,
+      "url": "https://conf.researchr.org/home/msr-2027",
+      "start": "2027-04-26",
+      "end": "2027-04-27",
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/msr-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-10-20",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-10-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "msr-2028",
+      "name": "MSR",
+      "full": "International Conference on Mining Software Repositories",
+      "edition": "MSR 2028",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2004,
+      "url": "https://conf.researchr.org/series/msr",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/msr-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-10-19",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-10-22",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "naacl-2027",
+      "name": "NAACL",
+      "full": "Annual Conference of the North American Chapter of the ACL",
+      "edition": "NAACL 2027",
+      "areas": [
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2000,
+      "url": "https://2027.naacl.org/",
+      "start": "2027-06-01",
+      "end": "2027-06-05",
+      "location": "San Francisco, USA",
+      "confirmed": true,
+      "source": "https://2027.naacl.org/",
+      "deadlines": [
+        {
+          "label": "ARR submission",
+          "date": "2026-10-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "commitment",
+          "date": "2026-12-23",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "notification",
+          "date": "2027-02-10",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "neurips-2026",
+      "name": "NeurIPS",
+      "full": "Conference on Neural Information Processing Systems",
+      "edition": "NeurIPS 2026",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1987,
+      "url": "https://neurips.cc/Conferences/2026",
+      "start": "2026-12-06",
+      "end": "2026-12-12",
+      "location": "Sydney, Australia",
+      "confirmed": true,
+      "source": "https://neurips.cc/Conferences/2026/Dates",
+      "deadlines": []
+    },
+    {
+      "id": "neurips-2027",
+      "name": "NeurIPS",
+      "full": "Conference on Neural Information Processing Systems",
+      "edition": "NeurIPS 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1987,
+      "url": "https://neurips.cc",
+      "start": null,
+      "end": null,
+      "location": "Europe (city TBA)",
+      "confirmed": false,
+      "source": "https://neurips.cc/Conferences/FutureMeetings",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-07",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "neus-2027",
+      "name": "NeuS",
+      "full": "International Conference on Neuro-Symbolic Systems",
+      "edition": "NeuS 2027",
+      "areas": [
+        "verification",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://sites.google.com/usc.edu/neus2026/home",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://lists.uni-paderborn.de/pipermail/fg-arc/2025-October/002967.html",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "nlbse-2027",
+      "name": "NLBSE",
+      "full": "International Workshop on Natural Language-Based Software Engineering (ICSE)",
+      "edition": "NLBSE 2027",
+      "areas": [
+        "se",
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://conf.researchr.org/home/icse-2027/nlbse-2027",
+      "start": null,
+      "end": null,
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/icse-2027/nlbse-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-13",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "nlbse-2028",
+      "name": "NLBSE",
+      "full": "International Workshop on Natural Language-Based Software Engineering (ICSE)",
+      "edition": "NLBSE 2028",
+      "areas": [
+        "se",
+        "nlp"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2022,
+      "url": "https://conf.researchr.org/series/nlbse",
+      "start": null,
+      "end": null,
+      "location": "Hawaii, USA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/icse-2027/nlbse-2027",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "gtc-2027",
+      "name": "NVIDIA GTC",
+      "full": "NVIDIA GPU Technology Conference",
+      "edition": "GTC 2027",
+      "areas": [
+        "systems",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2009,
+      "url": "https://www.nvidia.com/gtc/",
+      "start": "2027-03-15",
+      "end": "2027-03-18",
+      "location": "San Jose, USA",
+      "confirmed": true,
+      "source": "https://www.nvidia.com/en-us/gtc/call-for-submissions",
+      "deadlines": [
+        {
+          "label": "content interest survey",
+          "date": "2026-10-09",
+          "tz": "PT",
+          "primary": false
+        },
+        {
+          "label": "posters",
+          "date": "2026-11-10",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "gtc-2028",
+      "name": "NVIDIA GTC",
+      "full": "NVIDIA GPU Technology Conference",
+      "edition": "GTC 2028",
+      "areas": [
+        "systems",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2009,
+      "url": "https://www.nvidia.com/gtc/",
+      "start": null,
+      "end": null,
+      "location": "San Jose, USA",
+      "confirmed": false,
+      "source": "https://www.nvidia.com/en-us/gtc/call-for-submissions",
+      "deadlines": [
+        {
+          "label": "content interest survey",
+          "date": "2027-10-09",
+          "tz": "PT",
+          "primary": false
+        },
+        {
+          "label": "posters",
+          "date": "2027-11-10",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "oopsla-2026",
+      "name": "OOPSLA",
+      "full": "Object-Oriented Programming, Systems, Languages, and Applications (PACMPL OOPSLA, at SPLASH)",
+      "edition": "OOPSLA 2026 (SPLASH 2026)",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://2026.splashcon.org/",
+      "start": "2026-10-04",
+      "end": "2026-10-09",
+      "location": "Oakland, USA",
+      "confirmed": true,
+      "source": "https://2026.splashcon.org/dates",
+      "deadlines": []
+    },
+    {
+      "id": "oopsla-2027",
+      "name": "OOPSLA",
+      "full": "Object-Oriented Programming, Systems, Languages, and Applications (PACMPL OOPSLA, at SPLASH)",
+      "edition": "OOPSLA 2027 (SPLASH 2027)",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://conf.researchr.org/track/splash-2027/splashoopsla2027",
+      "start": "2027-10-10",
+      "end": "2027-10-15",
+      "location": "Prague, Czechia",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/track/splash-2027/splashoopsla2027",
+      "deadlines": [
+        {
+          "label": "round 1",
+          "date": "2026-10-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "round 2",
+          "date": "2027-04-07",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "oopsla-2028",
+      "name": "OOPSLA",
+      "full": "Object-Oriented Programming, Systems, Languages, and Applications (PACMPL OOPSLA, at SPLASH)",
+      "edition": "OOPSLA 2028 (SPLASH 2028)",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://splashcon.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/track/splash-2027/splashoopsla2027",
+      "deadlines": [
+        {
+          "label": "round 1",
+          "date": "2027-10-13",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pldi-2027",
+      "name": "PLDI",
+      "full": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+      "edition": "PLDI 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1979,
+      "url": "https://pldi27.sigplan.org/",
+      "start": "2027-06-05",
+      "end": "2027-06-11",
+      "location": "Atlanta, USA",
+      "confirmed": true,
+      "source": "https://pldi27.sigplan.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pldi-2028",
+      "name": "PLDI",
+      "full": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+      "edition": "PLDI 2028",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1979,
+      "url": "https://www.sigplan.org/Conferences/PLDI/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://pldi27.sigplan.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pytorch-na-2026",
+      "name": "PyTorch Conference",
+      "full": "PyTorch Conference North America",
+      "edition": "PyTorch Conference North America 2026",
+      "areas": [
+        "ml",
+        "systems"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2018,
+      "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
+      "start": "2026-10-20",
+      "end": "2026-10-21",
+      "location": "San Jose, USA",
+      "confirmed": true,
+      "source": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
+      "deadlines": []
+    },
+    {
+      "id": "pytorch-na-2027",
+      "name": "PyTorch Conference",
+      "full": "PyTorch Conference North America",
+      "edition": "PyTorch Conference North America 2027",
+      "areas": [
+        "ml",
+        "systems"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2018,
+      "url": "https://events.linuxfoundation.org/pytorch-conference-north-america/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://pytorch.org/blog/call-for-proposals-open-for-pytorch-conference-north-america-2026/",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-06-07",
+          "tz": "PT",
+          "primary": false
+        },
+        {
+          "label": "posters",
+          "date": "2027-07-26",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "pytorch-eu-2027",
+      "name": "PyTorch Conference Europe",
+      "full": "PyTorch Conference Europe",
+      "edition": "PyTorch Conference Europe 2027",
+      "areas": [
+        "ml",
+        "systems"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2026,
+      "url": "https://events.linuxfoundation.org/pytorch-conference-europe/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://events.linuxfoundation.org/pytorch-conference-europe/program/cfp",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-02-08",
+          "tz": "CET",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "qconai-boston-2027",
+      "name": "QCon AI",
+      "full": "QCon AI (InfoQ)",
+      "edition": "QCon AI Boston 2027",
+      "areas": [
+        "agents",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://newyork.qcon.ai/",
+      "start": null,
+      "end": null,
+      "location": "Boston, USA",
+      "confirmed": false,
+      "source": "https://www.infoq.com/qcon-ai-boston-2026/news",
+      "deadlines": []
+    },
+    {
+      "id": "qconai-ny-2026",
+      "name": "QCon AI",
+      "full": "QCon AI (InfoQ)",
+      "edition": "QCon AI New York 2026",
+      "areas": [
+        "agents",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://newyork.qcon.ai/",
+      "start": "2026-12-15",
+      "end": "2026-12-16",
+      "location": "Jersey City, USA",
+      "confirmed": true,
+      "source": "https://newyork.qcon.ai/llms/newyork2026.md",
+      "deadlines": []
+    },
+    {
+      "id": "qconai-ny-2027",
+      "name": "QCon AI",
+      "full": "QCon AI (InfoQ)",
+      "edition": "QCon AI New York 2027",
+      "areas": [
+        "agents",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://newyork.qcon.ai/",
+      "start": null,
+      "end": null,
+      "location": "New York area, USA",
+      "confirmed": false,
+      "source": "https://newyork.qcon.ai/",
+      "deadlines": []
+    },
+    {
+      "id": "ray-summit-2027",
+      "name": "Ray Summit",
+      "full": "Ray Summit",
+      "edition": "Ray Summit 2027",
+      "areas": [
+        "systems",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2020,
+      "url": "https://www.anyscale.com/ray-summit",
+      "start": null,
+      "end": null,
+      "location": "San Francisco, USA",
+      "confirmed": false,
+      "source": "https://www.anyscale.com/ray-summit",
+      "deadlines": [
+        {
+          "label": "talk proposals",
+          "date": "2027-06-30",
+          "tz": "PT",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "rlc-2027",
+      "name": "RLC",
+      "full": "Reinforcement Learning Conference",
+      "edition": "RLC 2027",
+      "areas": [
+        "ml",
+        "agents"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2024,
+      "url": "https://rl-conference.cc/",
+      "start": null,
+      "end": null,
+      "location": "Providence, USA and Odense, Denmark",
+      "confirmed": false,
+      "source": "https://rl-conference.cc/2026/index.html",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sacmat-2027",
+      "name": "SACMAT",
+      "full": "ACM Symposium on Access Control Models and Technologies",
+      "edition": "SACMAT 2027",
+      "areas": [
+        "verification",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "C",
+      "since": 1995,
+      "url": "https://www.sacmat.org/2027/",
+      "start": "2027-07-19",
+      "end": "2027-07-21",
+      "location": "Durham, UK",
+      "confirmed": true,
+      "source": "https://www.sacmat.org/2027/call-for-papers.php",
+      "deadlines": [
+        {
+          "label": "paper (cycle 1)",
+          "date": "2026-10-30",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-02-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sacmat-2028",
+      "name": "SACMAT",
+      "full": "ACM Symposium on Access Control Models and Technologies",
+      "edition": "SACMAT 2028",
+      "areas": [
+        "verification",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "C",
+      "since": 1995,
+      "url": "https://www.sacmat.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.sacmat.org/",
+      "deadlines": [
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-10-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "saiv-2027",
+      "name": "SAIV",
+      "full": "International Symposium on AI Verification",
+      "edition": "SAIV 2027",
+      "areas": [
+        "verification",
+        "ml"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2024,
+      "url": "https://link.springer.com/book/10.1007/978-3-032-32357-6",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://link.springer.com/book/10.1007/978-3-032-32357-6",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-03-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "saner-2027",
+      "name": "SANER",
+      "full": "IEEE International Conference on Software Analysis, Evolution and Reengineering",
+      "edition": "SANER 2027",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2015,
+      "url": "https://conf.researchr.org/home/saner-2027",
+      "start": "2027-03-09",
+      "end": "2027-03-12",
+      "location": "Richmond, USA",
+      "confirmed": true,
+      "source": "https://conf.researchr.org/home/saner-2027",
+      "deadlines": [
+        {
+          "label": "abstract (ERA, RENE, industry, Agentic AI4SE)",
+          "date": "2026-10-19",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "paper (ERA, RENE, industry, Agentic AI4SE)",
+          "date": "2026-10-23",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "saner-2028",
+      "name": "SANER",
+      "full": "IEEE International Conference on Software Analysis, Evolution and Reengineering",
+      "edition": "SANER 2028",
+      "areas": [
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2015,
+      "url": "https://conf.researchr.org/series/saner",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/saner-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-10-18",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-10-22",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "satml-2027",
+      "name": "SaTML",
+      "full": "IEEE Conference on Secure and Trustworthy Machine Learning",
+      "edition": "SaTML 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2023,
+      "url": "https://satml.org/",
+      "start": null,
+      "end": null,
+      "location": "Reykjavik, Iceland",
+      "confirmed": true,
+      "source": "https://satml.org/",
+      "deadlines": []
+    },
+    {
+      "id": "satml-2028",
+      "name": "SaTML",
+      "full": "IEEE Conference on Secure and Trustworthy Machine Learning",
+      "edition": "SaTML 2028",
+      "areas": [
+        "ml",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": true,
+      "core": null,
+      "since": 2023,
+      "url": "https://satml.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://mldeadlines.com/conference/satml/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-22",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-09-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "tacas-2027",
+      "name": "TACAS",
+      "full": "International Conference on Tools and Algorithms for the Construction and Analysis of Systems (ETAPS)",
+      "edition": "TACAS 2027 (ETAPS 2027)",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1995,
+      "url": "https://etaps.org/2027/conferences/tacas/",
+      "start": "2027-04-12",
+      "end": "2027-04-15",
+      "location": "Copenhagen, Denmark",
+      "confirmed": true,
+      "source": "https://www.etaps.org/2027/cfp",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-10-15",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "artifact",
+          "date": "2026-10-29",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "tacas-2028",
+      "name": "TACAS",
+      "full": "International Conference on Tools and Algorithms for the Construction and Analysis of Systems (ETAPS)",
+      "edition": "TACAS 2028 (ETAPS 2028)",
+      "areas": [
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1995,
+      "url": "https://etaps.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.etaps.org/2027/cfp",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-10-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "uai-2027",
+      "name": "UAI",
+      "full": "Conference on Uncertainty in Artificial Intelligence",
+      "edition": "UAI 2027",
+      "areas": [
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1985,
+      "url": "https://www.auai.org",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.auai.org",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "vericodegen-2026",
+      "name": "VeriCodeGen",
+      "full": "VeriCodeGen: AI for Verifiable Coding (NeurIPS Workshop)",
+      "edition": "VeriCodeGen 2026",
+      "areas": [
+        "verification",
+        "se",
+        "agents"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2026,
+      "url": "https://vericodegen.github.io/",
+      "start": "2026-12-12",
+      "end": "2026-12-12",
+      "location": "Atlanta, USA",
+      "confirmed": true,
+      "source": "https://vericodegen.github.io/",
+      "deadlines": []
+    },
+    {
+      "id": "verifai-2027",
+      "name": "VerifAI",
+      "full": "Workshop on AI Verification in the Wild (ICLR)",
+      "edition": "VerifAI-3 (ICLR 2027)",
+      "areas": [
+        "verification",
+        "ml",
+        "se"
+      ],
+      "type": "event",
+      "isNew": false,
+      "core": null,
+      "since": 2025,
+      "url": "https://www.iclr.cc/virtual/2026/workshop/10000774",
+      "start": "2027-04-29",
+      "end": "2027-04-30",
+      "location": null,
+      "confirmed": false,
+      "source": "https://iclr.cc/Conferences/2027/Dates",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sp-2027",
+      "name": "S&P",
+      "full": "IEEE Symposium on Security and Privacy",
+      "edition": "S&P 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1980,
+      "url": "https://sp2027.ieee-security.org/",
+      "start": "2027-05-17",
+      "end": "2027-05-20",
+      "location": "Montreal, Canada",
+      "confirmed": true,
+      "source": "https://sp2027.ieee-security.org/cfpapers.html",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2026-11-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2026-11-17",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sp-2028",
+      "name": "S&P",
+      "full": "IEEE Symposium on Security and Privacy",
+      "edition": "S&P 2028",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1980,
+      "url": "https://www.ieee-security.org/TC/SP-Index.html",
+      "start": "2028-05-15",
+      "end": "2028-05-18",
+      "location": "",
+      "confirmed": false,
+      "source": "https://sp2027.ieee-security.org/cfpapers.html",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-06-03",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-06-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-11-09",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-11-16",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "usenixsec-2027",
+      "name": "USENIX Security",
+      "full": "USENIX Security Symposium",
+      "edition": "USENIX Security 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1990,
+      "url": "https://www.usenix.org/conference/usenixsecurity27",
+      "start": "2027-08-11",
+      "end": "2027-08-13",
+      "location": "Denver, CO, USA",
+      "confirmed": true,
+      "source": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-01-19",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-01-26",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "usenixsec-2028",
+      "name": "USENIX Security",
+      "full": "USENIX Security Symposium",
+      "edition": "USENIX Security 2028",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1990,
+      "url": "https://www.usenix.org/conference/usenixsecurity28",
+      "start": "2028-08-09",
+      "end": "2028-08-11",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.usenix.org/conference/usenixsecurity27/call-for-papers",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-08-17",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-08-24",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ccs-2027",
+      "name": "CCS",
+      "full": "ACM Conference on Computer and Communications Security",
+      "edition": "CCS 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1993,
+      "url": "https://www.sigsac.org/ccs/CCS2027/",
+      "start": "2027-10-11",
+      "end": "2027-10-15",
+      "location": "Atlanta, GA, USA",
+      "confirmed": false,
+      "source": "https://sigsac.org/ccs/CCS2026/call-for/call-for-papers.html",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-01-06",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-01-13",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-04-21",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-04-28",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ndss-2028",
+      "name": "NDSS",
+      "full": "Network and Distributed System Security Symposium",
+      "edition": "NDSS 2028",
+      "areas": [
+        "security",
+        "networks"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1993,
+      "url": "https://www.ndss-symposium.org/",
+      "start": "2028-02-28",
+      "end": "2028-03-03",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.ndss-symposium.org/ndss2027/submissions/call-for-papers/",
+      "deadlines": [
+        {
+          "label": "paper (summer cycle)",
+          "date": "2027-04-28",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (fall cycle)",
+          "date": "2027-08-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eurosp-2027",
+      "name": "EuroS&P",
+      "full": "IEEE European Symposium on Security and Privacy",
+      "edition": "EuroS&P 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2016,
+      "url": "https://eurosp2027.ieee-security.org/",
+      "start": "2027-07-05",
+      "end": "2027-07-09",
+      "location": "Madrid, Spain",
+      "confirmed": true,
+      "source": "https://eurosp2027.ieee-security.org/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-11-25",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-12-02",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eurosp-2028",
+      "name": "EuroS&P",
+      "full": "IEEE European Symposium on Security and Privacy",
+      "edition": "EuroS&P 2028",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2016,
+      "url": "https://www.ieee-security.org/",
+      "start": "2028-07-03",
+      "end": "2028-07-07",
+      "location": "",
+      "confirmed": false,
+      "source": "https://eurosp2027.ieee-security.org/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-11-18",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-11-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "crypto-2027",
+      "name": "CRYPTO",
+      "full": "International Cryptology Conference",
+      "edition": "CRYPTO 2027",
+      "areas": [
+        "crypto",
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1981,
+      "url": "https://crypto.iacr.org/2027/",
+      "start": "2027-08-15",
+      "end": "2027-08-19",
+      "location": "Santa Barbara, CA, USA",
+      "confirmed": false,
+      "source": "https://crypto.iacr.org/2026/callforpapers.php",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-11",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eurocrypt-2028",
+      "name": "EUROCRYPT",
+      "full": "International Conference on the Theory and Applications of Cryptographic Techniques",
+      "edition": "EUROCRYPT 2028",
+      "areas": [
+        "crypto",
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://eurocrypt.iacr.org/",
+      "start": "2028-05-07",
+      "end": "2028-05-11",
+      "location": "",
+      "confirmed": false,
+      "source": "https://eurocrypt.iacr.org/2027/callforpapers.php",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-09-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "asiacrypt-2027",
+      "name": "ASIACRYPT",
+      "full": "International Conference on the Theory and Application of Cryptology and Information Security",
+      "edition": "ASIACRYPT 2027",
+      "areas": [
+        "crypto",
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1991,
+      "url": "https://asiacrypt.iacr.org/",
+      "start": "2027-12-06",
+      "end": "2027-12-10",
+      "location": "",
+      "confirmed": false,
+      "source": "https://asiacrypt.iacr.org/2026/callforpapers.php",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-05-20",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sigcomm-2027",
+      "name": "SIGCOMM",
+      "full": "ACM SIGCOMM Conference",
+      "edition": "SIGCOMM 2027",
+      "areas": [
+        "networks"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1981,
+      "url": "https://conferences.sigcomm.org/sigcomm/2027/",
+      "start": "2027-08-08",
+      "end": "2027-08-12",
+      "location": "Bangkok, Thailand",
+      "confirmed": false,
+      "source": "https://conferences.sigcomm.org/sigcomm/2026/cfp/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-29",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "nsdi-2028",
+      "name": "NSDI",
+      "full": "USENIX Symposium on Networked Systems Design and Implementation",
+      "edition": "NSDI 2028",
+      "areas": [
+        "networks",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2004,
+      "url": "https://www.usenix.org/conference/nsdi28",
+      "start": "2028-05-01",
+      "end": "2028-05-03",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.usenix.org/conference/nsdi27/call-for-papers",
+      "deadlines": [
+        {
+          "label": "abstract (spring)",
+          "date": "2027-04-15",
+          "tz": "ET",
+          "primary": true
+        },
+        {
+          "label": "paper (spring)",
+          "date": "2027-04-22",
+          "tz": "ET",
+          "primary": true
+        },
+        {
+          "label": "abstract (fall)",
+          "date": "2027-09-09",
+          "tz": "ET",
+          "primary": true
+        },
+        {
+          "label": "paper (fall)",
+          "date": "2027-09-16",
+          "tz": "ET",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "imc-2027",
+      "name": "IMC",
+      "full": "ACM Internet Measurement Conference",
+      "edition": "IMC 2027",
+      "areas": [
+        "networks"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2001,
+      "url": "https://conferences.sigcomm.org/imc/",
+      "start": "2027-10-25",
+      "end": "2027-10-28",
+      "location": "",
+      "confirmed": false,
+      "source": "https://conferences.sigcomm.org/imc/2026/cfp/",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2026-11-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2026-11-19",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-04-22",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-04-29",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "imc-2028",
+      "name": "IMC",
+      "full": "ACM Internet Measurement Conference",
+      "edition": "IMC 2028",
+      "areas": [
+        "networks"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2001,
+      "url": "https://conferences.sigcomm.org/imc/",
+      "start": "2028-10-23",
+      "end": "2028-10-26",
+      "location": "",
+      "confirmed": false,
+      "source": "https://conferences.sigcomm.org/imc/2026/cfp/",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-11-11",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-11-18",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "mobicom-2027",
+      "name": "MobiCom",
+      "full": "ACM International Conference on Mobile Computing and Networking",
+      "edition": "MobiCom 2027",
+      "areas": [
+        "networks",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1995,
+      "url": "https://www.sigmobile.org/mobicom/2027/",
+      "start": "2027-10-18",
+      "end": "2027-10-22",
+      "location": "",
+      "confirmed": false,
+      "source": "https://sigmobile.org/mobicom/2027/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract (winter)",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (winter)",
+          "date": "2027-03-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "mobicom-2028",
+      "name": "MobiCom",
+      "full": "ACM International Conference on Mobile Computing and Networking",
+      "edition": "MobiCom 2028",
+      "areas": [
+        "networks",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1995,
+      "url": "https://www.sigmobile.org/mobicom/",
+      "start": "2028-10-16",
+      "end": "2028-10-20",
+      "location": "",
+      "confirmed": false,
+      "source": "https://sigmobile.org/mobicom/2027/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract (summer)",
+          "date": "2027-08-25",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (summer)",
+          "date": "2027-09-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "infocom-2028",
+      "name": "INFOCOM",
+      "full": "IEEE International Conference on Computer Communications",
+      "edition": "INFOCOM 2028",
+      "areas": [
+        "networks"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://infocom.info/",
+      "start": "2028-05-15",
+      "end": "2028-05-18",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.comsoc.org/conferences-events/ieee-international-conference-computer-communications-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-07-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-07-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pets-2027",
+      "name": "PETS",
+      "full": "Privacy Enhancing Technologies Symposium (PoPETs)",
+      "edition": "PETS 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2000,
+      "url": "https://petsymposium.org/2027/",
+      "start": "2027-07-19",
+      "end": "2027-07-24",
+      "location": "Delft, Netherlands",
+      "confirmed": true,
+      "source": "https://petsymposium.org/cfp27.php",
+      "deadlines": [
+        {
+          "label": "paper (issue 3)",
+          "date": "2026-11-30",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (issue 4)",
+          "date": "2027-02-28",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pets-2028",
+      "name": "PETS",
+      "full": "Privacy Enhancing Technologies Symposium (PoPETs)",
+      "edition": "PETS 2028",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2000,
+      "url": "https://petsymposium.org/",
+      "start": "2028-07-17",
+      "end": "2028-07-22",
+      "location": "",
+      "confirmed": false,
+      "source": "https://petsymposium.org/cfp27.php",
+      "deadlines": [
+        {
+          "label": "paper (issue 1)",
+          "date": "2027-05-31",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (issue 2)",
+          "date": "2027-08-31",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (issue 3)",
+          "date": "2027-11-30",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "raid-2027",
+      "name": "RAID",
+      "full": "International Symposium on Research in Attacks, Intrusions and Defenses",
+      "edition": "RAID 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1998,
+      "url": "https://raid2026.org/",
+      "start": "2027-10-11",
+      "end": "2027-10-13",
+      "location": "",
+      "confirmed": false,
+      "source": "https://raid2026.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-22",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "acsac-2027",
+      "name": "ACSAC",
+      "full": "Annual Computer Security Applications Conference",
+      "edition": "ACSAC 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1985,
+      "url": "https://www.acsac.org/",
+      "start": "2027-12-06",
+      "end": "2027-12-10",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.acsac.org/2026/submissions/papers/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-05-27",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "esorics-2027",
+      "name": "ESORICS",
+      "full": "European Symposium on Research in Computer Security",
+      "edition": "ESORICS 2027",
+      "areas": [
+        "security"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1990,
+      "url": "https://www.ieee-security.org/Calendar/cfps/cfp-ESORICS2026.html",
+      "start": "2027-09-20",
+      "end": "2027-09-24",
+      "location": "",
+      "confirmed": false,
+      "source": "https://www.ieee-security.org/Calendar/cfps/cfp-ESORICS2026.html",
+      "deadlines": [
+        {
+          "label": "paper (winter cycle)",
+          "date": "2027-01-08",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (spring cycle)",
+          "date": "2027-04-21",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "osdi-2027",
+      "name": "OSDI",
+      "full": "USENIX Symposium on Operating Systems Design and Implementation",
+      "edition": "OSDI 2027",
+      "areas": [
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1994,
+      "url": "https://www.usenix.org/conference/osdi27",
+      "start": "2027-07-07",
+      "end": "2027-07-09",
+      "location": "Baltimore, USA",
+      "confirmed": true,
+      "source": "https://www.usenix.org/conference/osdi27/call-for-papers",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-12-01",
+          "tz": "ET",
+          "time": "17:59",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-12-08",
+          "tz": "ET",
+          "time": "17:59",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sosp-2027",
+      "name": "SOSP",
+      "full": "ACM Symposium on Operating Systems Principles",
+      "edition": "SOSP 2027",
+      "areas": [
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1967,
+      "url": "https://sigops.org/s/conferences/sosp/",
+      "start": "2027-10-04",
+      "end": "2027-10-07",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://sigops.org/s/conferences/sosp/2026/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-08",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "eurosys-2028",
+      "name": "EuroSys",
+      "full": "European Conference on Computer Systems",
+      "edition": "EuroSys 2028",
+      "areas": [
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2006,
+      "url": "https://www.eurosys.org/",
+      "start": "2028-04-24",
+      "end": "2028-04-28",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://2027.eurosys.org/cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract (spring cycle)",
+          "date": "2027-05-06",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (spring cycle)",
+          "date": "2027-05-13",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (fall cycle)",
+          "date": "2027-09-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (fall cycle)",
+          "date": "2027-09-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "atc-2027",
+      "name": "ATC",
+      "full": "ACM SIGOPS Annual Technical Conference (formerly USENIX ATC)",
+      "edition": "ATC 2027",
+      "areas": [
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1975,
+      "url": "https://atc.sigops.org/",
+      "start": "2027-07-12",
+      "end": "2027-07-14",
+      "location": "France",
+      "confirmed": false,
+      "source": "https://en.wikipedia.org/wiki/ACM_SIGOPS_Annual_Technical_Conference",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-01-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "asplos-2028",
+      "name": "ASPLOS",
+      "full": "ACM International Conference on Architectural Support for Programming Languages and Operating Systems",
+      "edition": "ASPLOS 2028",
+      "areas": [
+        "arch",
+        "systems",
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://www.asplos-conference.org/",
+      "start": "2028-04-03",
+      "end": "2028-04-07",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.asplos-conference.org/?p=8512",
+      "deadlines": [
+        {
+          "label": "paper (April cycle)",
+          "date": "2027-04-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (September cycle)",
+          "date": "2027-09-08",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "isca-2027",
+      "name": "ISCA",
+      "full": "ACM/IEEE International Symposium on Computer Architecture",
+      "edition": "ISCA 2027",
+      "areas": [
+        "arch"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1973,
+      "url": "https://www.iscaconf.org/",
+      "start": "2027-06-05",
+      "end": "2027-06-11",
+      "location": "Atlanta, USA",
+      "confirmed": false,
+      "source": "https://www.sigarch.org/call-contributions/isca-2026/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-11-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-11-19",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "micro-2027",
+      "name": "MICRO",
+      "full": "IEEE/ACM International Symposium on Microarchitecture",
+      "edition": "MICRO 2027",
+      "areas": [
+        "arch"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 1968,
+      "url": "https://www.microarch.org/",
+      "start": "2027-10-23",
+      "end": "2027-10-27",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.microarch.org/micro59/submit/papers.php",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-02",
+          "tz": "ET",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-09",
+          "tz": "ET",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "hpca-2028",
+      "name": "HPCA",
+      "full": "IEEE International Symposium on High-Performance Computer Architecture",
+      "edition": "HPCA 2028",
+      "areas": [
+        "arch"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1995,
+      "url": "https://www.hpca-conf.org/",
+      "start": "2028-02-26",
+      "end": "2028-03-01",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.sigarch.org/call-contributions/hpca-2027/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-07-23",
+          "tz": "UTC",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-07-30",
+          "tz": "UTC",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "fast-2028",
+      "name": "FAST",
+      "full": "USENIX Conference on File and Storage Technologies",
+      "edition": "FAST 2028",
+      "areas": [
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2002,
+      "url": "https://www.usenix.org/conference/fast28",
+      "start": "2028-02-22",
+      "end": "2028-02-24",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.usenix.org/conference/fast27/call-for-papers",
+      "deadlines": [
+        {
+          "label": "paper (spring)",
+          "date": "2027-03-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (fall)",
+          "date": "2027-09-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sc-2027",
+      "name": "SC",
+      "full": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
+      "edition": "SC27",
+      "areas": [
+        "systems",
+        "arch"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1988,
+      "url": "https://supercomputing.org/",
+      "start": "2027-11-14",
+      "end": "2027-11-19",
+      "location": "Denver, USA",
+      "confirmed": false,
+      "source": "https://sc26.supercomputing.org/program/papers/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "socc-2027",
+      "name": "SoCC",
+      "full": "ACM Symposium on Cloud Computing",
+      "edition": "SoCC 2027",
+      "areas": [
+        "systems",
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2010,
+      "url": "https://acmsocc.org/",
+      "start": "2027-11-17",
+      "end": "2027-11-19",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://acmsocc.org/2026/papers.html",
+      "deadlines": [
+        {
+          "label": "abstract (round 1)",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 1)",
+          "date": "2027-02-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (round 2)",
+          "date": "2027-07-07",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 2)",
+          "date": "2027-07-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sigmod-2027",
+      "name": "SIGMOD",
+      "full": "ACM SIGMOD International Conference on Management of Data",
+      "edition": "SIGMOD 2027",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://2027.sigmodconf.hosting.acm.org/",
+      "start": "2027-06-13",
+      "end": "2027-06-19",
+      "location": "Huntington Beach, USA",
+      "confirmed": true,
+      "source": "https://2027.sigmodconf.hosting.acm.org/calls_papers_important_dates.shtml",
+      "deadlines": [
+        {
+          "label": "abstract (round 4)",
+          "date": "2026-10-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 4)",
+          "date": "2026-10-17",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sigmod-2028",
+      "name": "SIGMOD",
+      "full": "ACM SIGMOD International Conference on Management of Data",
+      "edition": "SIGMOD 2028",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://2028.sigmod.org/",
+      "start": "2028-06-11",
+      "end": "2028-06-16",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://2027.sigmodconf.hosting.acm.org/calls_papers_important_dates.shtml",
+      "deadlines": [
+        {
+          "label": "abstract (round 1)",
+          "date": "2027-01-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 1)",
+          "date": "2027-01-17",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (round 2)",
+          "date": "2027-04-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 2)",
+          "date": "2027-04-17",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (round 3)",
+          "date": "2027-07-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 3)",
+          "date": "2027-07-17",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (round 4)",
+          "date": "2027-10-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 4)",
+          "date": "2027-10-17",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "vldb-2027",
+      "name": "VLDB",
+      "full": "International Conference on Very Large Data Bases (PVLDB)",
+      "edition": "VLDB 2027",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://vldb.org/2027/",
+      "start": "2027-08-23",
+      "end": "2027-08-27",
+      "location": "Athens, Greece",
+      "confirmed": true,
+      "source": "https://www.vldb.org/pvldb/volumes/20/submission",
+      "deadlines": [
+        {
+          "label": "paper (Nov 2026 round)",
+          "date": "2026-11-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Dec 2026 round)",
+          "date": "2026-12-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Jan 2027 round)",
+          "date": "2027-01-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Feb 2027 round)",
+          "date": "2027-02-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Mar 2027 round)",
+          "date": "2027-03-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "vldb-2028",
+      "name": "VLDB",
+      "full": "International Conference on Very Large Data Bases (PVLDB)",
+      "edition": "VLDB 2028",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1975,
+      "url": "https://vldb.org/",
+      "start": "2028-08-28",
+      "end": "2028-09-01",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.vldb.org/pvldb/volumes/20/submission",
+      "deadlines": [
+        {
+          "label": "paper (Apr 2027 round)",
+          "date": "2027-04-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (May 2027 round)",
+          "date": "2027-05-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Jun 2027 round)",
+          "date": "2027-06-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Jul 2027 round)",
+          "date": "2027-07-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Aug 2027 round)",
+          "date": "2027-08-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Sep 2027 round)",
+          "date": "2027-09-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Oct 2027 round)",
+          "date": "2027-10-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Nov 2027 round)",
+          "date": "2027-11-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        },
+        {
+          "label": "paper (Dec 2027 round)",
+          "date": "2027-12-01",
+          "tz": "PT",
+          "time": "17:00",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icde-2027",
+      "name": "ICDE",
+      "full": "IEEE International Conference on Data Engineering",
+      "edition": "ICDE 2027",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1984,
+      "url": "https://icde2027.github.io/",
+      "start": "2027-05-17",
+      "end": "2027-05-21",
+      "location": "Copenhagen, Denmark",
+      "confirmed": true,
+      "source": "https://icde2027.github.io/cf-research-papers.html",
+      "deadlines": [
+        {
+          "label": "paper (round 2)",
+          "date": "2026-11-11",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icde-2028",
+      "name": "ICDE",
+      "full": "IEEE International Conference on Data Engineering",
+      "edition": "ICDE 2028",
+      "areas": [
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1984,
+      "url": "https://ieee-icde.org/",
+      "start": "2028-05-15",
+      "end": "2028-05-19",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://icde2027.github.io/cf-research-papers.html",
+      "deadlines": [
+        {
+          "label": "paper (round 1)",
+          "date": "2027-06-15",
+          "tz": "PT",
+          "primary": true
+        },
+        {
+          "label": "paper (round 2)",
+          "date": "2027-11-05",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pods-2027",
+      "name": "PODS",
+      "full": "ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems",
+      "edition": "PODS 2027",
+      "areas": [
+        "db",
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://2027.sigmodconf.hosting.acm.org/",
+      "start": "2027-06-13",
+      "end": "2027-06-19",
+      "location": "Huntington Beach, USA",
+      "confirmed": true,
+      "source": "https://databasetheory.org/node/155",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2026-12-03",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2026-12-10",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "pods-2028",
+      "name": "PODS",
+      "full": "ACM SIGMOD-SIGACT-SIGAI Symposium on Principles of Database Systems",
+      "edition": "PODS 2028",
+      "areas": [
+        "db",
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://databasetheory.org/PODS",
+      "start": "2028-06-11",
+      "end": "2028-06-16",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://databasetheory.org/node/155",
+      "deadlines": [
+        {
+          "label": "abstract (cycle 1)",
+          "date": "2027-05-28",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-06-04",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "abstract (cycle 2)",
+          "date": "2027-12-03",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-12-10",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cidr-2028",
+      "name": "CIDR",
+      "full": "Conference on Innovative Data Systems Research",
+      "edition": "CIDR 2028",
+      "areas": [
+        "db",
+        "systems"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2003,
+      "url": "https://www.cidrdb.org/",
+      "start": "2028-01-23",
+      "end": "2028-01-26",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://www.cidrdb.org/cidr2027/cfp.html",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-08-04",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "stoc-2027",
+      "name": "STOC",
+      "full": "ACM Symposium on Theory of Computing",
+      "edition": "STOC 2027",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1969,
+      "url": "https://acm-stoc.org/stoc2027/",
+      "start": "2027-06-06",
+      "end": "2027-06-10",
+      "location": "Atlanta, USA",
+      "confirmed": true,
+      "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2026-11-02",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "stoc-2028",
+      "name": "STOC",
+      "full": "ACM Symposium on Theory of Computing",
+      "edition": "STOC 2028",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1969,
+      "url": "https://acm-stoc.org/",
+      "start": "2028-06-12",
+      "end": "2028-06-16",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-11-02",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "focs-2027",
+      "name": "FOCS",
+      "full": "IEEE Symposium on Foundations of Computer Science",
+      "edition": "FOCS 2027",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1960,
+      "url": "https://focs.computer.org/",
+      "start": "2027-11-07",
+      "end": "2027-11-10",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://focs.computer.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-01",
+          "tz": "ET",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "soda-2028",
+      "name": "SODA",
+      "full": "ACM-SIAM Symposium on Discrete Algorithms",
+      "edition": "SODA 2028",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1990,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/",
+      "start": "2028-01-16",
+      "end": "2028-01-19",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://soda27.hotcrp.com/deadlines",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-07-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icalp-2027",
+      "name": "ICALP",
+      "full": "EATCS International Colloquium on Automata, Languages and Programming",
+      "edition": "ICALP 2027",
+      "areas": [
+        "theory",
+        "logic"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1972,
+      "url": "https://icalp.uj.edu.pl/",
+      "start": "2027-07-05",
+      "end": "2027-07-09",
+      "location": "Kraków, Poland",
+      "confirmed": false,
+      "source": "https://icalp.uj.edu.pl/track-b/",
+      "deadlines": [
+        {
+          "label": "paper (Track A)",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (Track B round 2)",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ccc-2027",
+      "name": "CCC",
+      "full": "Computational Complexity Conference",
+      "edition": "CCC 2027",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://computationalcomplexity.org/",
+      "start": "2027-07-19",
+      "end": "2027-07-22",
+      "location": "Seattle, USA",
+      "confirmed": false,
+      "source": "https://computationalcomplexity.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "itcs-2028",
+      "name": "ITCS",
+      "full": "Innovations in Theoretical Computer Science",
+      "edition": "ITCS 2028",
+      "areas": [
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2010,
+      "url": "https://itcs-conf.org/",
+      "start": "2028-01-11",
+      "end": "2028-01-14",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://itcs-conf.org/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-01",
+          "tz": "PT",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-09-03",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "lics-2027",
+      "name": "LICS",
+      "full": "ACM/IEEE Symposium on Logic in Computer Science",
+      "edition": "LICS 2027",
+      "areas": [
+        "logic",
+        "theory"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1986,
+      "url": "https://lics.siglog.org/lics27/",
+      "start": "2027-06-21",
+      "end": "2027-06-24",
+      "location": "Montreal, Canada",
+      "confirmed": false,
+      "source": "https://lics.siglog.org/lics27/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-01-21",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cade-2027",
+      "name": "CADE",
+      "full": "International Conference on Automated Deduction",
+      "edition": "CADE-31 (2027)",
+      "areas": [
+        "logic",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1974,
+      "url": "https://fscd-cade.science.ru.nl/",
+      "start": "2027-08-21",
+      "end": "2027-08-27",
+      "location": "Nijmegen, Netherlands",
+      "confirmed": true,
+      "source": "https://fscd-cade.science.ru.nl/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-02-15",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-02-22",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "csl-2028",
+      "name": "CSL",
+      "full": "EACSL Annual Conference on Computer Science Logic",
+      "edition": "CSL 2028",
+      "areas": [
+        "logic"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "B",
+      "since": 1987,
+      "url": "https://www.eacsl.org/",
+      "start": "2028-01-24",
+      "end": "2028-01-28",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://csl2027.github.io/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-07-07",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-07-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "popl-2028",
+      "name": "POPL",
+      "full": "ACM SIGPLAN Symposium on Principles of Programming Languages",
+      "edition": "POPL 2028",
+      "areas": [
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1973,
+      "url": "https://conf.researchr.org/series/popl",
+      "start": "2028-01-09",
+      "end": "2028-01-15",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://popl27.sigplan.org/track/POPL-2027-popl-research-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-07-08",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icfp-2027",
+      "name": "ICFP",
+      "full": "ACM SIGPLAN International Conference on Functional Programming",
+      "edition": "ICFP 2027",
+      "areas": [
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1996,
+      "url": "https://icfp27.sigplan.org/",
+      "start": "2027-09-26",
+      "end": "2027-10-01",
+      "location": "Nijmegen, Netherlands",
+      "confirmed": true,
+      "source": "https://icfp27.sigplan.org/track/icfp-2027-icfp-papers",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-02-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "esop-2027",
+      "name": "ESOP",
+      "full": "European Symposium on Programming",
+      "edition": "ESOP 2027",
+      "areas": [
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://etaps.org/2027/conferences/esop/",
+      "start": "2027-04-12",
+      "end": "2027-04-15",
+      "location": "Copenhagen, Denmark",
+      "confirmed": true,
+      "source": "https://etaps.org/2027/cfp",
+      "deadlines": [
+        {
+          "label": "paper (round 2)",
+          "date": "2026-10-15",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "esop-2028",
+      "name": "ESOP",
+      "full": "European Symposium on Programming",
+      "edition": "ESOP 2028",
+      "areas": [
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://etaps.org/2028",
+      "start": "2028-04-02",
+      "end": "2028-04-07",
+      "location": "Karlsruhe, Germany",
+      "confirmed": false,
+      "source": "https://etaps.org/2028",
+      "deadlines": [
+        {
+          "label": "paper (round 1)",
+          "date": "2027-05-27",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 2)",
+          "date": "2027-10-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ecoop-2027",
+      "name": "ECOOP",
+      "full": "European Conference on Object-Oriented Programming",
+      "edition": "ECOOP 2027",
+      "areas": [
+        "pl",
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1987,
+      "url": "https://2027.ecoop.org/",
+      "start": "2027-06-28",
+      "end": "2027-07-02",
+      "location": "Turin, Italy",
+      "confirmed": true,
+      "source": "https://2027.ecoop.org/track/ecoop-2027-technical-papers",
+      "deadlines": [
+        {
+          "label": "paper (round 1)",
+          "date": "2026-11-19",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (round 2)",
+          "date": "2027-02-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ecoop-2028",
+      "name": "ECOOP",
+      "full": "European Conference on Object-Oriented Programming",
+      "edition": "ECOOP 2028",
+      "areas": [
+        "pl",
+        "se"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1987,
+      "url": "https://conf.researchr.org/series/ecoop",
+      "start": "2028-06-26",
+      "end": "2028-06-30",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://2027.ecoop.org/track/ecoop-2027-technical-papers",
+      "deadlines": [
+        {
+          "label": "paper (round 1)",
+          "date": "2027-11-18",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sas-2027",
+      "name": "SAS",
+      "full": "Static Analysis Symposium",
+      "edition": "SAS 2027",
+      "areas": [
+        "pl",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "B",
+      "since": 1994,
+      "url": "https://www.staticanalysis.org",
+      "start": "2027-10-11",
+      "end": "2027-10-13",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/splash-issta-2026/sas-2026",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-05-07",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "vmcai-2028",
+      "name": "VMCAI",
+      "full": "International Conference on Verification, Model Checking, and Abstract Interpretation",
+      "edition": "VMCAI 2028",
+      "areas": [
+        "verification",
+        "pl"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "B",
+      "since": 2000,
+      "url": "https://conf.researchr.org/series/vmcai",
+      "start": "2028-01-10",
+      "end": "2028-01-11",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://conf.researchr.org/home/VMCAI-2027",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-09-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-09-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "concur-2027",
+      "name": "CONCUR",
+      "full": "International Conference on Concurrency Theory",
+      "edition": "CONCUR 2027",
+      "areas": [
+        "theory",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1990,
+      "url": "https://concurrency-theory.org/events/concur/",
+      "start": "2027-08-31",
+      "end": "2027-09-03",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://lists.seas.upenn.edu/pipermail/types-announce/2025/012219.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-19",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "itp-2027",
+      "name": "ITP",
+      "full": "International Conference on Interactive Theorem Proving",
+      "edition": "ITP 2027",
+      "areas": [
+        "logic",
+        "verification"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2010,
+      "url": "https://itp-conference.github.io/",
+      "start": "2027-09-06",
+      "end": "2027-09-09",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://itp-conference-2026.github.io/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-02-25",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-04",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sat-2027",
+      "name": "SAT",
+      "full": "International Conference on Theory and Applications of Satisfiability Testing",
+      "edition": "SAT 2027",
+      "areas": [
+        "logic",
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1996,
+      "url": "https://satassociation.org/",
+      "start": "2027-08-02",
+      "end": "2027-08-05",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://satlive.org/2025/12/12/sat26-cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cp-2027",
+      "name": "CP",
+      "full": "International Conference on Principles and Practice of Constraint Programming",
+      "edition": "CP 2027",
+      "areas": [
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1995,
+      "url": "https://www.a4cp.org/events/cp-conference-series",
+      "start": "2027-08-23",
+      "end": "2027-08-27",
+      "location": "TBA",
+      "confirmed": false,
+      "source": "https://satlive.org/2026/01/20/cp26-cfp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-12",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-19",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "kr-2027",
+      "name": "KR",
+      "full": "International Conference on Principles of Knowledge Representation and Reasoning",
+      "edition": "KR 2027",
+      "areas": [
+        "ai",
+        "logic"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1989,
+      "url": "https://kr.org/",
+      "start": "2027-11-01",
+      "end": "2027-11-05",
+      "location": "Buenos Aires, Argentina",
+      "confirmed": false,
+      "source": "https://kr.org/KR2026/call_main_track.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-06",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-11",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cvpr-2027",
+      "name": "CVPR",
+      "full": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "edition": "CVPR 2027",
+      "areas": [
+        "cv"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1983,
+      "url": "https://cvpr.thecvf.com/Conferences/2027",
+      "start": "2027-06-20",
+      "end": "2027-06-25",
+      "location": "Seattle, USA",
+      "confirmed": true,
+      "source": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-11-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-11-16",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "iccv-2027",
+      "name": "ICCV",
+      "full": "IEEE/CVF International Conference on Computer Vision",
+      "edition": "ICCV 2027",
+      "areas": [
+        "cv"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1987,
+      "url": "https://iccv.thecvf.com/",
+      "start": "2027-10-02",
+      "end": "2027-10-08",
+      "location": "Hong Kong, China",
+      "confirmed": false,
+      "source": "https://iccv.thecvf.com/Conferences/2025",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "wacv-2028",
+      "name": "WACV",
+      "full": "IEEE/CVF Winter Conference on Applications of Computer Vision",
+      "edition": "WACV 2028",
+      "areas": [
+        "cv"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1992,
+      "url": "https://wacv.thecvf.com/",
+      "start": null,
+      "end": null,
+      "location": "Waikoloa, USA",
+      "confirmed": false,
+      "source": "https://www.thecvf.com/?page_id=100",
+      "deadlines": [
+        {
+          "label": "paper (cycle 1)",
+          "date": "2027-07-09",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (cycle 2)",
+          "date": "2027-09-10",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "bmvc-2027",
+      "name": "BMVC",
+      "full": "British Machine Vision Conference",
+      "edition": "BMVC 2027",
+      "areas": [
+        "cv"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1990,
+      "url": "https://www.bmva.org/bmvc",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://bmvc2026.bmva.org/calls/call-for-papers/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-21",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-28",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icra-2028",
+      "name": "ICRA",
+      "full": "IEEE International Conference on Robotics and Automation",
+      "edition": "ICRA 2028",
+      "areas": [
+        "robotics"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1984,
+      "url": "https://www.ieee-ras.org/conferences-workshops/fully-sponsored/icra",
+      "start": "2028-05-15",
+      "end": "2028-05-19",
+      "location": "Guadalajara, Mexico",
+      "confirmed": false,
+      "source": "https://2027.ieee-icra.org/announcements/call-for-technical-papers/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-09-15",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "iros-2027",
+      "name": "IROS",
+      "full": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "edition": "IROS 2027",
+      "areas": [
+        "robotics"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1988,
+      "url": "https://2027.ieee-iros.org/",
+      "start": "2027-09-26",
+      "end": "2027-10-01",
+      "location": "Florence, Italy",
+      "confirmed": true,
+      "source": "https://www.ieee-ras.org/events/category/deadlines/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-03-01",
+          "tz": "PT",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "rss-2027",
+      "name": "RSS",
+      "full": "Robotics: Science and Systems",
+      "edition": "RSS 2027",
+      "areas": [
+        "robotics"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2005,
+      "url": "https://roboticsconference.org/",
+      "start": "2027-07-06",
+      "end": "2027-07-11",
+      "location": "Athens, Greece",
+      "confirmed": true,
+      "source": "https://roboticsconference.org/information/cfp/",
+      "deadlines": [
+        {
+          "label": "abstract (stage 1)",
+          "date": "2026-12-04",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper (stage 2)",
+          "date": "2027-04-16",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "corl-2027",
+      "name": "CoRL",
+      "full": "Conference on Robot Learning",
+      "edition": "CoRL 2027",
+      "areas": [
+        "robotics",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": null,
+      "since": 2017,
+      "url": "https://www.corl.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://2026.corl.org/contributions/instruction-for-authors",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-24",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-27",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "chi-2028",
+      "name": "CHI",
+      "full": "ACM CHI Conference on Human Factors in Computing Systems",
+      "edition": "CHI 2028",
+      "areas": [
+        "hci"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1982,
+      "url": "https://chi2028.acm.org/",
+      "start": "2028-05-06",
+      "end": "2028-05-12",
+      "location": "Cape Town, South Africa",
+      "confirmed": false,
+      "source": "https://chi2027.acm.org/for-authors/papers/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-09-09",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "uist-2027",
+      "name": "UIST",
+      "full": "ACM Symposium on User Interface Software and Technology",
+      "edition": "UIST 2027",
+      "areas": [
+        "hci"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1988,
+      "url": "https://uist.acm.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://uist.acm.org/2026/cfp",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-30",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-06",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cscw-2027",
+      "name": "CSCW",
+      "full": "ACM Conference on Computer-Supported Cooperative Work and Social Computing",
+      "edition": "CSCW 2027",
+      "areas": [
+        "hci"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1986,
+      "url": "https://cscw.acm.org/2026/rolling.html",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": true,
+      "source": "https://cscw.acm.org/2026/rolling.html",
+      "deadlines": []
+    },
+    {
+      "id": "sigir-2027",
+      "name": "SIGIR",
+      "full": "ACM SIGIR Conference on Research and Development in Information Retrieval",
+      "edition": "SIGIR 2027",
+      "areas": [
+        "ir"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1978,
+      "url": "https://sigir2027.org/",
+      "start": "2027-07-18",
+      "end": "2027-07-24",
+      "location": "San Jose, USA",
+      "confirmed": true,
+      "source": "https://sigir2027.org/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-01-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-01-21",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "www-2027",
+      "name": "WWW",
+      "full": "The ACM Web Conference",
+      "edition": "WWW 2027",
+      "areas": [
+        "ir",
+        "dm"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 1994,
+      "url": "https://www2027.thewebconf.org/",
+      "start": "2027-05-10",
+      "end": "2027-05-14",
+      "location": "Dublin, Ireland",
+      "confirmed": true,
+      "source": "https://www2027.thewebconf.org/?p=296",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2026-10-18",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2026-10-25",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "wsdm-2028",
+      "name": "WSDM",
+      "full": "ACM International Conference on Web Search and Data Mining",
+      "edition": "WSDM 2028",
+      "areas": [
+        "ir",
+        "dm"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2008,
+      "url": "https://www.wsdm-conference.org/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://wsdm-conference.org/2027/cffp.html",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-08-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-08-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "cikm-2027",
+      "name": "CIKM",
+      "full": "ACM International Conference on Information and Knowledge Management",
+      "edition": "CIKM 2027",
+      "areas": [
+        "ir",
+        "dm",
+        "db"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1992,
+      "url": "https://www.cikmconference.org/",
+      "start": "2027-10-25",
+      "end": "2027-10-29",
+      "location": "Sydney, Australia",
+      "confirmed": false,
+      "source": "https://cikm2026.diag.uniroma1.it/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-05-16",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-05-23",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "recsys-2027",
+      "name": "RecSys",
+      "full": "ACM Conference on Recommender Systems",
+      "edition": "RecSys 2027",
+      "areas": [
+        "ir"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2007,
+      "url": "https://recsys.acm.org/recsys27/",
+      "start": "2027-08-23",
+      "end": "2027-08-27",
+      "location": "Honolulu, USA",
+      "confirmed": false,
+      "source": "https://recsys.acm.org/recsys26/call/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-13",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-20",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "icdm-2027",
+      "name": "ICDM",
+      "full": "IEEE International Conference on Data Mining",
+      "edition": "ICDM 2027",
+      "areas": [
+        "dm",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A*",
+      "since": 2001,
+      "url": "https://icdm2027-website.onrender.com/",
+      "start": "2027-11-15",
+      "end": "2027-11-18",
+      "location": "Brisbane, Australia",
+      "confirmed": false,
+      "source": "https://icdm2027-website.onrender.com/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-06-06",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sdm-2027",
+      "name": "SDM",
+      "full": "SIAM International Conference on Data Mining",
+      "edition": "SDM 2027",
+      "areas": [
+        "dm",
+        "ml"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2001,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/",
+      "start": null,
+      "end": null,
+      "location": null,
+      "confirmed": false,
+      "source": "https://www.siam.org/conferences-events/siam-conferences/sdm26/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-04-09",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-04-16",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ecai-2027",
+      "name": "ECAI",
+      "full": "European Conference on Artificial Intelligence",
+      "edition": "ECAI 2027",
+      "areas": [
+        "ai"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 1974,
+      "url": "https://ecai2027.org/",
+      "start": "2027-10-02",
+      "end": "2027-10-07",
+      "location": "Athens, Greece",
+      "confirmed": true,
+      "source": "https://ecai2027.org/",
+      "deadlines": [
+        {
+          "label": "paper",
+          "date": "2027-04-14",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "ecml-pkdd-2027",
+      "name": "ECML-PKDD",
+      "full": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases",
+      "edition": "ECML-PKDD 2027",
+      "areas": [
+        "ml",
+        "dm"
+      ],
+      "type": "conference",
+      "isNew": false,
+      "core": "A",
+      "since": 2001,
+      "url": "https://ecmlpkdd.org/2027/",
+      "start": "2027-08-30",
+      "end": "2027-09-03",
+      "location": "Eindhoven, Netherlands",
+      "confirmed": false,
+      "source": "https://ecmlpkdd.org/2026/submissions-research-track/",
+      "deadlines": [
+        {
+          "label": "abstract",
+          "date": "2027-03-05",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "paper",
+          "date": "2027-03-12",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    }
+  ],
+  "journals": [
+    {
+      "id": "jmlr",
+      "name": "JMLR",
+      "full": "Journal of Machine Learning Research",
+      "areas": [
+        "ml"
+      ],
+      "type": "journal",
+      "publisher": "JMLR (Microtome)",
+      "since": 2000,
+      "url": "https://www.jmlr.org/",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tmlr",
+      "name": "TMLR",
+      "full": "Transactions on Machine Learning Research",
+      "areas": [
+        "ml"
+      ],
+      "type": "journal",
+      "publisher": "JMLR (Microtome)",
+      "since": 2022,
+      "url": "https://jmlr.org/tmlr/",
+      "openAccess": true,
+      "core": null,
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tpami",
+      "name": "TPAMI",
+      "full": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "areas": [
+        "cv",
+        "ml"
+      ],
+      "type": "journal",
+      "publisher": "IEEE Computer Society",
+      "since": 1979,
+      "url": "https://www.computer.org/csdl/journal/tp",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "ijcv",
+      "name": "IJCV",
+      "full": "International Journal of Computer Vision",
+      "areas": [
+        "cv"
+      ],
+      "type": "journal",
+      "publisher": "Springer",
+      "since": 1987,
+      "url": "https://link.springer.com/journal/11263",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "aij",
+      "name": "AIJ",
+      "full": "Artificial Intelligence",
+      "areas": [
+        "ai"
+      ],
+      "type": "journal",
+      "publisher": "Elsevier",
+      "since": 1970,
+      "url": "https://www.sciencedirect.com/journal/artificial-intelligence",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "jair",
+      "name": "JAIR",
+      "full": "Journal of Artificial Intelligence Research",
+      "areas": [
+        "ai"
+      ],
+      "type": "journal",
+      "publisher": "AI Access Foundation",
+      "since": 1993,
+      "url": "https://www.jair.org/",
+      "openAccess": true,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tacl",
+      "name": "TACL",
+      "full": "Transactions of the Association for Computational Linguistics",
+      "areas": [
+        "nlp"
+      ],
+      "type": "journal",
+      "publisher": "MIT Press for the ACL",
+      "since": 2013,
+      "url": "https://transacl.org/",
+      "openAccess": true,
+      "core": null,
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "cl",
+      "name": "CL",
+      "full": "Computational Linguistics",
+      "areas": [
+        "nlp"
+      ],
+      "type": "journal",
+      "publisher": "MIT Press for the ACL",
+      "since": 1974,
+      "url": "https://direct.mit.edu/coli",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "nmi",
+      "name": "NMI",
+      "full": "Nature Machine Intelligence",
+      "areas": [
+        "ml",
+        "ai"
+      ],
+      "type": "journal",
+      "publisher": "Springer Nature",
+      "since": 2019,
+      "url": "https://www.nature.com/natmachintell/",
+      "openAccess": false,
+      "core": null,
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tse",
+      "name": "TSE",
+      "full": "IEEE Transactions on Software Engineering",
+      "areas": [
+        "se"
+      ],
+      "type": "journal",
+      "publisher": "IEEE Computer Society",
+      "since": 1975,
+      "url": "https://www.computer.org/csdl/journal/ts",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tosem",
+      "name": "TOSEM",
+      "full": "ACM Transactions on Software Engineering and Methodology",
+      "areas": [
+        "se"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1992,
+      "url": "https://dl.acm.org/journal/tosem",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "emse",
+      "name": "EMSE",
+      "full": "Empirical Software Engineering",
+      "areas": [
+        "se"
+      ],
+      "type": "journal",
+      "publisher": "Springer",
+      "since": 1996,
+      "url": "https://link.springer.com/journal/10664",
+      "openAccess": false,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "toplas",
+      "name": "TOPLAS",
+      "full": "ACM Transactions on Programming Languages and Systems",
+      "areas": [
+        "pl"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1979,
+      "url": "https://dl.acm.org/journal/toplas",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "fmsd",
+      "name": "FMSD",
+      "full": "Formal Methods in System Design",
+      "areas": [
+        "verification"
+      ],
+      "type": "journal",
+      "publisher": "Springer",
+      "since": 1992,
+      "url": "https://link.springer.com/journal/10703",
+      "openAccess": false,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "jar",
+      "name": "JAR",
+      "full": "Journal of Automated Reasoning",
+      "areas": [
+        "logic",
+        "verification"
+      ],
+      "type": "journal",
+      "publisher": "Springer",
+      "since": 1985,
+      "url": "https://link.springer.com/journal/10817",
+      "openAccess": false,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "lmcs",
+      "name": "LMCS",
+      "full": "Logical Methods in Computer Science",
+      "areas": [
+        "logic",
+        "theory",
+        "pl"
+      ],
+      "type": "journal",
+      "publisher": "LMCS (Episciences)",
+      "since": 2005,
+      "url": "https://lmcs.episciences.org/",
+      "openAccess": true,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "jacm",
+      "name": "JACM",
+      "full": "Journal of the ACM",
+      "areas": [
+        "theory"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1954,
+      "url": "https://dl.acm.org/journal/jacm",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "sicomp",
+      "name": "SICOMP",
+      "full": "SIAM Journal on Computing",
+      "areas": [
+        "theory"
+      ],
+      "type": "journal",
+      "publisher": "SIAM",
+      "since": 1972,
+      "url": "https://epubs.siam.org/journal/smjcat",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tdsc",
+      "name": "TDSC",
+      "full": "IEEE Transactions on Dependable and Secure Computing",
+      "areas": [
+        "security"
+      ],
+      "type": "journal",
+      "publisher": "IEEE Computer Society",
+      "since": 2004,
+      "url": "https://www.computer.org/csdl/journal/tq",
+      "openAccess": false,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tifs",
+      "name": "TIFS",
+      "full": "IEEE Transactions on Information Forensics and Security",
+      "areas": [
+        "security"
+      ],
+      "type": "journal",
+      "publisher": "IEEE Signal Processing Society",
+      "since": 2006,
+      "url": "https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security",
+      "openAccess": false,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tops",
+      "name": "TOPS",
+      "full": "ACM Transactions on Privacy and Security",
+      "areas": [
+        "security"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1998,
+      "url": "https://dl.acm.org/journal/tops",
+      "openAccess": true,
+      "core": "A",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "joc",
+      "name": "JoC",
+      "full": "Journal of Cryptology",
+      "areas": [
+        "crypto"
+      ],
+      "type": "journal",
+      "publisher": "Springer for the IACR",
+      "since": 1988,
+      "url": "https://link.springer.com/journal/145",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tocs",
+      "name": "TOCS",
+      "full": "ACM Transactions on Computer Systems",
+      "areas": [
+        "systems"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1983,
+      "url": "https://dl.acm.org/journal/tocs",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tods",
+      "name": "TODS",
+      "full": "ACM Transactions on Database Systems",
+      "areas": [
+        "db"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1976,
+      "url": "https://dl.acm.org/journal/tods",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "vldbj",
+      "name": "VLDBJ",
+      "full": "The VLDB Journal",
+      "areas": [
+        "db"
+      ],
+      "type": "journal",
+      "publisher": "Springer for the VLDB Endowment",
+      "since": 1992,
+      "url": "https://link.springer.com/journal/778",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "tochi",
+      "name": "TOCHI",
+      "full": "ACM Transactions on Computer-Human Interaction",
+      "areas": [
+        "hci"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1994,
+      "url": "https://dl.acm.org/journal/tochi",
+      "openAccess": true,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "ton",
+      "name": "ToN",
+      "full": "IEEE Transactions on Networking (formerly IEEE/ACM Transactions on Networking)",
+      "areas": [
+        "networks"
+      ],
+      "type": "journal",
+      "publisher": "IEEE",
+      "since": 1993,
+      "url": "https://www.comsoc.org/publications/journals/ieee-tnet",
+      "openAccess": false,
+      "core": "A*",
+      "submission": "Rolling submissions"
+    },
+    {
+      "id": "cacm",
+      "name": "CACM",
+      "full": "Communications of the ACM",
+      "areas": [
+        "theory",
+        "systems",
+        "ai",
+        "se",
+        "security",
+        "hci"
+      ],
+      "type": "journal",
+      "publisher": "ACM",
+      "since": 1958,
+      "url": "https://cacm.acm.org/",
+      "openAccess": true,
+      "core": null,
+      "submission": "See journal website for submission cycles"
+    }
+  ]
+}

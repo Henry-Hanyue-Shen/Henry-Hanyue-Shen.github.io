@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Conference deadlines, a research calendar, and a searchable directory of venues and journals.">
+  <title>Conferences · Hanyue Shen</title>
+  <link rel="stylesheet" href="conferences.css?v=20261015-1">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('conference-theme') || 'light'; } catch {}</script>
+  <script type="module" src="app.js?v=20261015-1"></script>
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to results</a>
+  <header class="site-header wrap">
+    <a class="site-name" href="../">Hanyue Shen</a>
+    <div class="header-actions"><a href="../">Academic homepage <span aria-hidden="true">↗</span></a><button id="theme" class="icon-button" aria-label="Switch to dark mode" title="Change color theme">◐</button></div>
+  </header>
+  <main class="wrap" id="main">
+    <div class="page-title"><h1>Conferences</h1><p>Deadlines, venues &amp; journals</p></div>
+    <div class="workspace">
+      <aside class="sidebar" aria-label="Search and filters">
+        <label class="search-label" for="search">Search venues</label>
+        <input id="search" type="search" placeholder="Name, topic, location…" autocomplete="off">
+        <nav class="view-tabs" aria-label="Conference views">
+          <button data-view="deadlines" aria-pressed="true">Deadlines</button>
+          <button data-view="calendar" aria-pressed="false">Calendar</button>
+          <button data-view="venues" aria-pressed="false">Venues</button>
+          <button data-view="journals" aria-pressed="false">Journals</button>
+        </nav>
+        <details class="filter-drawer" open>
+          <summary>Filters <span aria-hidden="true">⌄</span></summary>
+          <form id="filters">
+            <fieldset><legend>CORE rank</legend><div id="rank-filters" class="rank-options"></div></fieldset>
+            <div id="area-filters"></div>
+            <fieldset id="edition-options"><legend>Include</legend>
+              <label class="check"><input type="checkbox" id="estimated" checked> Estimated dates</label>
+              <label class="check"><input type="checkbox" id="industry"> Industry events</label>
+            </fieldset>
+            <button type="button" id="reset" class="text-button">Reset filters</button>
+          </form>
+        </details>
+        <button id="export" class="export-button">Export deadlines <span aria-hidden="true">↓</span><small>Calendar file (.ics)</small></button>
+        <p id="export-status" class="small" role="status"></p>
+      </aside>
+      <section class="results" id="results" aria-label="Conference results" tabindex="-1">
+        <div class="result-header"><p id="result-count" role="status">Loading directory…</p><p id="timezone"></p></div>
+        <div id="stage"><noscript><p>Enable JavaScript to search this directory and view its calendar.</p></noscript></div>
+        <p class="data-note">Dates marked <em>estimated</em> are provisional. Times are converted to your selected time zone; AoE means UTC−12. Confirm current deadlines on each venue’s website. <span id="snapshot-date"></span></p>
+      </section>
+    </div>
+  </main>
+  <footer class="wrap"><span>Hanyue Shen</span><a href="#main">Back to top ↑</a></footer>
+</body>
+</html>
