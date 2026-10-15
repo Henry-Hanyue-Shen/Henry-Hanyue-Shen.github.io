@@ -108,7 +108,49 @@
     "Theory",
     "Interdisciplinary"
   ],
-  "editions": [],
+  "editions": [
+    {
+      "id": "visapp-2027",
+      "name": "VISAPP",
+      "edition": "VISAPP 2027",
+      "full": "International Conference on Computer Vision Theory and Applications",
+      "type": "conference",
+      "areas": [
+        "cv"
+      ],
+      "core": "B",
+      "coreLabel": "B · CORE 2021",
+      "coreNote": "VISIGRAPP was rated B in CORE 2021. Its ICORE 2026 classification is Multiconference.",
+      "coreSource": "https://portal.core.edu.au/conf-ranks/958/",
+      "submissionNote": "Full paper deadline: October 22, 2026 (AoE), second submission stage.",
+      "confirmed": true,
+      "start": "2027-02-26",
+      "end": "2027-02-28",
+      "location": "Valletta, Malta",
+      "url": "https://visapp.scitevents.org/Home.aspx",
+      "source": "https://visapp.scitevents.org/ImportantDates.aspx",
+      "deadlines": [
+        {
+          "label": "Full paper (2nd stage)",
+          "date": "2026-10-22",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Author notification",
+          "date": "2026-12-04",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready and registration",
+          "date": "2026-12-18",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    }
+  ],
   "journals": [
     {
       "id": "jmlr",

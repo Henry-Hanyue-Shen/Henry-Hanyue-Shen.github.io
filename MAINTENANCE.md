@@ -176,7 +176,7 @@ GitHub 官方参考：[Pages 快速入门](https://docs.github.com/en/pages/quic
 - 左侧可筛选研究领域、CORE 等级、预估日期和行业活动；筛选结果可通过浏览器地址栏的链接分享，筛选偏好也会保存在当前浏览器。
 - **Export deadlines** 下载当前筛选结果中的未来投稿截止时间，格式为 `.ics`，可导入日历。这是一次性文件，不是自动同步订阅。
 - 数据是 **2026-10-15 保存的快照**；倒计时自动变化，但会议日期不会从外部网站自动更新。
-- 按要求，会议和活动条目已于 **2026-10-15** 暂时清空；28 个期刊条目及页面功能保留。以后向 `editions` 添加条目即可重新显示。
+- 初始会议和活动列表已于 **2026-10-15** 清空，目前仅添加 VISAPP 2027；28 个期刊条目保留。VISAPP 的 B 标记依据 VISIGRAPP 的 CORE 2021 评级，并在详情中注明 ICORE 2026 的 Multiconference 分类。
 
 [直接编辑 conferences/data.json](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/conferences/data.json)
 

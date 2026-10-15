@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-2';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-3';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -33,7 +33,7 @@ function eventDates(e) {
   return e.end && e.end !== e.start ? `${calendarDate(e.start)} – ${calendarDate(e.end)}` : calendarDate(e.start);
 }
 function badges(parent, e) {
-  if (e.core) { const badge = node('span', `rank${e.core === 'A*' ? ' top' : ''}`,e.core); badge.title = `CORE rank ${e.core}`; parent.append(badge); }
+  if (e.core) { const badge = node('span', `rank${e.core === 'A*' ? ' top' : ''}`,e.coreLabel || e.core); badge.title = e.coreNote || `CORE rank ${e.core}`; parent.append(badge); }
   if (e.confirmed === false) parent.append(node('span','estimate','estimated'));
   if (e.isNew) parent.append(node('span','estimate','new'));
 }
@@ -41,6 +41,7 @@ function identity(e) {
   const box = node('div','venue-identity');
   const name = node('span','venue-name',e.edition || e.name); badges(name,e); box.append(name);
   box.append(node('span','venue-full',e.full));
+  if (e.submissionNote) box.append(node('p','small',e.submissionNote));
   box.append(node('div','tags',e.areas.map(a=>data.areas[a]?.short || a).join(' · ')));
   return box;
 }
@@ -54,6 +55,7 @@ function download(editions) {
 }
 function detailPanel(e) {
   const panel = node('div','entry-details');
+  if (e.coreNote) { const note=node('p','small',e.coreNote+' '); if(e.coreSource) note.append(link('Ranking record ↗',e.coreSource)); panel.append(note); }
   if (e.deadlines.length) {
     const table = node('table','detail-table');
     const head = node('thead'); const tr = node('tr');
@@ -114,7 +116,8 @@ function renderVenues(editions) {
   for(const [name,list] of [...grouped].sort((a,b)=>a[0].localeCompare(b[0]))) {
     list.sort((a,b)=>(a.start || a.edition).localeCompare(b.start || b.edition)); const first=list[0];
     const article=node('article','directory-entry');
-    const heading=node('h2'); heading.append(link(name,first.url)); badges(heading,{core:first.core}); article.append(heading);
+    const heading=node('h2'); heading.append(link(name,first.url)); badges(heading,{core:first.core,coreLabel:first.coreLabel,coreNote:first.coreNote}); article.append(heading);
+    if(first.coreNote) { const note=node('p','small',first.coreNote+' '); if(first.coreSource) note.append(link('Ranking record ↗',first.coreSource)); article.append(note); }
     article.append(node('p','venue-full',first.full),node('p','tags',first.areas.map(a=>data.areas[a]?.label || a).join(' · ')));
     const editionsList=node('div','edition-list');
     for(const e of list) {
@@ -258,4 +261,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-2').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-3').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
