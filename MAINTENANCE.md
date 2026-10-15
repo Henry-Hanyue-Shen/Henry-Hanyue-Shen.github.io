@@ -173,10 +173,10 @@ GitHub 官方参考：[Pages 快速入门](https://docs.github.com/en/pages/quic
 - **Deadlines**：按下一项尚未截止的投稿时间排序；点击一行可展开各阶段的完整日期、原始时区和官网链接。
 - **Calendar**：按月份显示投稿截止日期与会议日期，用左右箭头切换月份。
 - **Venues / Journals**：搜索会议及期刊目录。
-- 左侧可筛选研究领域、CORE 等级、预估日期和行业活动；筛选结果可通过浏览器地址栏的链接分享，筛选偏好也会保存在当前浏览器。
-- **Export deadlines** 下载当前筛选结果中的未来投稿截止时间，格式为 `.ics`，可导入日历。这是一次性文件，不是自动同步订阅。
+- 左侧提供关键词搜索和视图切换，搜索结果可通过浏览器地址栏的链接分享。评级、领域和类型分类及相关筛选已移除；旧链接中的分类参数不再影响结果。
+- **Export deadlines** 下载当前搜索结果中的未来投稿截止时间，格式为 `.ics`，可导入日历。这是一次性文件，不是自动同步订阅。
 - 数据是 **2026-10-15 保存的快照**；倒计时自动变化，但会议日期不会从外部网站自动更新。
-- 初始会议和活动列表已于 **2026-10-15** 清空，目前仅添加 VISAPP 2027；28 个期刊条目保留。VISAPP 的 B 标记依据 VISIGRAPP 的 CORE 2021 评级，并在详情中注明 ICORE 2026 的 Multiconference 分类。
+- 初始会议和活动列表已于 **2026-10-15** 清空，目前仅添加 VISAPP 2027；28 个期刊条目保留。会议和期刊均不再显示评级或领域分类。
 
 [直接编辑 conferences/data.json](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/conferences/data.json)
 
@@ -186,7 +186,7 @@ GitHub 官方参考：[Pages 快速入门](https://docs.github.com/en/pages/quic
 2. `deadlines` 中的 `date` 使用 `YYYY-MM-DD`；`time` 可选，格式为 `HH:mm`；缺少时间时按该时区当天 23:59:59 处理。
 3. `tz` 支持 `AoE`、`PT`、`ET`、`UTC`、`CET`，也支持 `12:00 PDT`、`13:00 PST` 这种显式写法。`primary: true` 表示投稿相关截止日期；通知日期等可设为 `false`，仍会显示在展开详情中。
 4. 未正式公布的预计日期使用 `confirmed: false`，正式公布后改成 `true`，并更新 `source` 为相应官方页面。
-5. `start` / `end` 为会议当地日历日期；不知道时写 `null`，不要编造。`areas` 使用文件开头定义的领域编号，`core` 可填 `A*` / `A` / `B` / `C` 或 `null`。
+5. `start` / `end` 为会议当地日历日期；不知道时写 `null`，不要编造。无需填写评级、领域或类型分类。
 6. 期刊存放在 `journals` 中。保持 JSON 的英文双引号和逗号格式，最后一项后面不要多加逗号；更新顶层 `snapshotDate`。
 7. 提交到 `main` 后等待 Pages 部署完成，再刷新页面。需要避免缓存时，同步更新 `conferences/index.html`、`app.js` 中资源网址的版本参数。
 

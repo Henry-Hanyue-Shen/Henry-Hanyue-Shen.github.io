@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-3';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-4';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -18,7 +18,6 @@ function button(label, action, className = '') {
 const saved = key => { try { return JSON.parse(localStorage.getItem(key)); } catch { return null; } };
 const save = (key, value) => { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} };
 let data, filters, view, selectedMonth, zone, clock = Date.now();
-const ranks = ['A*','A','B','C','unranked'];
 const views = ['deadlines','calendar','venues','journals'];
 const browserZone = Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC';
 const fmt = (instant, options) => new Intl.DateTimeFormat('en-US', {timeZone:zone,...options}).format(instant);
@@ -33,7 +32,6 @@ function eventDates(e) {
   return e.end && e.end !== e.start ? `${calendarDate(e.start)} – ${calendarDate(e.end)}` : calendarDate(e.start);
 }
 function badges(parent, e) {
-  if (e.core) { const badge = node('span', `rank${e.core === 'A*' ? ' top' : ''}`,e.coreLabel || e.core); badge.title = e.coreNote || `CORE rank ${e.core}`; parent.append(badge); }
   if (e.confirmed === false) parent.append(node('span','estimate','estimated'));
   if (e.isNew) parent.append(node('span','estimate','new'));
 }
@@ -42,12 +40,11 @@ function identity(e) {
   const name = node('span','venue-name',e.edition || e.name); badges(name,e); box.append(name);
   box.append(node('span','venue-full',e.full));
   if (e.submissionNote) box.append(node('p','small',e.submissionNote));
-  box.append(node('div','tags',e.areas.map(a=>data.areas[a]?.short || a).join(' · ')));
   return box;
 }
 function download(editions) {
   const count = editions.reduce((n,e)=>n+openDeadlines(e,clock).length,0);
-  if (!count) { $('#export-status').textContent = 'No future submission deadlines match these filters.'; return; }
+  if (!count) { $('#export-status').textContent = 'No future submission deadlines match this search.'; return; }
   const url = URL.createObjectURL(new Blob([makeCalendar(editions,clock)],{type:'text/calendar;charset=utf-8'}));
   const a = node('a'); a.href = url; a.download = 'research-deadlines.ics'; document.body.append(a); a.click(); a.remove();
   setTimeout(()=>URL.revokeObjectURL(url),10000);
@@ -55,7 +52,6 @@ function download(editions) {
 }
 function detailPanel(e) {
   const panel = node('div','entry-details');
-  if (e.coreNote) { const note=node('p','small',e.coreNote+' '); if(e.coreSource) note.append(link('Ranking record ↗',e.coreSource)); panel.append(note); }
   if (e.deadlines.length) {
     const table = node('table','detail-table');
     const head = node('thead'); const tr = node('tr');
@@ -86,7 +82,7 @@ function empty() {
     box.append(node('h2','','No conferences listed'),node('p','','Conference entries will appear here when added.'));
     return box;
   }
-  const box = node('div','empty'); box.append(node('h2','','No matching results'),node('p','','Try another search or broaden your filters.'),button('Reset filters',reset,'text-button')); return box;
+  const box = node('div','empty'); box.append(node('h2','','No matching results'),node('p','','Try another name or location.'),button('Clear search',reset,'text-button')); return box;
 }
 function renderDeadlines(editions) {
   const rows = editions.map(e=>({e,open:openDeadlines(e,clock)})).filter(x=>x.open.length).sort((a,b)=>deadlineInstant(a.open[0])-deadlineInstant(b.open[0]));
@@ -116,9 +112,8 @@ function renderVenues(editions) {
   for(const [name,list] of [...grouped].sort((a,b)=>a[0].localeCompare(b[0]))) {
     list.sort((a,b)=>(a.start || a.edition).localeCompare(b.start || b.edition)); const first=list[0];
     const article=node('article','directory-entry');
-    const heading=node('h2'); heading.append(link(name,first.url)); badges(heading,{core:first.core,coreLabel:first.coreLabel,coreNote:first.coreNote}); article.append(heading);
-    if(first.coreNote) { const note=node('p','small',first.coreNote+' '); if(first.coreSource) note.append(link('Ranking record ↗',first.coreSource)); article.append(note); }
-    article.append(node('p','venue-full',first.full),node('p','tags',first.areas.map(a=>data.areas[a]?.label || a).join(' · ')));
+    const heading=node('h2'); heading.append(link(name,first.url)); article.append(heading);
+    article.append(node('p','venue-full',first.full));
     const editionsList=node('div','edition-list');
     for(const e of list) {
       const line=node('div','edition-line'); line.append(link(e.edition,e.url));
@@ -134,7 +129,7 @@ function renderJournals(journals) {
   const fragment=document.createDocumentFragment();
   for(const j of [...journals].sort((a,b)=>a.name.localeCompare(b.name))) {
     const article=node('article','directory-entry'); const h=node('h2'); h.append(link(j.name,j.url)); badges(h,j); article.append(h);
-    article.append(node('p','venue-full',j.full),node('p','tags',j.areas.map(a=>data.areas[a]?.label || a).join(' · ')),node('p','journal-meta',`${j.publisher}${j.since ? ` · Since ${j.since}` : ''}`));
+    article.append(node('p','venue-full',j.full),node('p','journal-meta',`${j.publisher}${j.since ? ` · Since ${j.since}` : ''}`));
     article.append(node('p','journal-meta',`${j.submission} · ${j.openAccess ? 'Open access' : 'Check access options with publisher'}`));
     const links=node('div','detail-links'); links.append(link('Journal website ↗',j.url)); article.append(links); fragment.append(article);
   }
@@ -184,7 +179,7 @@ function render() {
   clock=Date.now();
   const editions=data.editions.filter(e=>matches(e,filters));
   document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
-  $('#edition-options').hidden=view==='journals';$('#export').hidden=view==='journals';$('#timezone').hidden=view==='journals'||view==='venues';
+  $('#export').hidden=view==='journals';$('#timezone').hidden=view==='journals'||view==='venues';
   $('#export').disabled=!editions.some(e=>openDeadlines(e,clock).length);
   if(view==='deadlines') renderDeadlines(editions);
   else if(view==='venues') renderVenues(editions);
@@ -194,66 +189,28 @@ function render() {
 function syncUrl() {
   const params=new URLSearchParams();params.set('view',view);
   if(filters.q)params.set('q',filters.q);
-  if(filters.areas.length!==Object.keys(data.areas).length)params.set('areas',filters.areas.join(','));
-  if(filters.ranks.length!==ranks.length)params.set('ranks',filters.ranks.join(','));
-  if(!filters.estimated)params.set('estimated','0');
-  if(filters.industry)params.set('industry','1');
   if(view==='calendar')params.set('month',selectedMonth);
   params.set('tz',zone);
   history.replaceState(null,'',`${location.pathname}?${params}`);
-  save('conference-filters-v1',filters);save('conference-zone',zone);
-}
-function checkbox(text, checked, change, count) {
-  const label=node('label','check');const input=node('input');input.type='checkbox';input.checked=checked;
-  input.addEventListener('change',()=>change(input.checked));label.append(input,node('span','area-name',text));if(count!==undefined)label.append(node('span','area-count',count));return label;
+  save('conference-query',filters.q);save('conference-zone',zone);
 }
 function update(){syncUrl();render();$('#export-status').textContent='';}
-function filterControls() {
-  $('#rank-filters').replaceChildren(...ranks.map(rank=>checkbox(rank,filters.ranks.includes(rank),checked=>{filters.ranks=checked?[...filters.ranks,rank]:filters.ranks.filter(r=>r!==rank);update();})));
-  const groups=document.createDocumentFragment();
-  for(const group of data.groups) {
-    const areaKeys=Object.keys(data.areas).filter(key=>data.areas[key].group===group);const field=node('fieldset');const legend=node('legend','group-heading');legend.append(node('span','',group));
-    const actions=node('span','group-actions');
-    for(const [text,include] of [['All',true],['None',false]]) { const b=button(text,()=>{filters.areas=filters.areas.filter(a=>!areaKeys.includes(a));if(include)filters.areas.push(...areaKeys);filterControls();update();});b.setAttribute('aria-label',`${text} ${group} areas`);actions.append(b); }
-    legend.append(actions);field.append(legend);
-    for(const key of areaKeys) {
-      const count=new Set(data.editions.filter(e=>e.areas.includes(key)&&e.type!=='event').map(e=>e.name)).size;
-      field.append(checkbox(data.areas[key].label,filters.areas.includes(key),checked=>{filters.areas=checked?[...filters.areas,key]:filters.areas.filter(a=>a!==key);update();},count));
-    }
-    groups.append(field);
-  }
-  $('#area-filters').replaceChildren(groups);$('#estimated').checked=filters.estimated;$('#industry').checked=filters.industry;$('#search').value=filters.q;
-}
-function reset(){filters={q:'',areas:Object.keys(data.areas),ranks:[...ranks],estimated:true,industry:false};filterControls();update();}
+function reset(){filters={q:''};$('#search').value='';update();}
 function init() {
-  const params=new URLSearchParams(location.search);const stored=saved('conference-filters-v1');
-  const explicit=[...params.keys()].some(k=>['view','q','areas','ranks','estimated','industry'].includes(k));
-  filters={q:'',areas:Object.keys(data.areas),ranks:[...ranks],estimated:true,industry:false};
-  if(!explicit && stored && typeof stored.q==='string' && Array.isArray(stored.areas) && Array.isArray(stored.ranks)) filters={...filters,...stored};
-  if(params.has('q'))filters.q=params.get('q');
-  if(params.has('areas'))filters.areas=params.get('areas').split(',').filter(a=>a in data.areas);
-  if(params.has('ranks'))filters.ranks=params.get('ranks').split(',').filter(a=>ranks.includes(a));
-  if(params.has('estimated'))filters.estimated=params.get('estimated')!=='0';
-  if(params.has('industry'))filters.industry=params.get('industry')==='1';
+  const params=new URLSearchParams(location.search);const stored=saved('conference-query');
+  filters={q:params.get('q') ?? (params.has('view') ? '' : typeof stored==='string' ? stored : '')};
   view=views.includes(params.get('view'))?params.get('view'):'deadlines';
   zone=params.get('tz')||saved('conference-zone')||browserZone;
   try { new Intl.DateTimeFormat('en-US',{timeZone:zone}).format(); } catch { zone=browserZone; }
   selectedMonth=/^\d{4}-(0[1-9]|1[0-2])$/.test(params.get('month')||'')?params.get('month'):keyDate(clock).slice(0,7);
-  filterControls();
+  $('#search').value=filters.q;
   const zoneSelect=node('select');zoneSelect.setAttribute('aria-label','Display time zone');
   for(const z of new Set([zone,browserZone,'America/New_York','America/Los_Angeles','Europe/London','Asia/Shanghai','UTC'])) {const option=node('option','',z.replaceAll('_',' '));option.value=z;zoneSelect.append(option);}
   zoneSelect.value=zone;zoneSelect.addEventListener('change',()=>{zone=zoneSelect.value;update();});$('#timezone').append('Times in',zoneSelect);
   $('#search').addEventListener('input',()=>{filters.q=$('#search').value;update();});
-  $('#estimated').addEventListener('change',()=>{filters.estimated=$('#estimated').checked;update();});
-  $('#industry').addEventListener('change',()=>{filters.industry=$('#industry').checked;update();});
-  $('#reset').addEventListener('click',reset);
-  $('#filters').addEventListener('submit',e=>e.preventDefault());
   $('#export').addEventListener('click',()=>download(data.editions.filter(e=>matches(e,filters))));
   document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{view=b.dataset.view;update();}));
   $('#snapshot-date').textContent=`Dataset snapshot: ${calendarDate(data.snapshotDate)}.`;
-  const mobile=matchMedia('(max-width: 800px)');
-  $('.filter-drawer').open=!mobile.matches;
-  mobile.addEventListener('change',event=>{$('.filter-drawer').open=!event.matches;});
   syncUrl();render();
   setInterval(()=>{if(view==='deadlines' && !document.querySelector('.entry[open]'))render();},60000);
 }
@@ -261,4 +218,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-3').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-4').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});

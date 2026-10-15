@@ -23,9 +23,7 @@ export function openDeadlines(edition, now = Date.now()) {
   return edition.deadlines.filter(d => d.primary && deadlineInstant(d) > now).sort((a,b) => deadlineInstant(a)-deadlineInstant(b));
 }
 export function matches(item, filters) {
-  return filters.ranks.includes(item.core || 'unranked') && item.areas.some(a => filters.areas.includes(a)) &&
-    (filters.estimated || item.confirmed !== false) && (filters.industry || item.type !== 'event') &&
-    `${item.name} ${item.full} ${item.edition || ''} ${item.location || ''} ${item.publisher || ''} ${item.areas.join(' ')}`.toLowerCase().includes(filters.q.trim().toLowerCase());
+  return `${item.name} ${item.full} ${item.edition || ''} ${item.location || ''} ${item.publisher || ''}`.toLowerCase().includes(filters.q.trim().toLowerCase());
 }
 const icsEscape = value => String(value).replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');
 const utcStamp = ms => new Date(ms).toISOString().replace(/[-:]/g,'').replace(/\.\d{3}Z/,'Z');

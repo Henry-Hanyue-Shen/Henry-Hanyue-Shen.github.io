@@ -1,127 +1,11 @@
 {
   "snapshotDate": "2026-10-15",
-  "areas": {
-    "ai": {
-      "label": "Artificial intelligence",
-      "short": "ai",
-      "group": "AI"
-    },
-    "ml": {
-      "label": "Machine learning",
-      "short": "ml",
-      "group": "AI"
-    },
-    "nlp": {
-      "label": "Natural language",
-      "short": "nlp",
-      "group": "AI"
-    },
-    "cv": {
-      "label": "Computer vision",
-      "short": "vision",
-      "group": "AI"
-    },
-    "agents": {
-      "label": "Agents",
-      "short": "agents",
-      "group": "AI"
-    },
-    "robotics": {
-      "label": "Robotics",
-      "short": "robotics",
-      "group": "AI"
-    },
-    "ir": {
-      "label": "Web and retrieval",
-      "short": "ir",
-      "group": "AI"
-    },
-    "dm": {
-      "label": "Data mining",
-      "short": "data mining",
-      "group": "AI"
-    },
-    "systems": {
-      "label": "Operating and distributed systems",
-      "short": "systems",
-      "group": "Systems"
-    },
-    "arch": {
-      "label": "Computer architecture",
-      "short": "architecture",
-      "group": "Systems"
-    },
-    "networks": {
-      "label": "Networks",
-      "short": "networks",
-      "group": "Systems"
-    },
-    "db": {
-      "label": "Databases",
-      "short": "databases",
-      "group": "Systems"
-    },
-    "security": {
-      "label": "Security and privacy",
-      "short": "security",
-      "group": "Systems"
-    },
-    "se": {
-      "label": "Software engineering",
-      "short": "se",
-      "group": "Systems"
-    },
-    "pl": {
-      "label": "Programming languages",
-      "short": "pl",
-      "group": "Systems"
-    },
-    "verification": {
-      "label": "Formal methods",
-      "short": "formal methods",
-      "group": "Theory"
-    },
-    "theory": {
-      "label": "Algorithms and complexity",
-      "short": "theory",
-      "group": "Theory"
-    },
-    "logic": {
-      "label": "Logic and automated reasoning",
-      "short": "logic",
-      "group": "Theory"
-    },
-    "crypto": {
-      "label": "Cryptography",
-      "short": "crypto",
-      "group": "Theory"
-    },
-    "hci": {
-      "label": "Human-computer interaction",
-      "short": "hci",
-      "group": "Interdisciplinary"
-    }
-  },
-  "groups": [
-    "AI",
-    "Systems",
-    "Theory",
-    "Interdisciplinary"
-  ],
   "editions": [
     {
       "id": "visapp-2027",
       "name": "VISAPP",
       "edition": "VISAPP 2027",
       "full": "International Conference on Computer Vision Theory and Applications",
-      "type": "conference",
-      "areas": [
-        "cv"
-      ],
-      "core": "B",
-      "coreLabel": "B · CORE 2021",
-      "coreNote": "VISIGRAPP was rated B in CORE 2021. Its ICORE 2026 classification is Multiconference.",
-      "coreSource": "https://portal.core.edu.au/conf-ranks/958/",
       "submissionNote": "Full paper deadline: October 22, 2026 (AoE), second submission stage.",
       "confirmed": true,
       "start": "2027-02-26",
@@ -156,430 +40,280 @@
       "id": "jmlr",
       "name": "JMLR",
       "full": "Journal of Machine Learning Research",
-      "areas": [
-        "ml"
-      ],
-      "type": "journal",
       "publisher": "JMLR (Microtome)",
       "since": 2000,
       "url": "https://www.jmlr.org/",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tmlr",
       "name": "TMLR",
       "full": "Transactions on Machine Learning Research",
-      "areas": [
-        "ml"
-      ],
-      "type": "journal",
       "publisher": "JMLR (Microtome)",
       "since": 2022,
       "url": "https://jmlr.org/tmlr/",
       "openAccess": true,
-      "core": null,
       "submission": "Rolling submissions"
     },
     {
       "id": "tpami",
       "name": "TPAMI",
       "full": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-      "areas": [
-        "cv",
-        "ml"
-      ],
-      "type": "journal",
       "publisher": "IEEE Computer Society",
       "since": 1979,
       "url": "https://www.computer.org/csdl/journal/tp",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "ijcv",
       "name": "IJCV",
       "full": "International Journal of Computer Vision",
-      "areas": [
-        "cv"
-      ],
-      "type": "journal",
       "publisher": "Springer",
       "since": 1987,
       "url": "https://link.springer.com/journal/11263",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "aij",
       "name": "AIJ",
       "full": "Artificial Intelligence",
-      "areas": [
-        "ai"
-      ],
-      "type": "journal",
       "publisher": "Elsevier",
       "since": 1970,
       "url": "https://www.sciencedirect.com/journal/artificial-intelligence",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "jair",
       "name": "JAIR",
       "full": "Journal of Artificial Intelligence Research",
-      "areas": [
-        "ai"
-      ],
-      "type": "journal",
       "publisher": "AI Access Foundation",
       "since": 1993,
       "url": "https://www.jair.org/",
       "openAccess": true,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "tacl",
       "name": "TACL",
       "full": "Transactions of the Association for Computational Linguistics",
-      "areas": [
-        "nlp"
-      ],
-      "type": "journal",
       "publisher": "MIT Press for the ACL",
       "since": 2013,
       "url": "https://transacl.org/",
       "openAccess": true,
-      "core": null,
       "submission": "Rolling submissions"
     },
     {
       "id": "cl",
       "name": "CL",
       "full": "Computational Linguistics",
-      "areas": [
-        "nlp"
-      ],
-      "type": "journal",
       "publisher": "MIT Press for the ACL",
       "since": 1974,
       "url": "https://direct.mit.edu/coli",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "nmi",
       "name": "NMI",
       "full": "Nature Machine Intelligence",
-      "areas": [
-        "ml",
-        "ai"
-      ],
-      "type": "journal",
       "publisher": "Springer Nature",
       "since": 2019,
       "url": "https://www.nature.com/natmachintell/",
       "openAccess": false,
-      "core": null,
       "submission": "Rolling submissions"
     },
     {
       "id": "tse",
       "name": "TSE",
       "full": "IEEE Transactions on Software Engineering",
-      "areas": [
-        "se"
-      ],
-      "type": "journal",
       "publisher": "IEEE Computer Society",
       "since": 1975,
       "url": "https://www.computer.org/csdl/journal/ts",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tosem",
       "name": "TOSEM",
       "full": "ACM Transactions on Software Engineering and Methodology",
-      "areas": [
-        "se"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1992,
       "url": "https://dl.acm.org/journal/tosem",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "emse",
       "name": "EMSE",
       "full": "Empirical Software Engineering",
-      "areas": [
-        "se"
-      ],
-      "type": "journal",
       "publisher": "Springer",
       "since": 1996,
       "url": "https://link.springer.com/journal/10664",
       "openAccess": false,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "toplas",
       "name": "TOPLAS",
       "full": "ACM Transactions on Programming Languages and Systems",
-      "areas": [
-        "pl"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1979,
       "url": "https://dl.acm.org/journal/toplas",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "fmsd",
       "name": "FMSD",
       "full": "Formal Methods in System Design",
-      "areas": [
-        "verification"
-      ],
-      "type": "journal",
       "publisher": "Springer",
       "since": 1992,
       "url": "https://link.springer.com/journal/10703",
       "openAccess": false,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "jar",
       "name": "JAR",
       "full": "Journal of Automated Reasoning",
-      "areas": [
-        "logic",
-        "verification"
-      ],
-      "type": "journal",
       "publisher": "Springer",
       "since": 1985,
       "url": "https://link.springer.com/journal/10817",
       "openAccess": false,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "lmcs",
       "name": "LMCS",
       "full": "Logical Methods in Computer Science",
-      "areas": [
-        "logic",
-        "theory",
-        "pl"
-      ],
-      "type": "journal",
       "publisher": "LMCS (Episciences)",
       "since": 2005,
       "url": "https://lmcs.episciences.org/",
       "openAccess": true,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "jacm",
       "name": "JACM",
       "full": "Journal of the ACM",
-      "areas": [
-        "theory"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1954,
       "url": "https://dl.acm.org/journal/jacm",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "sicomp",
       "name": "SICOMP",
       "full": "SIAM Journal on Computing",
-      "areas": [
-        "theory"
-      ],
-      "type": "journal",
       "publisher": "SIAM",
       "since": 1972,
       "url": "https://epubs.siam.org/journal/smjcat",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tdsc",
       "name": "TDSC",
       "full": "IEEE Transactions on Dependable and Secure Computing",
-      "areas": [
-        "security"
-      ],
-      "type": "journal",
       "publisher": "IEEE Computer Society",
       "since": 2004,
       "url": "https://www.computer.org/csdl/journal/tq",
       "openAccess": false,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "tifs",
       "name": "TIFS",
       "full": "IEEE Transactions on Information Forensics and Security",
-      "areas": [
-        "security"
-      ],
-      "type": "journal",
       "publisher": "IEEE Signal Processing Society",
       "since": 2006,
       "url": "https://signalprocessingsociety.org/publications-resources/ieee-transactions-information-forensics-and-security",
       "openAccess": false,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "tops",
       "name": "TOPS",
       "full": "ACM Transactions on Privacy and Security",
-      "areas": [
-        "security"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1998,
       "url": "https://dl.acm.org/journal/tops",
       "openAccess": true,
-      "core": "A",
       "submission": "Rolling submissions"
     },
     {
       "id": "joc",
       "name": "JoC",
       "full": "Journal of Cryptology",
-      "areas": [
-        "crypto"
-      ],
-      "type": "journal",
       "publisher": "Springer for the IACR",
       "since": 1988,
       "url": "https://link.springer.com/journal/145",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tocs",
       "name": "TOCS",
       "full": "ACM Transactions on Computer Systems",
-      "areas": [
-        "systems"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1983,
       "url": "https://dl.acm.org/journal/tocs",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tods",
       "name": "TODS",
       "full": "ACM Transactions on Database Systems",
-      "areas": [
-        "db"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1976,
       "url": "https://dl.acm.org/journal/tods",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "vldbj",
       "name": "VLDBJ",
       "full": "The VLDB Journal",
-      "areas": [
-        "db"
-      ],
-      "type": "journal",
       "publisher": "Springer for the VLDB Endowment",
       "since": 1992,
       "url": "https://link.springer.com/journal/778",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "tochi",
       "name": "TOCHI",
       "full": "ACM Transactions on Computer-Human Interaction",
-      "areas": [
-        "hci"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1994,
       "url": "https://dl.acm.org/journal/tochi",
       "openAccess": true,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "ton",
       "name": "ToN",
       "full": "IEEE Transactions on Networking (formerly IEEE/ACM Transactions on Networking)",
-      "areas": [
-        "networks"
-      ],
-      "type": "journal",
       "publisher": "IEEE",
       "since": 1993,
       "url": "https://www.comsoc.org/publications/journals/ieee-tnet",
       "openAccess": false,
-      "core": "A*",
       "submission": "Rolling submissions"
     },
     {
       "id": "cacm",
       "name": "CACM",
       "full": "Communications of the ACM",
-      "areas": [
-        "theory",
-        "systems",
-        "ai",
-        "se",
-        "security",
-        "hci"
-      ],
-      "type": "journal",
       "publisher": "ACM",
       "since": 1958,
       "url": "https://cacm.acm.org/",
       "openAccess": true,
-      "core": null,
       "submission": "See journal website for submission cycles"
     }
   ]
