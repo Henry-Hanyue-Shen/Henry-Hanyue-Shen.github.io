@@ -232,6 +232,33 @@
           "primary": true
         }
       ]
+    },
+    {
+      "id": "sp-2027-cycle-2",
+      "name": "S&P",
+      "edition": "IEEE S&P 2027 · Cycle 2",
+      "full": "IEEE Symposium on Security and Privacy",
+      "submissionNote": "Second submission cycle: abstract registration November 10, 2026; full paper submission November 17, 2026. Both deadlines are 23:59:59 AoE (UTC-12).",
+      "confirmed": true,
+      "start": "2027-05-17",
+      "end": "2027-05-20",
+      "location": "Le Centre Sheraton Montreal Hotel, Montreal, Canada",
+      "url": "https://sp2027.ieee-security.org/",
+      "source": "https://sp2027.ieee-security.org/cfpapers.html",
+      "deadlines": [
+        {
+          "label": "Abstract registration (Cycle 2)",
+          "date": "2026-11-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper submission (Cycle 2)",
+          "date": "2026-11-17",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
     }
   ],
   "journals": [
