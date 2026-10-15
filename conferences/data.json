@@ -33,6 +33,35 @@
           "primary": false
         }
       ]
+    },
+    {
+      "id": "stoc-2027",
+      "name": "STOC",
+      "edition": "STOC 2027",
+      "full": "59th ACM Symposium on Theory of Computing",
+      "submissionNote": "Paper deadline: November 2, 2026, 23:59 (AoE). AI Day: June 11, 2027.",
+      "confirmed": true,
+      "start": "2027-06-06",
+      "end": "2027-06-10",
+      "location": "Atlanta, Georgia, USA",
+      "url": "https://acm-stoc.org/stoc2027/",
+      "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
+      "deadlines": [
+        {
+          "label": "Paper submission",
+          "date": "2026-11-02",
+          "time": "23:59",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Required video submission",
+          "date": "2026-11-16",
+          "time": "23:59",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
     }
   ],
   "journals": [
