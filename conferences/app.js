@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-1';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-2';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -79,6 +79,11 @@ function countdown(instant) {
   return `in ${Math.floor(hours/24)} days`;
 }
 function empty() {
+  if (view !== 'journals' && !data.editions.length) {
+    const box = node('div','empty');
+    box.append(node('h2','','No conferences listed'),node('p','','Conference entries will appear here when added.'));
+    return box;
+  }
   const box = node('div','empty'); box.append(node('h2','','No matching results'),node('p','','Try another search or broaden your filters.'),button('Reset filters',reset,'text-button')); return box;
 }
 function renderDeadlines(editions) {
@@ -253,4 +258,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-1').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-2').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
