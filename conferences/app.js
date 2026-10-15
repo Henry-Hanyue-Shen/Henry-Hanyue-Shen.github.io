@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-7';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261015-8';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -84,37 +84,25 @@ function empty() {
   }
   const box = node('div','empty'); box.append(node('h2','','No matching results'),node('p','','Try another name or location.'),button('Clear search',reset,'text-button')); return box;
 }
-function deadlineEntry(e, deadlines, past = false) {
-  const instant = deadlineInstant(deadlines[0]);
-  const details = node('details','entry'); details.id = e.id;
-  const summary = node('summary');
-  const date = node('div','deadline-date',fmt(instant,{month:'short',day:'numeric',...(past ? {year:'numeric'} : {})}));
-  date.append(node('span','deadline-time',fmt(instant,{weekday:'short',hour:'numeric',minute:'2-digit'})),node('span','countdown',past ? 'Closed' : countdown(instant)));
-  const info = identity(e); info.append(node('span','expand-hint','Details +'));
-  const milestones = node('div','milestones');
-  for (const d of deadlines.slice(0,3)) { const span=node('span','',`${d.label} · ${fmt(deadlineInstant(d),{month:'short',day:'numeric'})}`); span.title=`${d.date} ${d.time || ''} ${d.tz}`; milestones.append(span); }
-  if(deadlines.length>3) milestones.append(node('span','small',`+${deadlines.length-3} more`));
-  const event=node('div','event-meta',eventDates(e)); if(e.location) event.append(node('em','',e.location));
-  summary.append(date,info,milestones,event); details.append(summary,detailPanel(e));
-  return details;
-}
 function renderDeadlines(editions) {
   const rows = editions.map(e=>({e,open:openDeadlines(e,clock)})).filter(x=>x.open.length).sort((a,b)=>deadlineInstant(a.open[0])-deadlineInstant(b.open[0]));
-  const past = editions.map(e=>({e,deadlines:e.deadlines.filter(d=>d.primary).sort((a,b)=>deadlineInstant(a)-deadlineInstant(b))}))
-    .filter(r=>r.deadlines.length && deadlineInstant(r.deadlines.at(-1))<=clock)
-    .sort((a,b)=>deadlineInstant(b.deadlines.at(-1))-deadlineInstant(a.deadlines.at(-1)));
-  $('#result-count').textContent = `${rows.length} open calls · ${rows.reduce((n,r)=>n+r.open.length,0)} upcoming deadlines${past.length ? ` · ${past.length} past ${past.length === 1 ? 'call' : 'calls'}` : ''}`;
+  $('#result-count').textContent = `${rows.length} open calls · ${rows.reduce((n,r)=>n+r.open.length,0)} upcoming deadlines`;
   let month = ''; const fragment = document.createDocumentFragment();
   for (const {e,open} of rows) {
     const instant = deadlineInstant(open[0]); const group = fmt(instant,{month:'long',year:'numeric'});
     if (month !== group) { fragment.append(node('h2','month-heading',group)); month=group; }
-    fragment.append(deadlineEntry(e,open));
+    const details = node('details','entry'); details.id = e.id;
+    const summary = node('summary');
+    const date = node('div','deadline-date',fmt(instant,{month:'short',day:'numeric'}));
+    date.append(node('span','deadline-time',fmt(instant,{weekday:'short',hour:'numeric',minute:'2-digit'})),node('span','countdown',countdown(instant)));
+    const info = identity(e); info.append(node('span','expand-hint','Details +'));
+    const milestones = node('div','milestones');
+    for (const d of open.slice(0,3)) { const span=node('span','',`${d.label} · ${fmt(deadlineInstant(d),{month:'short',day:'numeric'})}`); span.title=`${d.date} ${d.time || ''} ${d.tz}`; milestones.append(span); }
+    if(open.length>3) milestones.append(node('span','small',`+${open.length-3} more`));
+    const event=node('div','event-meta',eventDates(e)); if(e.location) event.append(node('em','',e.location));
+    summary.append(date,info,milestones,event); details.append(summary,detailPanel(e)); fragment.append(details);
   }
-  if (past.length) {
-    fragment.append(node('h2','month-heading','Past deadlines'));
-    for (const {e,deadlines} of past) fragment.append(deadlineEntry(e,deadlines,true));
-  }
-  $('#stage').replaceChildren(rows.length || past.length ? fragment : empty());
+  $('#stage').replaceChildren(rows.length ? fragment : empty());
 }
 function renderVenues(editions) {
   const grouped=new Map();
@@ -230,4 +218,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261015-7').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261015-8').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
