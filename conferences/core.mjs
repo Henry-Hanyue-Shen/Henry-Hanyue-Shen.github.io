@@ -36,7 +36,7 @@ export function makeCalendar(editions, now = Date.now()) {
   const lines = ['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Hanyue Shen//Conference Calendar//EN','CALSCALE:GREGORIAN','METHOD:PUBLISH','X-WR-CALNAME:Research deadlines'];
   for (const e of editions) for (const d of openDeadlines(e, now)) {
     const start = deadlineInstant(d);
-    lines.push('BEGIN:VEVENT',`UID:${e.id}-${d.date}-${encodeURIComponent(d.label)}@henry-hanyue-shen.github.io`,`DTSTAMP:${utcStamp(now)}`,`DTSTART:${utcStamp(start)}`,`DTEND:${utcStamp(start+60000)}`,`SUMMARY:${icsEscape(`${e.edition}: ${d.label}${e.confirmed ? '' : ' (estimated)'}`)}`,`DESCRIPTION:${icsEscape(`${e.full}\nOriginal deadline: ${d.date} ${d.time || ''} ${d.tz}\n${e.confirmed ? 'Listed date. Check the official website for changes.' : 'Estimated date; not yet confirmed.'}`)}`,`URL:${e.url}`,'END:VEVENT');
+    lines.push('BEGIN:VEVENT',`UID:${e.id}-${d.date}-${encodeURIComponent(d.label)}@henry-hanyue-shen.github.io`,`DTSTAMP:${utcStamp(now)}`,`DTSTART:${utcStamp(start)}`,`DTEND:${utcStamp(start+60000)}`,`SUMMARY:${icsEscape(`${e.edition}: ${d.label}${e.confirmed ? '' : ' (estimated)'}`)}`,`DESCRIPTION:${icsEscape(`${e.full}\nOriginal deadline: ${d.date} ${d.time || ''} ${d.tz}\n${e.confirmed ? 'Listed date. Check the official website for changes.' : 'Estimated date; not yet confirmed.'}${e.submissionNote ? '\n' + e.submissionNote : ''}${e.source ? '\nSource: ' + e.source : ''}`)}`,`URL:${e.url}`,'END:VEVENT');
   }
   lines.push('END:VCALENDAR');
   return lines.map(foldLine).join('\r\n')+'\r\n';

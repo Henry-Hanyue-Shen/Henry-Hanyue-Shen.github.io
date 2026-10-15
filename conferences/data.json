@@ -117,6 +117,34 @@
           "primary": true
         }
       ]
+    },
+    {
+      "id": "mlsys-2027",
+      "name": "MLSys",
+      "edition": "MLSys 2027",
+      "full": "Conference on Machine Learning and Systems",
+      "submissionNote": "Full paper deadline: October 30, 2026, 20:00 UTC per the call for papers. The official dates page lists 19:00 UTC; confirm the time before submitting.",
+      "confirmed": true,
+      "start": "2027-06-21",
+      "end": "2027-06-25",
+      "location": "Bellevue, Washington, USA",
+      "url": "https://mlsys.org/Conferences/2027",
+      "source": "https://mlsys.org/Conferences/2027/CallForResearchPapers",
+      "additionalLinks": [
+        {
+          "label": "Official dates",
+          "url": "https://mlsys.org/Conferences/2027/Dates"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Full paper submission",
+          "date": "2026-10-30",
+          "time": "20:00",
+          "tz": "UTC",
+          "primary": true
+        }
+      ]
     }
   ],
   "journals": [

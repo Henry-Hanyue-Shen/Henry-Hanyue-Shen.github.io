@@ -6,29 +6,34 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Conference deadlines, a research calendar, and a searchable directory of venues and journals.">
   <title>Conferences · Hanyue Shen</title>
-  <link rel="stylesheet" href="conferences.css?v=20261015-9">
+  <link rel="stylesheet" href="../styles.css?v=20261015-10">
+  <link rel="stylesheet" href="conferences.css?v=20261015-10">
   <script>try { document.documentElement.dataset.theme = localStorage.getItem('conference-theme') || 'light'; } catch {}</script>
-  <script type="module" src="app.js?v=20261015-9"></script>
+  <script type="module" src="app.js?v=20261015-10"></script>
 </head>
 <body>
   <a class="skip-link" href="#results">Skip to results</a>
-  <header class="site-header wrap">
+  <header class="site-header">
+    <div class="header-inner">
     <a class="site-name" href="../">Hanyue Shen</a>
-    <div class="header-actions"><a href="../">Academic homepage <span aria-hidden="true">↗</span></a><button id="theme" class="icon-button" aria-label="Switch to dark mode" title="Change color theme">◐</button></div>
+    <div class="header-actions"><a href="../">Academic homepage</a><button id="theme" class="icon-button" aria-label="Switch to dark mode" title="Change color theme">◐</button></div>
+    </div>
   </header>
   <main class="wrap" id="main">
     <div class="page-title"><h1>Conferences</h1><p>Deadlines, venues &amp; journals</p></div>
     <div class="workspace">
-      <aside class="sidebar" aria-label="Search and views">
+      <aside class="directory-controls" aria-label="Search and views">
+        <div class="search-control">
         <label class="search-label" for="search">Search venues</label>
         <input id="search" type="search" placeholder="Name, location, publisher…" autocomplete="off">
+        </div>
         <nav class="view-tabs" aria-label="Conference views">
           <button data-view="deadlines" aria-pressed="true">Deadlines</button>
           <button data-view="calendar" aria-pressed="false">Calendar</button>
           <button data-view="venues" aria-pressed="false">Venues</button>
           <button data-view="journals" aria-pressed="false">Journals</button>
         </nav>
-        <button id="export" class="export-button">Export deadlines <span aria-hidden="true">↓</span><small>Calendar file (.ics)</small></button>
+        <button id="export" class="export-button">Export deadlines <span aria-hidden="true">↓</span><small>.ics calendar file</small></button>
         <p id="export-status" class="small" role="status"></p>
       </aside>
       <section class="results" id="results" aria-label="Conference results" tabindex="-1">
@@ -38,6 +43,6 @@
       </section>
     </div>
   </main>
-  <footer class="wrap"><span>Hanyue Shen</span><a href="#main">Back to top ↑</a></footer>
+  <footer class="site-footer"><div class="footer-inner"><span>Hanyue Shen</span><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
