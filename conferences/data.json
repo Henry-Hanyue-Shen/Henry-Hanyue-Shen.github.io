@@ -62,6 +62,34 @@
           "primary": true
         }
       ]
+    },
+    {
+      "id": "cvpr-2027",
+      "name": "CVPR",
+      "edition": "CVPR 2027",
+      "full": "IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+      "submissionNote": "Paper enrollment: November 10, 2026. Full paper submission: November 16, 2026. Both deadlines are AoE.",
+      "confirmed": true,
+      "start": "2027-06-20",
+      "end": "2027-06-25",
+      "location": "Seattle, Washington, USA",
+      "url": "https://cvpr.thecvf.com/Conferences/2027",
+      "source": "https://cvpr.thecvf.com/Conferences/2027/CallForPapers",
+      "deadlines": [
+        {
+          "label": "Paper enrollment / registration",
+          "date": "2026-11-10",
+          "time": "23:59",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper submission",
+          "date": "2026-11-16",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
     }
   ],
   "journals": [

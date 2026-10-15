@@ -176,7 +176,7 @@ GitHub 官方参考：[Pages 快速入门](https://docs.github.com/en/pages/quic
 - 左侧提供关键词搜索和视图切换，搜索结果可通过浏览器地址栏的链接分享。评级、领域和类型分类及相关筛选已移除；旧链接中的分类参数不再影响结果。
 - **Export deadlines** 下载当前搜索结果中的未来投稿截止时间，格式为 `.ics`，可导入日历。这是一次性文件，不是自动同步订阅。
 - 数据是 **2026-10-15 保存的快照**；倒计时自动变化，但会议日期不会从外部网站自动更新。
-- 初始会议和活动列表已于 **2026-10-15** 清空，目前添加 VISAPP 2027 和 STOC 2027；28 个期刊条目保留。会议和期刊均不再显示评级或领域分类。
+- 初始会议和活动列表已于 **2026-10-15** 清空，目前添加 VISAPP 2027、STOC 2027 和 CVPR 2027；28 个期刊条目保留。会议和期刊均不再显示评级或领域分类。
 
 [直接编辑 conferences/data.json](https://github.com/Henry-Hanyue-Shen/Henry-Hanyue-Shen.github.io/edit/main/conferences/data.json)
 
