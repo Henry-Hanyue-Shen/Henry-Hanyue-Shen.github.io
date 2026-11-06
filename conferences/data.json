@@ -312,6 +312,51 @@
       ]
     },
     {
+      "id": "incc-2027",
+      "name": "INCC",
+      "edition": "INCC 2027",
+      "full": "International Neuromorphic Computing Conference",
+      "submissionNote": "Abstract submission deadline: November 30, 2026. Acceptance notification: January 15, 2027. The official page does not state a time zone; AoE is shown as an assumption.",
+      "confirmed": true,
+      "start": "2027-05-11",
+      "end": "2027-05-13",
+      "location": "Mercure London Earls Court, London, UK",
+      "url": "https://www.incc-conference.com/event/864e59b4-d360-4b1f-bbe2-e9509af66857/summary",
+      "source": "https://www.incc-conference.com/event/864e59b4-d360-4b1f-bbe2-e9509af66857/summary",
+      "additionalLinks": [
+        {
+          "label": "Abstract submission",
+          "url": "https://www-eur.cvent.com/c/abstracts/13b36eba-0a8e-4bc4-ae6d-91d815e26529"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Abstract submission",
+          "date": "2026-11-30",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Acceptance notification",
+          "date": "2027-01-15",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Early bird registration",
+          "date": "2027-03-01",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Regular registration",
+          "date": "2027-05-03",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
       "id": "goc-2027",
       "name": "GOC",
       "edition": "GOC 2027",
