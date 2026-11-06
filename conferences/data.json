@@ -1,5 +1,5 @@
 {
-  "snapshotDate": "2026-10-15",
+  "snapshotDate": "2026-11-06",
   "editions": [
     {
       "id": "visapp-2027",
@@ -257,6 +257,102 @@
           "date": "2026-11-17",
           "tz": "AoE",
           "primary": true
+        }
+      ]
+    },
+    {
+      "id": "lion-2027",
+      "name": "LION",
+      "edition": "LION21 (2027)",
+      "full": "21st Learning and Intelligent Optimization Conference",
+      "submissionNote": "Submission website opens December 1, 2026. Full (long and short) paper deadline: January 31, 2027. Poster-only abstract deadline: March 31, 2027. All times AoE. Proceedings: Springer LNCS.",
+      "confirmed": true,
+      "start": "2027-06-14",
+      "end": "2027-06-17",
+      "location": "Pompeu Fabra University, Barcelona, Spain",
+      "url": "https://lion21.org/",
+      "source": "https://lion21.org/#important",
+      "deadlines": [
+        {
+          "label": "Full paper (long and short)",
+          "date": "2027-01-31",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Author notification",
+          "date": "2027-03-29",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Abstract (poster presentation only)",
+          "date": "2027-03-31",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Abstract notification",
+          "date": "2027-04-07",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Early registration",
+          "date": "2027-04-16",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready papers",
+          "date": "2027-05-20",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "goc-2027",
+      "name": "GOC",
+      "edition": "GOC 2027",
+      "full": "Global Optimization Conference (International Society of Global Optimization)",
+      "submissionNote": "Special session proposals: March 1, 2027. Abstract submission: March 15, 2027. The official page does not state a time zone; AoE is shown as an assumption.",
+      "confirmed": true,
+      "start": "2027-08-23",
+      "end": "2027-08-27",
+      "location": "Vilnius, Lithuania",
+      "url": "https://goc2027.org/",
+      "source": "https://goc2027.org/",
+      "additionalLinks": [
+        {
+          "label": "International Society of Global Optimization",
+          "url": "https://globaloptimization.org/"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Special session proposal",
+          "date": "2027-03-01",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Abstract submission",
+          "date": "2027-03-15",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Notification of acceptance",
+          "date": "2027-04-15",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Author registration",
+          "date": "2027-05-15",
+          "tz": "AoE",
+          "primary": false
         }
       ]
     }
