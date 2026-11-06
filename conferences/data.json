@@ -35,35 +35,6 @@
       ]
     },
     {
-      "id": "stoc-2027",
-      "name": "STOC",
-      "edition": "STOC 2027",
-      "full": "59th ACM Symposium on Theory of Computing",
-      "submissionNote": "Paper deadline: November 2, 2026, 23:59 (AoE). AI Day: June 11, 2027.",
-      "confirmed": true,
-      "start": "2027-06-06",
-      "end": "2027-06-10",
-      "location": "Atlanta, Georgia, USA",
-      "url": "https://acm-stoc.org/stoc2027/",
-      "source": "https://acm-stoc.org/stoc2027/stoc2027-cfp.html",
-      "deadlines": [
-        {
-          "label": "Paper submission",
-          "date": "2026-11-02",
-          "time": "23:59",
-          "tz": "AoE",
-          "primary": true
-        },
-        {
-          "label": "Required video submission",
-          "date": "2026-11-16",
-          "time": "23:59",
-          "tz": "AoE",
-          "primary": true
-        }
-      ]
-    },
-    {
       "id": "cvpr-2027",
       "name": "CVPR",
       "edition": "CVPR 2027",
@@ -306,6 +277,63 @@
         {
           "label": "Camera-ready papers",
           "date": "2027-05-20",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "omae-2027",
+      "name": "OMAE",
+      "edition": "OMAE 2027",
+      "full": "ASME 46th International Conference on Ocean, Offshore and Arctic Engineering",
+      "submissionNote": "Abstract submission: November 24, 2026. Full-length paper for review: January 14, 2027. Final paper: March 22, 2027. The official page does not state a time zone; AoE is shown as an assumption. The page lists the conference as both June 13–17 and June 13–18, 2027 (exhibition June 14–17).",
+      "confirmed": true,
+      "start": "2027-06-13",
+      "end": "2027-06-18",
+      "location": "World Forum, The Hague, Netherlands",
+      "url": "https://event.asme.org/OMAE",
+      "source": "https://event.asme.org/OMAE",
+      "deadlines": [
+        {
+          "label": "Abstract submission",
+          "date": "2026-11-24",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Abstract acceptance notification",
+          "date": "2026-12-01",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Full-length paper for review",
+          "date": "2027-01-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Paper acceptance notification",
+          "date": "2027-02-11",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Revised paper (if required)",
+          "date": "2027-02-25",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Copyright form",
+          "date": "2027-03-18",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Final paper submission",
+          "date": "2027-03-22",
           "tz": "AoE",
           "primary": false
         }
