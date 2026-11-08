@@ -8,6 +8,22 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-10-30",
+    title: "MLSys 2027 · Submission and arXiv preprint",
+    text: "Submitted to MLSys 2027 and posted on arXiv on October 30, 2026. Under peer review.",
+    papers: [
+      {
+        title: "Autoformalization for Ambiguous Inputs: Precision, Coverage, and Cost across SQL and Logical Forms",
+        text: "Coauthored with Xinling Liao (Lfff09), Adarsh Vatsa, and William Eiers (Neurosymbolic Software Engineering Laboratory, Stevens Institute of Technology).",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
+        reference: "arXiv:2611.00340 [cs.SE]",
+        resources: [
+          { label: "arXiv preprint", url: "https://arxiv.org/abs/2611.00340" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-10-07",
     title: "arXiv · New preprint",
     text: "Our preprint is now available on arXiv. First submitted October 7, 2026.",
@@ -27,7 +43,7 @@ window.PROFILE_NEWS = [
   {
     date: "2026-10-06",
     title: "IMDC 2027 · Abstract acceptance",
-    text: "Our abstract was accepted for further development into a full paper for the International Marine Design Conference (IMDC) 2027. We were invited to submit the draft full paper.",
+    text: "Our abstract was accepted for further development into a full paper for the International Marine Design Conference (IMDC) 2027. We were invited to submit the draft full paper, which has since been submitted.",
     papers: [
       {
         title: "Fixed-Prototype Spatial Voting for Visual Sea-State Classification",
