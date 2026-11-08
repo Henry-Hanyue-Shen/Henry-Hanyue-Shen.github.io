@@ -1,7 +1,8 @@
 // Edit this array to add or update announcements. Dates use YYYY-MM-DD.
 // Newest dates appear first; entries on the same day keep their order.
 // A simple entry needs only date and text. The fields below are optional:
-// title, conferenceUrl, inlineLinks, papers, resources.
+// title, conferenceUrl, inlineLinks, papers, resources, accepted.
+// Set accepted: true to show the green acceptance marker on the timeline.
 // Each paper may have title, text, inlineLinks, reference, doi, and resources.
 // Resources use { label: "Slides (PDF)", url: "https://..." }.
 // All text is plain text; HTML is not needed. See MAINTENANCE.md for examples.
@@ -9,6 +10,7 @@
 window.PROFILE_NEWS = [
   {
     date: "2026-11-04",
+    accepted: true,
     title: "IEEE BigData 2026 · CONSTRAINT workshop paper acceptance",
     conferenceUrl: "https://lc4workshop.github.io/constraint.html",
     text: "Accepted to the 4th Workshop on Handling Resource Constraints for/using Big Data and AI (CONSTRAINT 2026), held online with IEEE BigData 2026 on December 14–17, 2026. The date follows the workshop’s official notification date.",
@@ -78,6 +80,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-10-06",
+    accepted: true,
     title: "IMDC 2027 · Abstract acceptance",
     text: "Our abstract was accepted for further development into a full paper for the International Marine Design Conference (IMDC) 2027. We were invited to submit the draft full paper, which has since been submitted.",
     papers: [
@@ -97,6 +100,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-10-01",
+    accepted: true,
     title: "AGU26 · Online poster acceptance",
     text: "Our abstract was accepted for an online poster presentation. Notification received October 1, 2026.",
     papers: [
@@ -112,6 +116,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07-29",
+    accepted: true,
     title: "ASME FEDSM 2026",
     conferenceUrl: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23903",
     text: "Presented in Bellevue, WA. Accepted in the Technical Paper Publication category; pending publication.",
@@ -128,6 +133,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07-27",
+    accepted: true,
     title: "ASME FEDSM 2026",
     conferenceUrl: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23874",
     text: "Presented in Bellevue, WA. Accepted in the Technical Paper Publication category; pending publication.",
@@ -144,6 +150,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07-01",
+    accepted: true,
     title: "IEEE OCEANS 2026 Monterey · Paper acceptances",
     conferenceUrl: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thc6_04",
     text: "Three coauthored papers were accepted to IEEE OCEANS 2026 Monterey. They were not presented at the conference. The date follows the official author-notification schedule.",
@@ -178,6 +185,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-06-23",
+    accepted: true,
     title: "ASME IMECE 2026 · Two paper acceptances",
     text: "Two papers accepted in the Technical Paper Publication category; both pending publication. The date follows ASME’s scheduled draft-paper decision notification.",
     inlineLinks: [{ text: "scheduled draft-paper decision notification", url: "https://imece.secure-platform.com/a/page/publication_schedule" }],
@@ -204,6 +212,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-05-27",
+    accepted: true,
     title: "IEEE OCEANS 2026 Sanya",
     conferenceUrl: "https://program-sanya26.oceanstechnical.org/glance.cfm#:~:text=The%20Critical%20Maneuverability%20Theorem",
     text: "Presented in the Hydrodynamics 1 session in Sanya, China. Published in the conference proceedings.",

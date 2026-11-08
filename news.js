@@ -74,6 +74,7 @@
     const date = el('time', 'news-date', item.date);
     date.dateTime = item.date;
     heading.append(date, el('h3', '', hasText(item.title) ? item.title.trim() : 'Update'));
+    if (item.accepted === true) heading.append(el('span', 'accepted-badge', 'Accepted'));
     header.append(heading);
     const conference = makeLink(item.conferenceUrl, 'Conference program');
     if (conference) header.append(conference);
@@ -141,7 +142,14 @@
     time.dateTime = item.date;
     const papers = (Array.isArray(item.papers) ? item.papers : []).filter(p => p && hasText(p.title));
     const excerpt = papers.length ? papers.map(p => p.title.trim()).join(' · ') : item.text.trim();
-    card.append(el('span', 'timeline-dot'), time,
+    const dot = el('span', 'timeline-dot');
+    if (item.accepted === true) {
+      card.classList.add('is-accepted');
+      dot.textContent = '✓';
+      dot.setAttribute('aria-hidden', 'true');
+      card.setAttribute('aria-label', `Accepted: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
+    }
+    card.append(dot, time,
       el('span', 'timeline-title', hasText(item.title) ? item.title.trim() : 'Update'),
       el('span', 'timeline-excerpt', excerpt),
       el('span', 'timeline-more', papers.length > 1 ? `${papers.length} papers · Details` : 'Details'));

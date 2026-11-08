@@ -5,6 +5,8 @@
   --link: #922b36;
   --link-hover: #621c25;
   --rule: #e7e7e7;
+  --accepted: #2e7d4f;
+  --accepted-soft: #e6f2ea;
   --measure: 840px;
   --font: Optima, Avenir, Calibri, Arial, sans-serif;
   --space-xs: 4px;
@@ -93,6 +95,10 @@ li + li { margin-top: 8px; }
 .timeline-card.is-active .timeline-dot { border-color: var(--link); background: var(--link); transform: scale(1.15); }
 .timeline-card.is-active .timeline-title { color: var(--link); }
 .timeline-card.is-active .timeline-more { visibility: hidden; }
+.timeline-card.is-accepted .timeline-dot { top: -1px; width: 18px; height: 18px; border-color: var(--accepted); background: var(--accepted); color: #fff; font-size: 11px; font-weight: 700; line-height: 14px; text-align: center; }
+.timeline-card.is-accepted.is-active .timeline-dot { background: var(--accepted); box-shadow: 0 0 0 3px var(--background), 0 0 0 5px var(--accepted); transform: none; }
+.accepted-badge { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 999px; background: var(--accepted-soft); color: var(--accepted); font-size: 13px; font-weight: 600; }
+.accepted-badge::before { content: "✓"; }
 .timeline-detail { margin-top: var(--space-sm); padding-top: var(--space-lg); border-top: 1px solid var(--rule); }
 .news-date { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-body { min-width: 0; }
