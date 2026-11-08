@@ -8,6 +8,35 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-11-04",
+    title: "IEEE BigData 2026 · CONSTRAINT workshop paper acceptance",
+    conferenceUrl: "https://lc4workshop.github.io/constraint.html",
+    text: "Accepted to the 4th Workshop on Handling Resource Constraints for/using Big Data and AI (CONSTRAINT 2026), held online with IEEE BigData 2026 on December 14–17, 2026. The date follows the workshop’s official notification date.",
+    papers: [
+      {
+        title: "Precision-Preserving Subtensor Inference for a 22B Joint Audio–Video Generator under a Fixed GPU Working Set",
+        text: "Coauthored with Xinling Liao (Lfff09).",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }]
+      }
+    ]
+  },
+  {
+    date: "2026-11-01",
+    title: "JGR: Atmospheres · Submission and ESS Open Archive preprint",
+    text: "Our manuscript is in submission to JGR: Atmospheres; the preprint was posted on ESS Open Archive on November 1, 2026. It extends the work behind our AGU26 abstract.",
+    papers: [
+      {
+        title: "Spatial Fusion of Himawari Observations and GFS Guidance for 24–72-Hour Regional Cloud-Probability Forecasting",
+        text: "Xinling Liao (Lfff09) and Hanyue Shen.",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
+        doi: "10.22541/essoar.15011397/v1",
+        resources: [
+          { label: "ESS Open Archive preprint", url: "https://essopenarchive.org/doi/full/10.22541/essoar.15011397/v1" }
+        ]
+      }
+    ]
+  },
+  {
     date: "2026-10-30",
     title: "MLSys 2027 · Submission and arXiv preprint",
     text: "Submitted to MLSys 2027 and posted on arXiv on October 30, 2026. Under peer review.",
@@ -22,6 +51,13 @@ window.PROFILE_NEWS = [
         ]
       }
     ]
+  },
+  {
+    date: "2026-10-12",
+    title: "EMO 2027 · Paper submission",
+    conferenceUrl: "https://www.emo2027.org/",
+    text: "Submitted a paper to the International Conference on Evolutionary Multi-Criterion Optimization (EMO 2027), from MA-498 senior research with Pavel B. Dubovski on error bounds for estimating global minimum values from piecewise spline fits to discrete data. Under review. The date follows the official (extended) submission deadline.",
+    inlineLinks: [{ text: "Pavel B. Dubovski", url: "https://www.stevens.edu/profile/pdubovsk" }]
   },
   {
     date: "2026-10-07",
