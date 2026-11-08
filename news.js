@@ -124,7 +124,8 @@
     .filter(x => x && hasText(x.label) && validDate(x.start) && (x.end == null || validDate(x.end)));
 
   // Overview range: from the first update's month to the month after next.
-  const t0 = monthStart(times[0]);
+  const configuredStart = typeof window.PROFILE_TIMELINE_START === 'string' && validDate(window.PROFILE_TIMELINE_START) ? toTime(window.PROFILE_TIMELINE_START) : Infinity;
+  const t0 = monthStart(Math.min(times[0], configuredStart));
   const t1 = addMonths(Math.max(times[times.length - 1], Date.now()), 2);
   const pct = t => `${Math.min(100, Math.max(0, (t - t0) / (t1 - t0) * 100))}%`;
 
@@ -272,7 +273,9 @@
     return [first, Math.min(entries.length - 1, first + count - 1)];
   }
 
+  const monthCount = axis.childElementCount;
   function update() {
+    overview.classList.toggle('is-dense', lanes.clientWidth / monthCount < 50);
     const max = scroller.scrollWidth - scroller.clientWidth;
     earlier.disabled = scroller.scrollLeft <= 2;
     later.disabled = scroller.scrollLeft >= max - 2;

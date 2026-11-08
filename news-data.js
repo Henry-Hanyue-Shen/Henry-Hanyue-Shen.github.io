@@ -298,14 +298,17 @@ window.PROFILE_NEWS = [
   }
 ];
 
-// Experience bars for the synced Gantt track under the timeline.
+// Experience bars for the overview strip above the Updates carousel.
 // short is the row label on the overview strip; end: null means ongoing.
 // Dates use YYYY-MM or YYYY-MM-DD.
-// Lists experiences active from September 2026 onward (from the resume).
+// Lists experiences active from September 2025 onward (from the resume).
+// The overview strip starts at PROFILE_TIMELINE_START (or the first update, if earlier).
+window.PROFILE_TIMELINE_START = "2025-09";
 window.PROFILE_EXPERIENCE = [
   { short: "MA-498 research", label: "MA-498 Senior Research · Dr. Pavel Dubovski", org: "Stevens Institute of Technology", start: "2026-09", end: null },
   { short: "NE-498 research", label: "NE-498 Naval Engineering Research · Dr. Raju Datla", org: "Stevens Institute of Technology", start: "2026-09", end: null },
   { short: "Neurosymbolic Lab RA", label: "Research Assistant · Dr. William Eiers", org: "Neurosymbolic Software Engineering Laboratory", start: "2026-09", end: null },
   { short: "YH Intelligence", label: "Founder", org: "YH Intelligence Technology, Co., Ltd.", start: "2026-07", end: null },
+  { short: "AIRS Fellow", label: "AIRS Fellow · Dr. Jason Rabinovitch", org: "Stevens Institute of Artificial Intelligence", start: "2026-06", end: "2026-08-31" },
   { short: "Electric Boatworks", label: "Unmanned section member", org: "Stevens Electric Boatworks", start: "2025-09", end: null }
 ];
