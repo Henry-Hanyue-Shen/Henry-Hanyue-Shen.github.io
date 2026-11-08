@@ -1,5 +1,5 @@
 // Edit this array to add or update announcements. Dates use YYYY-MM-DD.
-// Newest dates appear first; entries on the same day keep their order.
+// Entries are sorted by date; the timeline runs left (earlier) to right (latest).
 // A simple entry needs only date and text. The fields below are optional:
 // title, conferenceUrl, inlineLinks, papers, resources, accepted.
 // Set accepted: true to show the green acceptance marker on the timeline.
@@ -116,8 +116,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07-29",
-    accepted: true,
-    title: "ASME FEDSM 2026",
+    title: "ASME FEDSM 2026 · Presentation",
     conferenceUrl: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23903",
     text: "Presented in Bellevue, WA. Accepted in the Technical Paper Publication category; pending publication.",
     papers: [
@@ -133,8 +132,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-07-27",
-    accepted: true,
-    title: "ASME FEDSM 2026",
+    title: "ASME FEDSM 2026 · Presentation",
     conferenceUrl: "https://fedsm.secure-platform.com/a/solicitations/278/sessiongallery/23874",
     text: "Presented in Bellevue, WA. Accepted in the Technical Paper Publication category; pending publication.",
     papers: [
@@ -212,8 +210,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-05-27",
-    accepted: true,
-    title: "IEEE OCEANS 2026 Sanya",
+    title: "IEEE OCEANS 2026 Sanya · Presentation and publication",
     conferenceUrl: "https://program-sanya26.oceanstechnical.org/glance.cfm#:~:text=The%20Critical%20Maneuverability%20Theorem",
     text: "Presented in the Hydrodynamics 1 session in Sanya, China. Published in the conference proceedings.",
     papers: [
@@ -227,5 +224,87 @@ window.PROFILE_NEWS = [
         ]
       }
     ]
+  },
+
+  // Submission milestones. Each date is the venue's official submission deadline.
+  {
+    date: "2026-10-01",
+    title: "IEEE BigData 2026 · CONSTRAINT workshop submission",
+    conferenceUrl: "https://lc4workshop.github.io/constraint.html",
+    text: "Workshop paper submitted. The date follows the official workshop paper submission deadline.",
+    papers: [{ title: "Precision-Preserving Subtensor Inference for a 22B Joint Audio–Video Generator under a Fixed GPU Working Set" }]
+  },
+  {
+    date: "2026-10-01",
+    title: "IMDC 2027 · Abstract submission",
+    text: "Abstract submitted to the International Marine Design Conference 2027. The date follows the official abstract submission close; IMDC reviews abstracts on a rolling basis.",
+    papers: [{ title: "Fixed-Prototype Spatial Voting for Visual Sea-State Classification" }],
+    resources: [{ label: "IMDC 2027 key dates", url: "https://sites.mit.edu/imdc" }]
+  },
+  {
+    date: "2026-08-05",
+    title: "AGU26 · Abstract submission",
+    text: "Abstract submitted to the AGU26 Annual Meeting. The date follows the official abstract submission deadline.",
+    papers: [{ title: "Probabilistic Atmospheric Model for Cloud Field Prediction" }]
+  },
+  {
+    date: "2026-05-05",
+    title: "ASME IMECE 2026 · Draft paper submission",
+    text: "Two full-length draft papers submitted. The date follows ASME’s official draft paper submission deadline.",
+    inlineLinks: [{ text: "official draft paper submission deadline", url: "https://imece.secure-platform.com/a/page/publication_schedule" }],
+    papers: [
+      { title: "Complex Spectral Binding Networks for High-Entropy Fluid Dynamics: Solving the Spectral Fidelity Paradox in Atmospheric Gravity Waves" },
+      { title: "A Speed-Gradient Operator for Asymptotic Static State Recovery in Unsteady Viscous Flows" }
+    ]
+  },
+  {
+    date: "2026-05-04",
+    title: "IEEE OCEANS 2026 Monterey · Submission",
+    text: "Three coauthored submissions. The date follows the official abstract submission deadline.",
+    inlineLinks: [{ text: "official abstract submission deadline", url: "https://monterey26.oceansconference.org/important-dates/" }],
+    papers: [
+      { title: "Physics-Regularized Sea State Classification on an 8-Bit Microcontroller" },
+      { title: "An Analytic Acoustic Evaluation of Cavitator Geometries for Supercavitating Vehicles" },
+      { title: "Physics-Regularized ConvLSTM for Long-Lead ENSO Prediction from ERSSTv5" }
+    ]
+  },
+  {
+    date: "2026-03-09",
+    accepted: true,
+    title: "ASME FEDSM 2026 · Two paper acceptances",
+    conferenceUrl: "https://event.asme.org/FEDSM-2026",
+    text: "Two full-length papers accepted in the Technical Paper Publication category. The date follows ASME’s official paper acceptance notification date.",
+    papers: [
+      { title: "One Wing for Two Worlds: A Bio-Inspired Design for Cross-Domain Vehicles", reference: "FEDSM2026-184505" },
+      { title: "Residual Manifolds and Cloud Uncertainty: A Unified Framework for Physical System Prediction Validated in Aerodynamic Coefficient Prediction", reference: "FEDSM2026-184498" }
+    ]
+  },
+  {
+    date: "2026-01-26",
+    title: "ASME FEDSM 2026 · Full paper submission",
+    conferenceUrl: "https://event.asme.org/FEDSM-2026",
+    text: "Two full-length papers submitted for review. The date follows ASME’s official full-length paper submission deadline.",
+    papers: [
+      { title: "One Wing for Two Worlds: A Bio-Inspired Design for Cross-Domain Vehicles" },
+      { title: "Residual Manifolds and Cloud Uncertainty: A Unified Framework for Physical System Prediction Validated in Aerodynamic Coefficient Prediction" }
+    ]
+  },
+  {
+    date: "2026-01",
+    title: "IEEE OCEANS 2026 Sanya · Submission",
+    text: "Submitted to IEEE OCEANS 2026 Sanya. The official site gives the abstract deadline only as January 2026.",
+    inlineLinks: [{ text: "official site", url: "https://sanya26.oceansconference.org/important-dates/" }],
+    papers: [{ title: "The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles" }]
   }
+];
+
+// Experience bars for the synced Gantt track under the timeline.
+// end: null means ongoing. Dates use YYYY-MM or YYYY-MM-DD.
+// Lists experiences active from September 2026 onward (from the resume).
+window.PROFILE_EXPERIENCE = [
+  { label: "MA-498 Senior Research · Dr. Pavel Dubovski", org: "Stevens Institute of Technology", start: "2026-09", end: null },
+  { label: "NE-498 Naval Engineering Research · Dr. Raju Datla", org: "Stevens Institute of Technology", start: "2026-09", end: null },
+  { label: "Research Assistant · Dr. William Eiers", org: "Neurosymbolic Software Engineering Laboratory", start: "2026-09", end: null },
+  { label: "Founder", org: "YH Intelligence Technology, Co., Ltd.", start: "2026-07", end: null },
+  { label: "Unmanned section member", org: "Stevens Electric Boatworks", start: "2025-09", end: null }
 ];

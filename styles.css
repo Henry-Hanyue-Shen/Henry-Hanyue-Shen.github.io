@@ -7,6 +7,7 @@
   --rule: #e7e7e7;
   --accepted: #2e7d4f;
   --accepted-soft: #e6f2ea;
+  --bar: #f4e9eb;
   --measure: 840px;
   --font: Optima, Avenir, Calibri, Arial, sans-serif;
   --space-xs: 4px;
@@ -78,12 +79,29 @@ li + li { margin-top: 8px; }
 .timeline-arrow { width: 44px; height: 44px; border: 1px solid var(--rule); border-radius: 50%; background: var(--background); color: var(--text); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; transition: border-color .15s, color .15s; }
 .timeline-arrow:hover:not(:disabled) { border-color: var(--link); color: var(--link); }
 .timeline-arrow:disabled { color: #c4c4c4; cursor: default; }
-.timeline-arrow:focus-visible, .timeline-card:focus-visible, .timeline-track:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.timeline-track { --gap: var(--space-lg); display: flex; gap: var(--gap); list-style: none; margin: 0; padding: 0 0 var(--space-md); overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: thin; }
+.timeline-arrow:focus-visible, .timeline-card:focus-visible, .timeline-scroll:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.timeline-scroll { --gap: var(--space-lg); position: relative; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; overscroll-behavior-x: contain; scrollbar-width: thin; padding-bottom: var(--space-sm); }
+.timeline-track { display: flex; gap: var(--gap); list-style: none; margin: 0; padding: 0 0 var(--space-md); }
 .timeline-track > li + li { margin-top: 0; }
 .timeline-item { position: relative; flex: 0 0 calc((100% - 2 * var(--gap)) / 3); scroll-snap-align: start; padding-top: 22px; }
 .timeline-item::before { content: ""; position: absolute; top: 7px; left: 0; right: calc(-1 * var(--gap)); border-top: 2px solid var(--rule); }
 .timeline-item:last-child::before { right: 0; }
+/* Experience Gantt: shares the timeline's scroll container and date scale. */
+.gantt { position: relative; overflow: clip; padding-top: var(--space-sm); border-top: 1px dashed var(--rule); }
+.gantt-heading { position: sticky; left: 0; width: max-content; margin: 0 0 var(--space-xs); color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+.gantt-axis { position: relative; height: 22px; border-bottom: 1px solid var(--rule); }
+.gantt-tick { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--rule); }
+.gantt-tick-label { position: absolute; top: 2px; left: 4px; color: var(--muted); font-size: 12px; line-height: 1.4; white-space: nowrap; }
+.gantt-rows { display: grid; gap: 6px; padding: var(--space-sm) 0; }
+.gantt-row { position: relative; height: 28px; }
+.gantt-bar { position: absolute; top: 0; height: 28px; overflow: clip; border-left: 3px solid var(--link); border-radius: 0 6px 6px 0; background: var(--bar); }
+.gantt-bar.starts-earlier { border-left-style: dashed; }
+.gantt-bar.is-ongoing { border-radius: 0; background: linear-gradient(to right, var(--bar) 85%, rgba(146, 43, 54, 0)); }
+.gantt-label { position: sticky; left: 8px; display: inline-block; padding: 0 8px; color: var(--text); font-size: 13px; line-height: 28px; white-space: nowrap; }
+.gantt-label strong { font-weight: 600; }
+.gantt-org, .gantt-since { color: var(--muted); }
+.gantt-today { position: absolute; top: 30px; bottom: 0; border-left: 2px dashed var(--link); pointer-events: none; }
+.gantt-today::before { content: "Today"; position: absolute; top: -2px; left: 4px; color: var(--link); font-size: 12px; font-weight: 600; }
 .timeline-card { display: flex; flex-direction: column; gap: var(--space-xs); width: 100%; height: 100%; padding: 0 0 var(--space-sm); border: 0; background: none; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
 .timeline-dot { position: absolute; top: 2px; left: 0; width: 12px; height: 12px; border: 2px solid var(--muted); border-radius: 50%; background: var(--background); transition: background .15s, border-color .15s, transform .15s; }
 .timeline-date { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
@@ -147,7 +165,9 @@ li + li { margin-top: 8px; }
   .profile-links { font-size: 14px; }
   h2 { margin-bottom: 20px; font-size: 23px; }
   section + section { margin-top: 32px; }
-  .timeline-track { --gap: var(--space-md); }
+  .timeline-scroll { --gap: var(--space-md); }
+  .gantt-org, .gantt-since { display: none; }
+  .gantt-label { font-size: 12px; }
   .timeline-item { flex-basis: 78%; }
   .news-header { display: block; }
   .news-header h3 { font-size: 18px; }
@@ -166,6 +186,8 @@ li + li { margin-top: 8px; }
   section + section { margin-top: 24px; }
   .research-entry, .timeline-detail, .contact-list { break-inside: avoid; }
   .timeline-bar { display: none; }
-  .timeline-track { flex-wrap: wrap; overflow: visible; }
+  .timeline-scroll { overflow: visible; }
+  .timeline-track { flex-wrap: wrap; }
+  .gantt { display: none; }
   a { color: var(--text); text-decoration: underline; }
 }

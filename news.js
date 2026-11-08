@@ -1,7 +1,8 @@
 // Edit news-data.js for content. All supplied text is rendered without HTML.
-// Updates render as a horizontal timeline, newest first: the three most recent
-// fill the visible track, older ones scroll in from the right. Selecting a card
-// shows its full details (papers, references, links) below the track.
+// Updates render as a chronological horizontal timeline: earlier on the left,
+// latest on the right (the view opens at the latest three). A Gantt track of
+// current experience shares the same scroll container and time scale.
+// Selecting a card shows its full details (papers, references, links) below.
 (() => {
   const container = document.getElementById('news-content');
   if (!container) return;
@@ -105,30 +106,45 @@
     return content;
   }
 
+  const DAY = 86400000;
+  const toTime = value => Date.parse(`${value.length === 7 ? `${value}-01` : value}T00:00:00Z`);
+  const fmtMonth = t => new Date(t).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+
   const source = Array.isArray(window.PROFILE_NEWS) ? window.PROFILE_NEWS : [];
+  // Chronological: earlier on the left, latest on the right.
   const entries = source.filter(item => item && validDate(item.date) && hasText(item.text))
     .map((item, order) => ({ item, order }))
-    .sort((a, b) => b.item.date.localeCompare(a.item.date) || a.order - b.order)
+    .sort((a, b) => a.item.date.localeCompare(b.item.date) || a.order - b.order)
     .map(({ item }) => item);
   if (!entries.length) return;
+
+  const experiences = (Array.isArray(window.PROFILE_EXPERIENCE) ? window.PROFILE_EXPERIENCE : [])
+    .filter(x => x && hasText(x.label) && validDate(x.start) && (x.end == null || validDate(x.end)));
 
   const root = el('div', 'timeline');
   const bar = el('div', 'timeline-bar');
   const status = el('p', 'timeline-status');
   status.setAttribute('aria-live', 'polite');
   const nav = el('div', 'timeline-nav');
-  const newer = el('button', 'timeline-arrow', '‹');
-  newer.type = 'button';
-  newer.setAttribute('aria-label', 'Show newer updates');
-  const older = el('button', 'timeline-arrow', '›');
-  older.type = 'button';
-  older.setAttribute('aria-label', 'Show older updates');
-  nav.append(newer, older);
+  const earlier = el('button', 'timeline-arrow', '‹');
+  earlier.type = 'button';
+  earlier.setAttribute('aria-label', 'Show earlier updates');
+  const later = el('button', 'timeline-arrow', '›');
+  later.type = 'button';
+  later.setAttribute('aria-label', 'Show later updates');
+  nav.append(earlier, later);
   bar.append(status, nav);
 
+  // One scroll container holds both tracks, so they always move together.
+  const scroller = el('div', 'timeline-scroll');
+  scroller.tabIndex = 0;
+  scroller.setAttribute('aria-label', 'Updates timeline, earlier on the left. Scroll sideways to move through time.');
   const track = el('ol', 'timeline-track');
-  track.tabIndex = 0;
-  track.setAttribute('aria-label', 'Updates timeline, newest first. Scroll sideways for earlier updates.');
+  const gantt = el('div', 'gantt');
+  gantt.setAttribute('aria-label', 'Current experience, aligned to the same timeline');
+  scroller.append(track);
+  if (experiences.length) scroller.append(gantt);
+
   const detail = el('div', 'timeline-detail');
   detail.id = 'news-detail';
   detail.setAttribute('aria-live', 'polite');
@@ -143,10 +159,10 @@
     const papers = (Array.isArray(item.papers) ? item.papers : []).filter(p => p && hasText(p.title));
     const excerpt = papers.length ? papers.map(p => p.title.trim()).join(' · ') : item.text.trim();
     const dot = el('span', 'timeline-dot');
+    dot.setAttribute('aria-hidden', 'true');
     if (item.accepted === true) {
       card.classList.add('is-accepted');
       dot.textContent = '✓';
-      dot.setAttribute('aria-hidden', 'true');
       card.setAttribute('aria-label', `Accepted: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
     }
     card.append(dot, time,
@@ -166,35 +182,129 @@
       card.setAttribute('aria-expanded', String(active));
     });
     detail.replaceChildren(renderDetail(entries[index]));
-    if (fromUser) cards[index].parentElement.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+    if (fromUser) {
+      const item = cards[index].parentElement;
+      const left = item.offsetLeft, right = left + item.offsetWidth;
+      if (left < scroller.scrollLeft) scroller.scrollTo({ left, behavior: 'smooth' });
+      else if (right > scroller.scrollLeft + scroller.clientWidth) scroller.scrollTo({ left: right - scroller.clientWidth, behavior: 'smooth' });
+    }
+  }
+
+  // Date → x position along the card track. Cards are evenly spaced, so time is
+  // piecewise linear between consecutive card dates; the Gantt uses the same map.
+  function makeScale() {
+    const anchors = [];
+    entries.forEach((item, i) => {
+      const t = toTime(item.date);
+      const x = cards[i].parentElement.offsetLeft;
+      if (!anchors.length || anchors[anchors.length - 1].t !== t) anchors.push({ t, x });
+    });
+    const end = track.scrollWidth;
+    const lastCard = cards[cards.length - 1].parentElement;
+    const tail = { x: lastCard.offsetLeft + lastCard.offsetWidth };
+    const first = anchors[0], last = anchors[anchors.length - 1];
+    const tailSpan = 45 * DAY;
+    tail.t = last.t + tailSpan;
+    return t => {
+      if (t <= first.t) return first.x;
+      if (t >= tail.t) return Math.min(end, tail.x);
+      if (t >= last.t) return last.x + (tail.x - last.x) * (t - last.t) / tailSpan;
+      let i = 1;
+      while (anchors[i].t < t) i += 1;
+      const a = anchors[i - 1], b = anchors[i];
+      return a.x + (b.x - a.x) * (t - a.t) / (b.t - a.t);
+    };
+  }
+
+  function layoutGantt() {
+    if (!experiences.length) return;
+    const x = makeScale();
+    const width = track.scrollWidth;
+    const firstT = toTime(entries[0].date);
+    const rows = el('div', 'gantt-rows');
+    const axis = el('div', 'gantt-axis');
+    gantt.style.width = `${width}px`;
+
+    // Month ticks, skipping labels that would collide.
+    let lastX = -Infinity;
+    const start = new Date(firstT);
+    for (let m = Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 1); ; ) {
+      const px = x(m);
+      if (px >= width - 4) break;
+      const tick = el('span', 'gantt-tick');
+      tick.style.left = `${px}px`;
+      if (px - lastX >= 64) {
+        tick.append(el('span', 'gantt-tick-label', fmtMonth(m)));
+        lastX = px;
+      }
+      axis.append(tick);
+      const d = new Date(m);
+      m = Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1);
+    }
+
+    const today = el('span', 'gantt-today');
+    today.style.left = `${x(Date.now())}px`;
+    today.title = 'Today';
+
+    experiences.forEach(exp => {
+      const s = toTime(exp.start);
+      const ongoing = exp.end == null;
+      const left = x(s);
+      const right = ongoing ? width : x(toTime(exp.end));
+      const barEl = el('div', 'gantt-bar');
+      if (s < firstT) barEl.classList.add('starts-earlier');
+      if (ongoing) barEl.classList.add('is-ongoing');
+      barEl.style.left = `${left}px`;
+      barEl.style.width = `${Math.max(24, right - left)}px`;
+      const since = new Date(s).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+      barEl.title = `${exp.label} — ${exp.org || ''} (${since} – ${ongoing ? 'present' : exp.end})`;
+      const label = el('span', 'gantt-label');
+      label.append(el('strong', '', exp.label));
+      if (hasText(exp.org)) label.append(el('span', 'gantt-org', ` · ${exp.org}`));
+      label.append(el('span', 'gantt-since', ` · since ${since}`));
+      barEl.append(label);
+      const row = el('div', 'gantt-row');
+      row.append(barEl);
+      rows.append(row);
+    });
+    gantt.replaceChildren(el('p', 'gantt-heading', 'Experience'), axis, rows, today);
   }
 
   function step() {
     const items = track.children;
-    if (items.length < 2) return track.clientWidth;
+    if (items.length < 2) return scroller.clientWidth;
     return items[1].offsetLeft - items[0].offsetLeft;
   }
 
   function update() {
-    const max = track.scrollWidth - track.clientWidth;
-    newer.disabled = track.scrollLeft <= 2;
-    older.disabled = track.scrollLeft >= max - 2;
+    const max = scroller.scrollWidth - scroller.clientWidth;
+    earlier.disabled = scroller.scrollLeft <= 2;
+    later.disabled = scroller.scrollLeft >= max - 2;
     const width = step() || 1;
-    const first = Math.min(entries.length, Math.round(track.scrollLeft / width) + 1);
-    const visible = Math.max(1, Math.round(track.clientWidth / width));
+    const first = Math.min(entries.length, Math.round(scroller.scrollLeft / width) + 1);
+    const visible = Math.max(1, Math.round(scroller.clientWidth / width));
     const last = Math.min(entries.length, first + visible - 1);
-    status.textContent = first === 1
-      ? `Latest ${last} of ${entries.length}${last < entries.length ? ' · scroll for earlier updates' : ''}`
-      : `${first}–${last} of ${entries.length}`;
+    status.textContent = last >= entries.length
+      ? `Latest ${visible} of ${entries.length} · scroll left for earlier updates`
+      : `${first}–${last} of ${entries.length} · ${entries[first - 1].date} to ${entries[last - 1].date}`;
   }
 
-  newer.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
-  older.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
-  track.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
-  window.addEventListener('resize', update);
+  earlier.addEventListener('click', () => scroller.scrollBy({ left: -step(), behavior: 'smooth' }));
+  later.addEventListener('click', () => scroller.scrollBy({ left: step(), behavior: 'smooth' }));
+  scroller.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
+  let resizeFrame = 0;
+  window.addEventListener('resize', () => {
+    cancelAnimationFrame(resizeFrame);
+    resizeFrame = requestAnimationFrame(() => { layoutGantt(); update(); });
+  });
 
-  root.append(bar, track, detail);
+  root.append(bar, scroller, detail);
   container.replaceChildren(root);
-  select(0, false);
+  layoutGantt();
+  // Open at the latest updates (right end).
+  scroller.style.scrollBehavior = 'auto';
+  scroller.scrollLeft = scroller.scrollWidth;
+  scroller.style.scrollBehavior = '';
+  select(entries.length - 1, false);
   update();
 })();
