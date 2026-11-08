@@ -86,22 +86,31 @@ li + li { margin-top: 8px; }
 .timeline-item { position: relative; flex: 0 0 calc((100% - 2 * var(--gap)) / 3); scroll-snap-align: start; padding-top: 22px; }
 .timeline-item::before { content: ""; position: absolute; top: 7px; left: 0; right: calc(-1 * var(--gap)); border-top: 2px solid var(--rule); }
 .timeline-item:last-child::before { right: 0; }
-/* Experience Gantt: shares the timeline's scroll container and date scale. */
-.gantt { position: relative; overflow: clip; padding-top: var(--space-sm); border-top: 1px dashed var(--rule); }
-.gantt-heading { position: sticky; left: 0; width: max-content; margin: 0 0 var(--space-xs); color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.gantt-axis { position: relative; height: 22px; border-bottom: 1px solid var(--rule); }
-.gantt-tick { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--rule); }
-.gantt-tick-label { position: absolute; top: 2px; left: 4px; color: var(--muted); font-size: 12px; line-height: 1.4; white-space: nowrap; }
-.gantt-rows { display: grid; gap: 6px; padding: var(--space-sm) 0; }
-.gantt-row { position: relative; height: 28px; }
-.gantt-bar { position: absolute; top: 0; height: 28px; overflow: clip; border-left: 3px solid var(--link); border-radius: 0 6px 6px 0; background: var(--bar); }
-.gantt-bar.starts-earlier { border-left-style: dashed; }
-.gantt-bar.is-ongoing { border-radius: 0; background: linear-gradient(to right, var(--bar) 85%, rgba(146, 43, 54, 0)); }
-.gantt-label { position: sticky; left: 8px; display: inline-block; padding: 0 8px; color: var(--text); font-size: 13px; line-height: 28px; white-space: nowrap; }
-.gantt-label strong { font-weight: 600; }
-.gantt-org, .gantt-since { color: var(--muted); }
-.gantt-today { position: absolute; top: 30px; bottom: 0; border-left: 2px dashed var(--link); pointer-events: none; }
-.gantt-today::before { content: "Today"; position: absolute; top: -2px; left: 4px; color: var(--link); font-size: 12px; font-weight: 600; }
+/* Compact overview strip: linear time, paper milestones, experience bars, view window. */
+.overview { display: grid; grid-template-columns: 132px minmax(0, 1fr); column-gap: var(--space-sm); margin: 0 0 30px; }
+.ov-labels, .ov-lanes { display: flex; flex-direction: column; gap: 3px; }
+.ov-lanes { position: relative; cursor: pointer; touch-action: pan-y; user-select: none; }
+.ov-row { position: relative; height: 16px; }
+.ov-axis { height: 20px; border-bottom: 1px solid var(--rule); }
+.ov-events { height: 24px; }
+.ov-label { height: 16px; overflow: hidden; color: var(--muted); font-size: 12px; line-height: 16px; white-space: nowrap; text-overflow: ellipsis; }
+.ov-label-axis { height: 20px; }
+.ov-labels > .ov-label:nth-child(2) { height: 24px; line-height: 24px; color: var(--text); font-weight: 600; }
+.ov-tick { position: absolute; top: 0; bottom: 0; border-left: 1px solid var(--rule); }
+.ov-tick-label { position: absolute; top: 1px; left: 3px; color: var(--muted); font-size: 11px; line-height: 1.4; white-space: nowrap; }
+.ov-dot { position: absolute; top: 50%; width: 10px; height: 10px; padding: 0; border: 2px solid var(--muted); border-radius: 50%; background: var(--background); transform: translate(-50%, -50%); cursor: pointer; transition: transform .15s, border-color .15s; z-index: 1; }
+.ov-dot::after { content: ""; position: absolute; inset: -6px; }
+.ov-dot.in-view { border-color: var(--text); }
+.ov-dot.is-accepted { border-color: var(--accepted); background: var(--accepted); }
+.ov-dot:hover, .ov-dot:focus-visible { transform: translate(-50%, -50%) scale(1.35); outline: none; }
+.ov-dot.is-active { transform: translate(-50%, -50%) scale(1.45); border-color: var(--link); box-shadow: 0 0 0 2px var(--background), 0 0 0 3px var(--link); z-index: 2; }
+.ov-dot.is-accepted.is-active { border-color: var(--accepted); box-shadow: 0 0 0 2px var(--background), 0 0 0 3px var(--accepted); }
+.ov-bar { position: absolute; top: 3px; height: 10px; border-radius: 5px; background: var(--link); opacity: .55; }
+.ov-bar.starts-earlier { border-top-left-radius: 0; border-bottom-left-radius: 0; }
+.ov-bar.is-ongoing { border-top-right-radius: 0; border-bottom-right-radius: 0; background: linear-gradient(to right, var(--link) 70%, rgba(146, 43, 54, 0)); }
+.ov-today { position: absolute; top: 0; bottom: 0; border-left: 2px dotted var(--link); pointer-events: none; }
+.ov-today::after { content: "Today"; position: absolute; bottom: -17px; left: -15px; color: var(--link); font-size: 11px; font-weight: 600; }
+.ov-brush { position: absolute; top: 0; bottom: 0; border: 1px solid rgba(146, 43, 54, .35); border-radius: 4px; background: rgba(146, 43, 54, .07); pointer-events: none; transition: left .2s, width .2s; }
 .timeline-card { display: flex; flex-direction: column; gap: var(--space-xs); width: 100%; height: 100%; padding: 0 0 var(--space-sm); border: 0; background: none; color: var(--text); font: inherit; text-align: left; cursor: pointer; }
 .timeline-dot { position: absolute; top: 2px; left: 0; width: 12px; height: 12px; border: 2px solid var(--muted); border-radius: 50%; background: var(--background); transition: background .15s, border-color .15s, transform .15s; }
 .timeline-date { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
@@ -166,8 +175,9 @@ li + li { margin-top: 8px; }
   h2 { margin-bottom: 20px; font-size: 23px; }
   section + section { margin-top: 32px; }
   .timeline-scroll { --gap: var(--space-md); }
-  .gantt-org, .gantt-since { display: none; }
-  .gantt-label { font-size: 12px; }
+  .overview { grid-template-columns: 84px minmax(0, 1fr); }
+  .ov-label { font-size: 11px; }
+  .ov-tick.is-odd .ov-tick-label { display: none; }
   .timeline-item { flex-basis: 78%; }
   .news-header { display: block; }
   .news-header h3 { font-size: 18px; }
@@ -188,6 +198,6 @@ li + li { margin-top: 8px; }
   .timeline-bar { display: none; }
   .timeline-scroll { overflow: visible; }
   .timeline-track { flex-wrap: wrap; }
-  .gantt { display: none; }
+  .overview { display: none; }
   a { color: var(--text); text-decoration: underline; }
 }

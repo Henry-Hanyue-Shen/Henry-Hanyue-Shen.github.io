@@ -1,8 +1,8 @@
 // Edit news-data.js for content. All supplied text is rendered without HTML.
-// Updates render as a chronological horizontal timeline: earlier on the left,
-// latest on the right (the view opens at the latest three). A Gantt track of
-// current experience shares the same scroll container and time scale.
-// Selecting a card shows its full details (papers, references, links) below.
+// Updates render as a compact overview strip (linear time: paper milestones and
+// current experience bars) above a chronological card carousel, earlier on the
+// left. The strip highlights the cards in view; click or drag it to navigate.
+// Selecting a card or dot shows its full details below.
 (() => {
   const container = document.getElementById('news-content');
   if (!container) return;
@@ -105,10 +105,11 @@
     appendResources(content, resources, `Resources for ${item.title || item.date}`);
     return content;
   }
-
   const DAY = 86400000;
   const toTime = value => Date.parse(`${value.length === 7 ? `${value}-01` : value}T00:00:00Z`);
-  const fmtMonth = t => new Date(t).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+  const monthStart = t => { const d = new Date(t); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 1); };
+  const addMonths = (t, n) => { const d = new Date(t); return Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + n, 1); };
+  const fmt = (t, opts) => new Date(t).toLocaleDateString('en-US', { timeZone: 'UTC', ...opts });
 
   const source = Array.isArray(window.PROFILE_NEWS) ? window.PROFILE_NEWS : [];
   // Chronological: earlier on the left, latest on the right.
@@ -117,11 +118,81 @@
     .sort((a, b) => a.item.date.localeCompare(b.item.date) || a.order - b.order)
     .map(({ item }) => item);
   if (!entries.length) return;
+  const times = entries.map(item => toTime(item.date));
 
   const experiences = (Array.isArray(window.PROFILE_EXPERIENCE) ? window.PROFILE_EXPERIENCE : [])
     .filter(x => x && hasText(x.label) && validDate(x.start) && (x.end == null || validDate(x.end)));
 
+  // Overview range: from the first update's month to the month after next.
+  const t0 = monthStart(times[0]);
+  const t1 = addMonths(Math.max(times[times.length - 1], Date.now()), 2);
+  const pct = t => `${Math.min(100, Math.max(0, (t - t0) / (t1 - t0) * 100))}%`;
+
   const root = el('div', 'timeline');
+  const detail = el('div', 'timeline-detail');
+  detail.id = 'news-detail';
+  detail.setAttribute('aria-live', 'polite');
+
+  // ---- Compact overview: linear time axis, paper events, experience bars ----
+  const overview = el('div', 'overview');
+  const lanes = el('div', 'ov-lanes');
+  const labels = el('div', 'ov-labels');
+  overview.append(labels, lanes);
+
+  const axis = el('div', 'ov-row ov-axis');
+  labels.append(el('span', 'ov-label ov-label-axis', ''));
+  for (let m = t0, k = 0; m < t1; m = addMonths(m, 1), k += 1) {
+    const tick = el('span', k % 2 ? 'ov-tick is-odd' : 'ov-tick');
+    tick.style.left = pct(m);
+    const month = new Date(m).getUTCMonth();
+    tick.append(el('span', 'ov-tick-label', month === 0 || m === t0 ? fmt(m, { month: 'short', year: '2-digit' }).replace(' ', ' ’') : fmt(m, { month: 'short' })));
+    axis.append(tick);
+  }
+  lanes.append(axis);
+
+  const eventRow = el('div', 'ov-row ov-events');
+  labels.append(el('span', 'ov-label', 'Papers'));
+  const dots = entries.map((item, index) => {
+    const dot = el('button', 'ov-dot');
+    dot.type = 'button';
+    dot.style.left = pct(times[index]);
+    if (item.accepted === true) dot.classList.add('is-accepted');
+    const name = `${item.date} · ${hasText(item.title) ? item.title.trim() : 'Update'}`;
+    dot.title = name;
+    dot.setAttribute('aria-label', `${item.accepted === true ? 'Accepted: ' : ''}${name}`);
+    dot.addEventListener('click', event => { event.stopPropagation(); select(index, true); });
+    eventRow.append(dot);
+    return dot;
+  });
+  lanes.append(eventRow);
+
+  for (const exp of experiences) {
+    const s = toTime(exp.start);
+    const ongoing = exp.end == null;
+    const e = ongoing ? t1 : toTime(exp.end);
+    const row = el('div', 'ov-row');
+    const barEl = el('span', 'ov-bar');
+    if (s < t0) barEl.classList.add('starts-earlier');
+    if (ongoing) barEl.classList.add('is-ongoing');
+    barEl.style.left = pct(s);
+    barEl.style.right = `calc(100% - ${pct(e)})`;
+    const since = fmt(s, { month: 'short', year: 'numeric' });
+    const tip = `${exp.label}${hasText(exp.org) ? ` — ${exp.org}` : ''} · ${since} – ${ongoing ? 'present' : fmt(toTime(exp.end), { month: 'short', year: 'numeric' })}`;
+    barEl.title = tip;
+    row.append(barEl);
+    lanes.append(row);
+    const label = el('span', 'ov-label', hasText(exp.short) ? exp.short : exp.label.split(' · ')[0]);
+    label.title = tip;
+    labels.append(label);
+  }
+
+  const today = el('span', 'ov-today');
+  today.style.left = pct(Date.now());
+  today.title = `Today · ${fmt(Date.now(), { month: 'short', day: 'numeric', year: 'numeric' })}`;
+  const brush = el('span', 'ov-brush');
+  lanes.append(today, brush);
+
+  // ---- Card carousel ----
   const bar = el('div', 'timeline-bar');
   const status = el('p', 'timeline-status');
   status.setAttribute('aria-live', 'polite');
@@ -135,19 +206,11 @@
   nav.append(earlier, later);
   bar.append(status, nav);
 
-  // One scroll container holds both tracks, so they always move together.
   const scroller = el('div', 'timeline-scroll');
   scroller.tabIndex = 0;
-  scroller.setAttribute('aria-label', 'Updates timeline, earlier on the left. Scroll sideways to move through time.');
+  scroller.setAttribute('aria-label', 'Updates, earlier on the left. Scroll sideways to move through time.');
   const track = el('ol', 'timeline-track');
-  const gantt = el('div', 'gantt');
-  gantt.setAttribute('aria-label', 'Current experience, aligned to the same timeline');
   scroller.append(track);
-  if (experiences.length) scroller.append(gantt);
-
-  const detail = el('div', 'timeline-detail');
-  detail.id = 'news-detail';
-  detail.setAttribute('aria-live', 'polite');
 
   const cards = entries.map((item, index) => {
     const li = el('li', 'timeline-item');
@@ -175,99 +238,25 @@
     return card;
   });
 
+  function scrollToIndex(index, smooth) {
+    const item = cards[index].parentElement;
+    const target = item.offsetLeft - (scroller.clientWidth - item.offsetWidth) / 2;
+    scroller.scrollTo({ left: Math.max(0, target), behavior: smooth ? 'smooth' : 'auto' });
+  }
+
   function select(index, fromUser) {
     cards.forEach((card, i) => {
       const active = i === index;
       card.classList.toggle('is-active', active);
       card.setAttribute('aria-expanded', String(active));
+      dots[i].classList.toggle('is-active', active);
     });
     detail.replaceChildren(renderDetail(entries[index]));
     if (fromUser) {
       const item = cards[index].parentElement;
       const left = item.offsetLeft, right = left + item.offsetWidth;
-      if (left < scroller.scrollLeft) scroller.scrollTo({ left, behavior: 'smooth' });
-      else if (right > scroller.scrollLeft + scroller.clientWidth) scroller.scrollTo({ left: right - scroller.clientWidth, behavior: 'smooth' });
+      if (left < scroller.scrollLeft || right > scroller.scrollLeft + scroller.clientWidth) scrollToIndex(index, true);
     }
-  }
-
-  // Date → x position along the card track. Cards are evenly spaced, so time is
-  // piecewise linear between consecutive card dates; the Gantt uses the same map.
-  function makeScale() {
-    const anchors = [];
-    entries.forEach((item, i) => {
-      const t = toTime(item.date);
-      const x = cards[i].parentElement.offsetLeft;
-      if (!anchors.length || anchors[anchors.length - 1].t !== t) anchors.push({ t, x });
-    });
-    const end = track.scrollWidth;
-    const lastCard = cards[cards.length - 1].parentElement;
-    const tail = { x: lastCard.offsetLeft + lastCard.offsetWidth };
-    const first = anchors[0], last = anchors[anchors.length - 1];
-    const tailSpan = 45 * DAY;
-    tail.t = last.t + tailSpan;
-    return t => {
-      if (t <= first.t) return first.x;
-      if (t >= tail.t) return Math.min(end, tail.x);
-      if (t >= last.t) return last.x + (tail.x - last.x) * (t - last.t) / tailSpan;
-      let i = 1;
-      while (anchors[i].t < t) i += 1;
-      const a = anchors[i - 1], b = anchors[i];
-      return a.x + (b.x - a.x) * (t - a.t) / (b.t - a.t);
-    };
-  }
-
-  function layoutGantt() {
-    if (!experiences.length) return;
-    const x = makeScale();
-    const width = track.scrollWidth;
-    const firstT = toTime(entries[0].date);
-    const rows = el('div', 'gantt-rows');
-    const axis = el('div', 'gantt-axis');
-    gantt.style.width = `${width}px`;
-
-    // Month ticks, skipping labels that would collide.
-    let lastX = -Infinity;
-    const start = new Date(firstT);
-    for (let m = Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 1); ; ) {
-      const px = x(m);
-      if (px >= width - 4) break;
-      const tick = el('span', 'gantt-tick');
-      tick.style.left = `${px}px`;
-      if (px - lastX >= 64) {
-        tick.append(el('span', 'gantt-tick-label', fmtMonth(m)));
-        lastX = px;
-      }
-      axis.append(tick);
-      const d = new Date(m);
-      m = Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1);
-    }
-
-    const today = el('span', 'gantt-today');
-    today.style.left = `${x(Date.now())}px`;
-    today.title = 'Today';
-
-    experiences.forEach(exp => {
-      const s = toTime(exp.start);
-      const ongoing = exp.end == null;
-      const left = x(s);
-      const right = ongoing ? width : x(toTime(exp.end));
-      const barEl = el('div', 'gantt-bar');
-      if (s < firstT) barEl.classList.add('starts-earlier');
-      if (ongoing) barEl.classList.add('is-ongoing');
-      barEl.style.left = `${left}px`;
-      barEl.style.width = `${Math.max(24, right - left)}px`;
-      const since = new Date(s).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
-      barEl.title = `${exp.label} — ${exp.org || ''} (${since} – ${ongoing ? 'present' : exp.end})`;
-      const label = el('span', 'gantt-label');
-      label.append(el('strong', '', exp.label));
-      if (hasText(exp.org)) label.append(el('span', 'gantt-org', ` · ${exp.org}`));
-      label.append(el('span', 'gantt-since', ` · since ${since}`));
-      barEl.append(label);
-      const row = el('div', 'gantt-row');
-      row.append(barEl);
-      rows.append(row);
-    });
-    gantt.replaceChildren(el('p', 'gantt-heading', 'Experience'), axis, rows, today);
   }
 
   function step() {
@@ -276,31 +265,57 @@
     return items[1].offsetLeft - items[0].offsetLeft;
   }
 
+  function visibleRange() {
+    const width = step() || 1;
+    const first = Math.min(entries.length - 1, Math.max(0, Math.round(scroller.scrollLeft / width)));
+    const count = Math.max(1, Math.round(scroller.clientWidth / width));
+    return [first, Math.min(entries.length - 1, first + count - 1)];
+  }
+
   function update() {
     const max = scroller.scrollWidth - scroller.clientWidth;
     earlier.disabled = scroller.scrollLeft <= 2;
     later.disabled = scroller.scrollLeft >= max - 2;
-    const width = step() || 1;
-    const first = Math.min(entries.length, Math.round(scroller.scrollLeft / width) + 1);
-    const visible = Math.max(1, Math.round(scroller.clientWidth / width));
-    const last = Math.min(entries.length, first + visible - 1);
-    status.textContent = last >= entries.length
-      ? `Latest ${visible} of ${entries.length} · scroll left for earlier updates`
-      : `${first}–${last} of ${entries.length} · ${entries[first - 1].date} to ${entries[last - 1].date}`;
+    const [a, b] = visibleRange();
+    status.textContent = b >= entries.length - 1
+      ? `Latest ${b - a + 1} of ${entries.length} · scroll left for earlier updates`
+      : `${a + 1}–${b + 1} of ${entries.length} · ${entries[a].date} to ${entries[b].date}`;
+    // Highlight the visible cards' time window on the overview.
+    const left = (times[a] - t0) / (t1 - t0) * 100;
+    const right = (times[b] - t0) / (t1 - t0) * 100;
+    const pad = 0.8;
+    brush.style.left = `${Math.max(0, left - pad)}%`;
+    brush.style.width = `${Math.max(2, right - left + 2 * pad)}%`;
+    dots.forEach((dot, i) => dot.classList.toggle('in-view', i >= a && i <= b));
   }
+
+  // Click or drag on the overview to move the carousel to that date.
+  function indexAt(clientX) {
+    const rect = lanes.getBoundingClientRect();
+    const t = t0 + (clientX - rect.left) / rect.width * (t1 - t0);
+    let best = 0;
+    times.forEach((time, i) => { if (Math.abs(time - t) < Math.abs(times[best] - t)) best = i; });
+    return best;
+  }
+  let dragging = false;
+  lanes.addEventListener('pointerdown', event => {
+    if (event.target.closest('.ov-dot')) return;
+    dragging = true;
+    lanes.setPointerCapture(event.pointerId);
+    scrollToIndex(indexAt(event.clientX), true);
+  });
+  lanes.addEventListener('pointermove', event => { if (dragging) scrollToIndex(indexAt(event.clientX), false); });
+  const stop = () => { dragging = false; };
+  lanes.addEventListener('pointerup', stop);
+  lanes.addEventListener('pointercancel', stop);
 
   earlier.addEventListener('click', () => scroller.scrollBy({ left: -step(), behavior: 'smooth' }));
   later.addEventListener('click', () => scroller.scrollBy({ left: step(), behavior: 'smooth' }));
   scroller.addEventListener('scroll', () => requestAnimationFrame(update), { passive: true });
-  let resizeFrame = 0;
-  window.addEventListener('resize', () => {
-    cancelAnimationFrame(resizeFrame);
-    resizeFrame = requestAnimationFrame(() => { layoutGantt(); update(); });
-  });
+  window.addEventListener('resize', () => requestAnimationFrame(update));
 
-  root.append(bar, scroller, detail);
+  root.append(overview, bar, scroller, detail);
   container.replaceChildren(root);
-  layoutGantt();
   // Open at the latest updates (right end).
   scroller.style.scrollBehavior = 'auto';
   scroller.scrollLeft = scroller.scrollWidth;

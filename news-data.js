@@ -299,12 +299,13 @@ window.PROFILE_NEWS = [
 ];
 
 // Experience bars for the synced Gantt track under the timeline.
-// end: null means ongoing. Dates use YYYY-MM or YYYY-MM-DD.
+// short is the row label on the overview strip; end: null means ongoing.
+// Dates use YYYY-MM or YYYY-MM-DD.
 // Lists experiences active from September 2026 onward (from the resume).
 window.PROFILE_EXPERIENCE = [
-  { label: "MA-498 Senior Research · Dr. Pavel Dubovski", org: "Stevens Institute of Technology", start: "2026-09", end: null },
-  { label: "NE-498 Naval Engineering Research · Dr. Raju Datla", org: "Stevens Institute of Technology", start: "2026-09", end: null },
-  { label: "Research Assistant · Dr. William Eiers", org: "Neurosymbolic Software Engineering Laboratory", start: "2026-09", end: null },
-  { label: "Founder", org: "YH Intelligence Technology, Co., Ltd.", start: "2026-07", end: null },
-  { label: "Unmanned section member", org: "Stevens Electric Boatworks", start: "2025-09", end: null }
+  { short: "MA-498 research", label: "MA-498 Senior Research · Dr. Pavel Dubovski", org: "Stevens Institute of Technology", start: "2026-09", end: null },
+  { short: "NE-498 research", label: "NE-498 Naval Engineering Research · Dr. Raju Datla", org: "Stevens Institute of Technology", start: "2026-09", end: null },
+  { short: "Neurosymbolic Lab RA", label: "Research Assistant · Dr. William Eiers", org: "Neurosymbolic Software Engineering Laboratory", start: "2026-09", end: null },
+  { short: "YH Intelligence", label: "Founder", org: "YH Intelligence Technology, Co., Ltd.", start: "2026-07", end: null },
+  { short: "Electric Boatworks", label: "Unmanned section member", org: "Stevens Electric Boatworks", start: "2025-09", end: null }
 ];
