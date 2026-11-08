@@ -76,6 +76,7 @@
     date.dateTime = item.date;
     heading.append(date, el('h3', '', hasText(item.title) ? item.title.trim() : 'Update'));
     if (item.accepted === true) heading.append(el('span', 'accepted-badge', 'Accepted'));
+    else if (item.scheduled === true) heading.append(el('span', 'scheduled-badge', 'Scheduled'));
     header.append(heading);
     const conference = makeLink(item.conferenceUrl, 'Conference program');
     if (conference) header.append(conference);
@@ -158,6 +159,7 @@
     dot.type = 'button';
     dot.style.left = pct(times[index]);
     if (item.accepted === true) dot.classList.add('is-accepted');
+    else if (item.scheduled === true) dot.classList.add('is-scheduled');
     const name = `${item.date} · ${hasText(item.title) ? item.title.trim() : 'Update'}`;
     dot.title = name;
     dot.setAttribute('aria-label', `${item.accepted === true ? 'Accepted: ' : ''}${name}`);
@@ -228,6 +230,9 @@
       card.classList.add('is-accepted');
       dot.textContent = '✓';
       card.setAttribute('aria-label', `Accepted: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
+    } else if (item.scheduled === true) {
+      card.classList.add('is-scheduled');
+      card.setAttribute('aria-label', `Scheduled: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
     }
     card.append(dot, time,
       el('span', 'timeline-title', hasText(item.title) ? item.title.trim() : 'Update'),
@@ -280,8 +285,8 @@
     earlier.disabled = scroller.scrollLeft <= 2;
     later.disabled = scroller.scrollLeft >= max - 2;
     const [a, b] = visibleRange();
-    status.textContent = b >= entries.length - 1
-      ? `Latest ${b - a + 1} of ${entries.length} · scroll left for earlier updates`
+    status.textContent = b === current
+      ? `Latest ${b - a + 1} of ${entries.length} · scroll left for earlier, right for scheduled decisions`
       : `${a + 1}–${b + 1} of ${entries.length} · ${entries[a].date} to ${entries[b].date}`;
     // Highlight the visible cards' time window on the overview.
     const left = (times[a] - t0) / (t1 - t0) * 100;
@@ -319,10 +324,14 @@
 
   root.append(overview, bar, scroller, detail);
   container.replaceChildren(root);
-  // Open at the latest updates (right end).
+  // Open with the latest past update as the rightmost card; scheduled future
+  // decisions sit just beyond it on the right.
+  let current = entries.length - 1;
+  while (current > 0 && entries[current].scheduled === true) current -= 1;
+  const currentItem = cards[current].parentElement;
   scroller.style.scrollBehavior = 'auto';
-  scroller.scrollLeft = scroller.scrollWidth;
+  scroller.scrollLeft = Math.max(0, currentItem.offsetLeft + currentItem.offsetWidth - scroller.clientWidth);
   scroller.style.scrollBehavior = '';
-  select(entries.length - 1, false);
+  select(current, false);
   update();
 })();

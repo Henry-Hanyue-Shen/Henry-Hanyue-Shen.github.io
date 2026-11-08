@@ -127,6 +127,10 @@ li + li { margin-top: 8px; }
 .timeline-card.is-accepted.is-active .timeline-dot { background: var(--accepted); box-shadow: 0 0 0 3px var(--background), 0 0 0 5px var(--accepted); transform: none; }
 .accepted-badge { display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 999px; background: var(--accepted-soft); color: var(--accepted); font-size: 13px; font-weight: 600; }
 .accepted-badge::before { content: "✓"; }
+.timeline-card.is-scheduled .timeline-dot { border-style: dashed; }
+.timeline-card.is-scheduled .timeline-date::after { content: " · scheduled"; }
+.ov-dot.is-scheduled { border-style: dashed; background: transparent; }
+.scheduled-badge { display: inline-flex; align-items: center; padding: 1px 8px; border: 1px dashed var(--muted); border-radius: 999px; color: var(--muted); font-size: 13px; font-weight: 600; }
 .timeline-detail { margin-top: var(--space-sm); padding-top: var(--space-lg); border-top: 1px solid var(--rule); }
 .news-date { color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .news-body { min-width: 0; }

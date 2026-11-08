@@ -3,6 +3,9 @@
 // A simple entry needs only date and text. The fields below are optional:
 // title, conferenceUrl, inlineLinks, papers, resources, accepted.
 // Set accepted: true to show the green acceptance marker on the timeline.
+// Set scheduled: true for a future official decision date (shown dashed).
+// Submission dates use the official submission deadline; acceptance dates use
+// the official notification date.
 // Each paper may have title, text, inlineLinks, reference, doi, and resources.
 // Resources use { label: "Slides (PDF)", url: "https://..." }.
 // All text is plain text; HTML is not needed. See MAINTENANCE.md for examples.
@@ -147,41 +150,6 @@ window.PROFILE_NEWS = [
     ]
   },
   {
-    date: "2026-07-01",
-    accepted: true,
-    title: "IEEE OCEANS 2026 Monterey · Paper acceptances",
-    conferenceUrl: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thc6_04",
-    text: "Three coauthored papers were accepted to IEEE OCEANS 2026 Monterey. They were not presented at the conference. The date follows the official author-notification schedule.",
-    inlineLinks: [{ text: "official author-notification schedule", url: "https://monterey26.oceansconference.org/important-dates/" }],
-    papers: [
-      {
-        title: "Physics-Regularized Sea State Classification on an 8-Bit Microcontroller",
-        text: "Xinling Liao (Lfff09), Yuyan Lin, and Henry Shen.",
-        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
-        reference: "OCEANS26B-0157",
-        resources: [
-          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thc6_04" }
-        ]
-      },
-      {
-        title: "An Analytic Acoustic Evaluation of Cavitator Geometries for Supercavitating Vehicles",
-        text: "Ruoyu Zhang, Xinjia Zhang, and Henry Shen.",
-        reference: "OCEANS26B-0162",
-        resources: [
-          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thb5_04" }
-        ]
-      },
-      {
-        title: "Physics-Regularized ConvLSTM for Long-Lead ENSO Prediction from ERSSTv5",
-        text: "Jiayi Hao, Ziyi Weng, and Henry Shen.",
-        reference: "OCEANS26B-0164",
-        resources: [
-          { label: "Official program entry", url: "https://controls.papercept.net/conferences/conferences/OCEANS26B/program/OCEANS26B_ContentListWeb_4.html#thb9_01" }
-        ]
-      }
-    ]
-  },
-  {
     date: "2026-06-23",
     accepted: true,
     title: "ASME IMECE 2026 · Two paper acceptances",
@@ -258,17 +226,6 @@ window.PROFILE_NEWS = [
     ]
   },
   {
-    date: "2026-05-04",
-    title: "IEEE OCEANS 2026 Monterey · Submission",
-    text: "Three coauthored submissions. The date follows the official abstract submission deadline.",
-    inlineLinks: [{ text: "official abstract submission deadline", url: "https://monterey26.oceansconference.org/important-dates/" }],
-    papers: [
-      { title: "Physics-Regularized Sea State Classification on an 8-Bit Microcontroller" },
-      { title: "An Analytic Acoustic Evaluation of Cavitator Geometries for Supercavitating Vehicles" },
-      { title: "Physics-Regularized ConvLSTM for Long-Lead ENSO Prediction from ERSSTv5" }
-    ]
-  },
-  {
     date: "2026-03-09",
     accepted: true,
     title: "ASME FEDSM 2026 · Two paper acceptances",
@@ -290,11 +247,59 @@ window.PROFILE_NEWS = [
     ]
   },
   {
-    date: "2026-01",
-    title: "IEEE OCEANS 2026 Sanya · Submission",
-    text: "Submitted to IEEE OCEANS 2026 Sanya. The official site gives the abstract deadline only as January 2026.",
-    inlineLinks: [{ text: "official site", url: "https://sanya26.oceansconference.org/important-dates/" }],
+    date: "2026-01-12",
+    title: "IEEE OCEANS 2026 Sanya · Abstract submission",
+    text: "Submitted to IEEE OCEANS 2026 Sanya. The date follows the official abstract submission deadline.",
+    inlineLinks: [{ text: "official abstract submission deadline", url: "https://sanya26.oceansconference.org/call-for-abstracts/" }],
     papers: [{ title: "The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles" }]
+  },
+  {
+    date: "2025-12-01",
+    title: "ASME FEDSM 2026 · Abstract submission",
+    conferenceUrl: "https://event.asme.org/FEDSM-2026",
+    text: "Two abstracts submitted. The date follows ASME’s official abstract submission deadline.",
+    papers: [
+      { title: "One Wing for Two Worlds: A Bio-Inspired Design for Cross-Domain Vehicles" },
+      { title: "Residual Manifolds and Cloud Uncertainty: A Unified Framework for Physical System Prediction Validated in Aerodynamic Coefficient Prediction" }
+    ]
+  },
+
+  // Acceptance milestones. Each date is the venue's official notification date.
+  {
+    date: "2026-02-22",
+    accepted: true,
+    title: "IEEE OCEANS 2026 Sanya · Acceptance",
+    text: "Accepted to IEEE OCEANS 2026 Sanya. The date follows the official author notification date.",
+    inlineLinks: [{ text: "official author notification date", url: "https://sanya26.oceansconference.org/call-for-abstracts/" }],
+    papers: [{ title: "The Critical Maneuverability Theorem: A First-Principles Design Framework for Agile Supercavitating Vehicles" }]
+  },
+  {
+    date: "2025-12-15",
+    accepted: true,
+    title: "ASME FEDSM 2026 · Abstract acceptance",
+    conferenceUrl: "https://event.asme.org/FEDSM-2026",
+    text: "Two abstracts accepted, with invitations to submit full-length papers. The date follows ASME’s official abstract acceptance notification date.",
+    papers: [
+      { title: "One Wing for Two Worlds: A Bio-Inspired Design for Cross-Domain Vehicles" },
+      { title: "Residual Manifolds and Cloud Uncertainty: A Unified Framework for Physical System Prediction Validated in Aerodynamic Coefficient Prediction" }
+    ]
+  },
+
+  // Scheduled decisions. Official notification dates for papers still under review.
+  {
+    date: "2026-11-30",
+    scheduled: true,
+    title: "EMO 2027 · Author notification (scheduled)",
+    conferenceUrl: "https://www.emo2027.org/",
+    text: "Official author notification date for the EMO 2027 submission. Decision pending."
+  },
+  {
+    date: "2027-02-28",
+    scheduled: true,
+    title: "MLSys 2027 · Author notification (scheduled)",
+    conferenceUrl: "https://mlsys.org/Conferences/2027/Dates",
+    text: "Official author notification date for the MLSys 2027 submission. Decision pending.",
+    papers: [{ title: "Autoformalization for Ambiguous Inputs: Precision, Coverage, and Cost across SQL and Logical Forms" }]
   }
 ];
 
