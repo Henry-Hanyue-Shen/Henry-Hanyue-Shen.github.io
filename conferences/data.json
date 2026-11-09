@@ -469,6 +469,61 @@
       ]
     },
     {
+      "id": "nice-2027",
+      "name": "NICE",
+      "edition": "NICE 2027",
+      "full": "14th Neuro-Inspired Computational Elements Conference",
+      "submissionNote": "Paper submission extended from November 11 to December 1, 2026 (AoE). Regular papers 4–8 pages excluding references. Acceptance decisions expected late December 2026 or early January 2027. Late-breaking news abstracts due February 1, 2027 (decisions mid-February). Talks April 6–8; tutorials April 9, 2027.",
+      "confirmed": true,
+      "start": "2027-04-06",
+      "end": "2027-04-09",
+      "location": "University of Sussex, Brighton, UK",
+      "url": "https://niceworkshop.org/nice-2027/",
+      "source": "https://niceworkshop.org/nice-2027/",
+      "additionalLinks": [
+        {
+          "label": "EasyChair call for papers",
+          "url": "https://easychair.org/cfp/nice2027"
+        },
+        {
+          "label": "Submission system",
+          "url": "https://easychair.org/conferences/?conf=nice2027"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Paper submission (extended)",
+          "date": "2026-12-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Tutorial suggestions",
+          "date": "2026-12-02",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Early-bird registration ends",
+          "date": "2027-01-17",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Late-breaking news abstracts",
+          "date": "2027-02-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Camera-ready papers",
+          "date": "2027-03-09",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
       "id": "ijcai-2027",
       "name": "IJCAI",
       "edition": "IJCAI 2027",
