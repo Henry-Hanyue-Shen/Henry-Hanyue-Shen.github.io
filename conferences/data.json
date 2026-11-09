@@ -1,5 +1,5 @@
 {
-  "snapshotDate": "2026-11-06",
+  "snapshotDate": "2026-11-09",
   "editions": [
     {
       "id": "visapp-2027",
@@ -424,6 +424,102 @@
         {
           "label": "Author registration",
           "date": "2027-05-15",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "iccai-2027",
+      "name": "ICCAI",
+      "edition": "ICCAI 2027",
+      "full": "13th International Conference on Computing and Artificial Intelligence",
+      "submissionNote": "Submission deadline: December 10, 2026. Acceptance notification: January 10, 2027. Registration deadline: February 10, 2027. The official page does not state a time zone; AoE is shown as an assumption.",
+      "confirmed": true,
+      "start": "2027-04-23",
+      "end": "2027-04-26",
+      "location": "Seoul, South Korea",
+      "url": "https://www.iccai.net/",
+      "source": "https://www.iccai.net/",
+      "additionalLinks": [
+        {
+          "label": "Submission system",
+          "url": "http://confsys.iconf.org/submission/iccai2027"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Paper submission",
+          "date": "2026-12-10",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Acceptance notification",
+          "date": "2027-01-10",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Registration",
+          "date": "2027-02-10",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "ijcai-2027",
+      "name": "IJCAI",
+      "edition": "IJCAI 2027",
+      "full": "36th International Joint Conference on Artificial Intelligence (main track)",
+      "submissionNote": "Abstract submission: January 4, 2027. Author information and full paper (including appendix and resubmission information): January 11, 2027. All times 23:59 AoE (UTC-12). Satellite event in Hengqin, China, August 15–17, 2027.",
+      "confirmed": true,
+      "start": "2027-08-07",
+      "end": "2027-08-13",
+      "location": "Kyoto, Japan (and Hengqin, China, Aug 15–17)",
+      "url": "https://2027.ijcai.org/",
+      "source": "https://2027.ijcai.org/ijcai-2027-call-for-papers-main-track/",
+      "deadlines": [
+        {
+          "label": "Abstract submission",
+          "date": "2027-01-04",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper and author information",
+          "date": "2027-01-11",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Non-primary paper payment",
+          "date": "2027-01-18",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Summary reject notification",
+          "date": "2027-02-25",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Author response period (Mar 30 – Apr 2)",
+          "date": "2027-03-30",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Paper notification",
+          "date": "2027-04-21",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready copy",
+          "date": "2027-05-07",
           "tz": "AoE",
           "primary": false
         }
