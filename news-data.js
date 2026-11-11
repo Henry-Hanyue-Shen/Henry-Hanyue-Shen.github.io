@@ -158,20 +158,41 @@ window.PROFILE_NEWS = [
     papers: [
       {
         title: "Complex Spectral Binding Networks for High-Entropy Fluid Dynamics: Solving the Spectral Fidelity Paradox in Atmospheric Gravity Waves",
-        text: "Presentation scheduled for November 11, 2026, at 14:21 in Vancouver, Canada (local time).",
         reference: "IMECE2026-192090",
         resources: [
-          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" },
-          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780" }
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" }
         ]
       },
       {
         title: "A Speed-Gradient Operator for Asymptotic Static State Recovery in Unsteady Viscous Flows",
-        text: "Presentation scheduled for November 11, 2026, at 14:42 in Vancouver, Canada (local time).",
         reference: "IMECE2026-192091",
         resources: [
-          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781/application/192091" },
-          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781" }
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781/application/192091" }
+        ]
+      }
+    ]
+  },
+  {
+    date: "2026-11-11",
+    title: "ASME IMECE 2026 · Presentations",
+    text: "Presented both papers at the Vancouver Convention Centre, Vancouver, Canada. Accepted in the Technical Paper Publication category; pending publication.",
+    papers: [
+      {
+        title: "Complex Spectral Binding Networks for High-Entropy Fluid Dynamics: Solving the Spectral Fidelity Paradox in Atmospheric Gravity Waves",
+        reference: "IMECE2026-192090",
+        resources: [
+          { label: "Presentation slides (PDF)", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/IMECE26/IMECE2026-192090_Presentation.pdf" },
+          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780" },
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24780/application/192090" }
+        ]
+      },
+      {
+        title: "A Speed-Gradient Operator for Asymptotic Static State Recovery in Unsteady Viscous Flows",
+        reference: "IMECE2026-192091",
+        resources: [
+          { label: "Presentation slides (PDF)", url: "https://github.com/Henry-Hanyue-Shen/Works_And_Presentations/blob/main/IMECE26/IMECE2026-192091_Presentation.pdf" },
+          { label: "Conference session", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781" },
+          { label: "ASME paper record", url: "https://imece.secure-platform.com/a/solicitations/281/sessiongallery/24781/application/192091" }
         ]
       }
     ]
