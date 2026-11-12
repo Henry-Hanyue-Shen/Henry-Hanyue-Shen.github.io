@@ -78,9 +78,22 @@
     if (item.accepted === true) heading.append(el('span', 'accepted-badge', 'Accepted'));
     else if (item.scheduled === true) heading.append(el('span', 'scheduled-badge', 'Scheduled'));
     header.append(heading);
-    const conference = makeLink(item.conferenceUrl, 'Conference program');
+    const conference = makeLink(item.conferenceUrl, hasText(item.conferenceLabel) ? item.conferenceLabel : 'Conference program');
     if (conference) header.append(conference);
     content.append(header, paragraph(item.text, 'news-summary', item.inlineLinks));
+
+    // Optional photo: image: { src: "assets/...", alt: "...", caption: "..." }.
+    // Only same-site relative paths under assets/ are accepted.
+    if (item.image && hasText(item.image.src) && /^assets\/[\w.-]+\.(jpe?g|png|webp)$/i.test(item.image.src) && hasText(item.image.alt)) {
+      const figure = el('figure', 'news-figure');
+      const img = el('img');
+      img.src = item.image.src;
+      img.alt = item.image.alt.trim();
+      img.decoding = 'async';
+      figure.append(img);
+      if (hasText(item.image.caption)) figure.append(el('figcaption', '', item.image.caption.trim()));
+      content.append(figure);
+    }
 
     for (const paper of Array.isArray(item.papers) ? item.papers : []) {
       if (!paper || !hasText(paper.title)) continue;

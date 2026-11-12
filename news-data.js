@@ -1,7 +1,8 @@
 // Edit this array to add or update announcements. Dates use YYYY-MM-DD.
 // Entries are sorted by date; the timeline runs left (earlier) to right (latest).
 // A simple entry needs only date and text. The fields below are optional:
-// title, conferenceUrl, inlineLinks, papers, resources, accepted.
+// title, conferenceUrl, conferenceLabel, inlineLinks, papers, resources, accepted,
+// image ({ src: "assets/<file>.jpg", alt, caption }).
 // Set accepted: true to show the green acceptance marker on the timeline.
 // Set scheduled: true for a future official decision date (shown dashed).
 // Submission dates use the official submission deadline; acceptance dates use
@@ -11,6 +12,24 @@
 // All text is plain text; HTML is not needed. See MAINTENANCE.md for examples.
 
 window.PROFILE_NEWS = [
+  {
+    date: "2026-11-04",
+    title: "SIAI Seminar Series and AIRS Poster Session · Presentation",
+    conferenceUrl: "https://events.stevens.edu/events/AjzZLO4YRoqutEUqr08i/QJqsGKAdJAjypMjdXcyZ",
+    conferenceLabel: "Official event listing",
+    text: "Presented my AIRS summer fellowship research at the Stevens Institute for Artificial Intelligence (SIAI) Seminar Series and AIRS Poster Session, Gateway North, Stevens Institute of Technology.",
+    image: { src: "assets/siai-airs-poster-session-2026-11-04.jpg", alt: "Group photo of presenters and faculty on the Gateway North stairs at the SIAI Seminar Series and AIRS Poster Session, November 4, 2026", caption: "SIAI Seminar Series and AIRS Poster Session, November 4, 2026." },
+    papers: [
+      {
+        title: "Evaluating Hypersonic Flight with a Decentralized Protocol",
+        text: "Advised by Prof. Jason Rabinovitch.",
+        resources: [
+          { label: "Poster (PDF)", url: "https://github.com/Henry-Hanyue-Shen/AIRS_Hypersonic/blob/main/poster/airs_2026_poster.pdf" },
+          { label: "Reports and code", url: "https://github.com/Henry-Hanyue-Shen/AIRS_Hypersonic" }
+        ]
+      }
+    ]
+  },
   {
     date: "2026-11-04",
     accepted: true,

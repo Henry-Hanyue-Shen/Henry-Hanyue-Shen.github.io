@@ -140,6 +140,9 @@ li + li { margin-top: 8px; }
 .news-header > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; white-space: nowrap; }
 .news-summary { margin: 0; font-size: 16px; }
 .news-paper { margin-top: var(--space-md); padding-left: var(--space-md); border-left: 2px solid var(--rule); }
+.news-figure { margin: var(--space-md) 0 0; }
+.news-figure img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.news-figure figcaption { margin-top: var(--space-xs); color: var(--muted); font-size: 14px; }
 .news-paper + .news-paper { margin-top: var(--space-lg); }
 .news-paper-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.5; }
 .news-paper-detail { margin: var(--space-xs) 0 0; font-size: 15px; }
