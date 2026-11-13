@@ -62,8 +62,8 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-11-01",
-    title: "JGR: Atmospheres · Submission and ESS Open Archive preprint",
-    text: "Our manuscript is in submission to JGR: Atmospheres; the preprint was posted on ESS Open Archive on November 1, 2026. It extends the work behind our AGU26 abstract.",
+    title: "ESS Open Archive · Preprint",
+    text: "Our preprint was posted on ESS Open Archive on November 1, 2026. It extends the work behind our AGU26 abstract.",
     papers: [
       {
         title: "Spatial Fusion of Himawari Observations and GFS Guidance for 24–72-Hour Regional Cloud-Probability Forecasting",
