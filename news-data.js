@@ -13,6 +13,22 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-11-13",
+    accepted: true,
+    title: "VISAPP 2027 · Short paper acceptance",
+    conferenceUrl: "https://visapp.scitevents.org/Home.aspx",
+    conferenceLabel: "Conference website",
+    text: "Accepted as a Short Paper to the International Conference on Computer Vision Theory and Applications (VISAPP 2027), Valletta, Malta, February 26–28, 2027, with a recommended 20-minute oral presentation. Notification received November 13, 2026.",
+    papers: [
+      {
+        title: "Content-Grouped Multi-Readout RISA for Recaptured-Image Detection",
+        text: "Coauthored with Xinling Liao (Lfff09).",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
+        reference: "VISAPP 2027 paper #22"
+      }
+    ]
+  },
+  {
     date: "2026-11-04",
     title: "SIAI Seminar Series and AIRS Poster Session · Presentation",
     conferenceUrl: "https://events.stevens.edu/events/AjzZLO4YRoqutEUqr08i/QJqsGKAdJAjypMjdXcyZ",
