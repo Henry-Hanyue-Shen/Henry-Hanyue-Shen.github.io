@@ -583,21 +583,6 @@
   ],
   "journals": [
     {
-      "id": "jgr-atmospheres",
-      "name": "JGR: Atmospheres",
-      "full": "Journal of Geophysical Research: Atmospheres",
-      "publisher": "American Geophysical Union (AGU) / Wiley",
-      "url": "https://agupubs.onlinelibrary.wiley.com/hub/journal/21698996/journal-overview",
-      "openAccess": false,
-      "submission": "Rolling submissions year-round",
-      "additionalLinks": [
-        {
-          "label": "Submit a manuscript",
-          "url": "https://jgr-atmospheres-submit.agu.org/cgi-bin/main.plex"
-        }
-      ]
-    },
-    {
       "id": "ieee-joe",
       "name": "IEEE JOE",
       "full": "IEEE Journal of Oceanic Engineering",
