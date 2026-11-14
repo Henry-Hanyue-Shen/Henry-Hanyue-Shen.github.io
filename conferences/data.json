@@ -560,6 +560,79 @@
           "primary": false
         }
       ]
+    },
+    {
+      "id": "icra-2027",
+      "name": "ICRA",
+      "edition": "ICRA 2027",
+      "full": "IEEE International Conference on Robotics and Automation",
+      "submissionNote": "Technical paper deadline (extended) was September 16, 2026, 23:59 PST, via PaperPlaza. Journal (RA-L) paper transfers until December 31, 2026. On-site conference.",
+      "confirmed": true,
+      "start": "2027-05-24",
+      "end": "2027-05-28",
+      "location": "Seoul, Republic of Korea",
+      "url": "https://2027.ieee-icra.org/",
+      "source": "https://2027.ieee-icra.org/?p=1964",
+      "sourceLabel": "Technical paper information",
+      "deadlines": [
+        {
+          "label": "Technical paper submission (extended)",
+          "date": "2026-09-16",
+          "time": "23:59",
+          "tz": "PST",
+          "primary": true
+        },
+        {
+          "label": "Journal paper transfer",
+          "date": "2026-12-31",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Acceptance notification",
+          "date": "2027-01-31",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "iros-2027",
+      "name": "IROS",
+      "edition": "IROS 2027",
+      "full": "IEEE/RSJ International Conference on Intelligent Robots and Systems",
+      "submissionNote": "Paper submission deadline March 1, 2027 per the IEEE RAS calendar (no time zone given; shown as AoE). PaperPlaza submission links are not open yet.",
+      "confirmed": true,
+      "start": "2027-09-25",
+      "end": "2027-09-30",
+      "location": "Florence, Italy",
+      "url": "https://www.ieee-ras.org/event/call-for-papers-paper-submission-deadline-iros-2027-ieee-rsj-international-conference-on-intelligent-robots-and-systems-iros-27403-0/",
+      "source": "https://ras.papercept.net/conferences/scripts/start.pl",
+      "sourceLabel": "PaperPlaza (dates and submission)",
+      "deadlines": [
+        {
+          "label": "Paper submission",
+          "date": "2027-03-01",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "sigspatial-2027",
+      "name": "SIGSPATIAL",
+      "edition": "ACM SIGSPATIAL 2027",
+      "full": "ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems",
+      "submissionNote": "SIGSPATIAL 2027 dates and location are not yet announced. The 2026 edition was held in Riverside, CA, USA.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://sigspatial.org/",
+      "source": "https://sigspatial2026.sigspatial.org/research-submission.html",
+      "sourceLabel": "SIGSPATIAL 2026 research call (previous edition)",
+      "deadlines": []
     }
   ],
   "journals": [

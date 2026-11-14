@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261114-25';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261114-26';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -95,7 +95,7 @@ function renderDeadlines(editions) {
   const rows = editions.map(e=>({e,open:openDeadlines(e,clock)})).filter(x=>x.open.length).sort((a,b)=>deadlineInstant(a.open[0])-deadlineInstant(b.open[0]));
   const deadlineCount = rows.reduce((n,r)=>n+r.open.length,0);
   // Prospective venues: no announced upcoming deadline yet. Listed after the dated calls, alphabetically.
-  const prospective = editions.filter(e=>e.prospective === true && !openDeadlines(e,clock).length).sort((a,b)=>(a.edition || a.name).localeCompare(b.edition || b.name));
+  const prospective = editions.filter(e=>e.prospective === true && !openDeadlines(e,clock).length).sort((a,b)=>a.name.localeCompare(b.name,'en',{sensitivity:'base'}));
   $('#result-count').textContent = `${rows.length} ${rows.length === 1 ? 'open call' : 'open calls'} · ${deadlineCount} upcoming ${deadlineCount === 1 ? 'deadline' : 'deadlines'}${prospective.length ? ` · ${prospective.length} prospective` : ''}`;
   let month = ''; const fragment = document.createDocumentFragment();
   for (const {e,open} of rows) {
@@ -244,4 +244,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261114-25').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261114-26').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
