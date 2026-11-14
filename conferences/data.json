@@ -1,5 +1,5 @@
 {
-  "snapshotDate": "2026-11-09",
+  "snapshotDate": "2026-11-14",
   "editions": [
     {
       "id": "visapp-2027",
@@ -69,29 +69,97 @@
       ]
     },
     {
+      "id": "bibm-2027",
+      "name": "BIBM",
+      "edition": "BIBM 2027",
+      "full": "IEEE International Conference on Bioinformatics and Biomedicine",
+      "submissionNote": "BIBM 2027 dates and location are not yet announced. The previous edition, BIBM 2026, runs December 1–4, 2026.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www3.cs.stonybrook.edu/~bibm2026/",
+      "source": "https://www3.cs.stonybrook.edu/~bibm2026/callforpaper2026.html",
+      "sourceLabel": "BIBM 2026 call for papers",
+      "deadlines": []
+    },
+    {
+      "id": "kdd-2027",
+      "name": "KDD",
+      "edition": "KDD 2027",
+      "full": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+      "submissionNote": "Research track Cycle 1 has closed (abstract July 19, full paper July 26, 2026, AoE; notification November 14, 2026). Cycle 2 dates are not yet announced.",
+      "prospective": true,
+      "confirmed": true,
+      "start": "2027-08-01",
+      "end": "2027-08-05",
+      "location": "San Jose McEnery Convention Center, San Jose, California, USA",
+      "url": "https://kdd2027.kdd.org/",
+      "source": "https://kdd2027.kdd.org/research-track-call-for-papers/",
+      "deadlines": [
+        {
+          "label": "Abstract (Cycle 1)",
+          "date": "2026-07-19",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full paper (Cycle 1)",
+          "date": "2026-07-26",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Notification (Cycle 1)",
+          "date": "2026-11-14",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
       "id": "icml-2027",
       "name": "ICML",
       "edition": "ICML 2027",
       "full": "International Conference on Machine Learning",
-      "submissionNote": "Tentative: abstract submission January 23, 2027; full paper submission January 28, 2027 (AoE assumed). Awaiting official deadline confirmation.",
-      "confirmed": false,
-      "start": null,
-      "end": null,
-      "location": "South America",
-      "url": "https://icml.cc/Conferences/FutureMeetings",
-      "source": "https://icml.cc/Conferences/FutureMeetings",
+      "submissionNote": "Abstract submission January 14, 2027; full paper submission January 22, 2027 (AoE). Submissions open January 8, 2027 on OpenReview.",
+      "confirmed": true,
+      "start": "2027-07-31",
+      "end": "2027-08-06",
+      "location": "Rio de Janeiro, Brazil",
+      "url": "https://icml.cc/Conferences/2027/Dates",
+      "source": "https://icml.cc/Conferences/2027/Dates",
+      "additionalLinks": [
+        {
+          "label": "Future meetings (host city)",
+          "url": "https://icml.cc/Conferences/FutureMeetings"
+        }
+      ],
       "deadlines": [
         {
           "label": "Abstract submission",
-          "date": "2027-01-23",
+          "date": "2027-01-14",
           "tz": "AoE",
           "primary": true
         },
         {
           "label": "Full paper submission",
-          "date": "2027-01-28",
+          "date": "2027-01-22",
           "tz": "AoE",
           "primary": true
+        },
+        {
+          "label": "First-stage rejections sent",
+          "date": "2027-02-23",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Final decisions to authors",
+          "date": "2027-05-03",
+          "tz": "AoE",
+          "primary": false
         }
       ]
     },

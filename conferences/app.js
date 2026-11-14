@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261113-20';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261114-21';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -32,7 +32,8 @@ function eventDates(e) {
   return e.end && e.end !== e.start ? `${calendarDate(e.start)} – ${calendarDate(e.end)}` : calendarDate(e.start);
 }
 function badges(parent, e) {
-  if (e.confirmed === false) parent.append(node('span','estimate','estimated'));
+  if (e.prospective === true) parent.append(node('span','estimate','prospective'));
+  else if (e.confirmed === false) parent.append(node('span','estimate','estimated'));
   if (e.isNew) parent.append(node('span','estimate','new'));
 }
 function identity(e) {
@@ -64,9 +65,9 @@ function detailPanel(e) {
     }
     table.append(tbody); panel.append(table);
   }
-  panel.append(node('p','detail-status',e.confirmed ? 'Listed dates. Check the venue website for the latest submission details.' : 'Estimated schedule. These dates are provisional and may change.'));
+  panel.append(node('p','detail-status',e.prospective === true ? 'Prospective. Submission dates for this edition are not yet announced; check the venue website.' : e.confirmed ? 'Listed dates. Check the venue website for the latest submission details.' : 'Estimated schedule. These dates are provisional and may change.'));
   const links = node('div','detail-links'); links.append(link('Venue website ↗',e.url));
-  if (e.source && e.source !== e.url) links.append(link(e.confirmed ? 'Submission information ↗' : 'Previous schedule ↗',e.source));
+  if (e.source && e.source !== e.url) links.append(link(`${e.sourceLabel || (e.confirmed ? 'Submission information' : 'Previous schedule')} ↗`,e.source));
   for (const extra of e.additionalLinks || []) links.append(link(`${extra.label} ↗`,extra.url));
   if (openDeadlines(e,clock).length) links.append(button('Add deadlines to calendar ↓',()=>download([e])));
   panel.append(links); return panel;
@@ -88,7 +89,9 @@ function empty() {
 function renderDeadlines(editions) {
   const rows = editions.map(e=>({e,open:openDeadlines(e,clock)})).filter(x=>x.open.length).sort((a,b)=>deadlineInstant(a.open[0])-deadlineInstant(b.open[0]));
   const deadlineCount = rows.reduce((n,r)=>n+r.open.length,0);
-  $('#result-count').textContent = `${rows.length} ${rows.length === 1 ? 'open call' : 'open calls'} · ${deadlineCount} upcoming ${deadlineCount === 1 ? 'deadline' : 'deadlines'}`;
+  // Prospective venues: no announced upcoming deadline yet. Listed after the dated calls, alphabetically.
+  const prospective = editions.filter(e=>e.prospective === true && !openDeadlines(e,clock).length).sort((a,b)=>(a.edition || a.name).localeCompare(b.edition || b.name));
+  $('#result-count').textContent = `${rows.length} ${rows.length === 1 ? 'open call' : 'open calls'} · ${deadlineCount} upcoming ${deadlineCount === 1 ? 'deadline' : 'deadlines'}${prospective.length ? ` · ${prospective.length} prospective` : ''}`;
   let month = ''; const fragment = document.createDocumentFragment();
   for (const {e,open} of rows) {
     const instant = deadlineInstant(open[0]); const group = fmt(instant,{month:'long',year:'numeric'});
@@ -105,7 +108,18 @@ function renderDeadlines(editions) {
     event.append(node('span','expand-hint','Details +'));
     summary.append(date,info,milestones,event); details.append(summary,detailPanel(e)); fragment.append(details);
   }
-  $('#stage').replaceChildren(rows.length ? fragment : empty());
+  if (prospective.length) fragment.append(node('h2','month-heading','Prospective · dates not yet announced'));
+  for (const e of prospective) {
+    const details = node('details','entry'); details.id = e.id;
+    const summary = node('summary');
+    const date = node('div','deadline-date','TBA');
+    date.append(node('span','deadline-time','Next call'),node('span','countdown','not announced'));
+    const milestones = node('div','milestones'); milestones.append(node('span','','Submission dates not yet announced'));
+    const event=node('div','event-meta',eventDates(e)); if(e.location) event.append(node('em','',e.location));
+    event.append(node('span','expand-hint','Details +'));
+    summary.append(date,identity(e),milestones,event); details.append(summary,detailPanel(e)); fragment.append(details);
+  }
+  $('#stage').replaceChildren(rows.length || prospective.length ? fragment : empty());
 }
 function renderVenues(editions) {
   const grouped=new Map();
@@ -120,7 +134,7 @@ function renderVenues(editions) {
     const editionsList=node('div','edition-list');
     for(const e of list) {
       const line=node('div','edition-line'); line.append(link(e.edition,e.url));
-      line.append(node('span','',`${eventDates(e)}${e.location ? ` · ${e.location}` : ''}${e.confirmed ? '' : ' · estimated'}`));
+      line.append(node('span','',`${eventDates(e)}${e.location ? ` · ${e.location}` : ''}${e.prospective ? ' · prospective' : e.confirmed ? '' : ' · estimated'}`));
       editionsList.append(line);
     }
     article.append(editionsList); fragment.append(article);
@@ -224,4 +238,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261113-20').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261114-21').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
