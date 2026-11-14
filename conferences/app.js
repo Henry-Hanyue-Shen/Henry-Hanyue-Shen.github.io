@@ -1,4 +1,4 @@
-import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261114-23';
+import { deadlineInstant, openDeadlines, matches, makeCalendar } from './core.mjs?v=20261114-24';
 
 const $ = selector => document.querySelector(selector);
 const node = (tag, className, text) => {
@@ -31,6 +31,11 @@ function eventDates(e) {
   if (!e.start) return 'Dates to be announced';
   return e.end && e.end !== e.start ? `${calendarDate(e.start)} – ${calendarDate(e.end)}` : calendarDate(e.start);
 }
+// Gold triangle: a venue the author plans to submit to ("planned": true).
+function plannedMark(e) {
+  if (e.planned !== true) return null;
+  const mark = node('span','planned-mark','▲'); mark.title = 'Scheduled submission'; mark.setAttribute('aria-label','Scheduled submission'); return mark;
+}
 function badges(parent, e) {
   if (e.prospective === true) parent.append(node('span','estimate','prospective'));
   else if (e.confirmed === false) parent.append(node('span','estimate','estimated'));
@@ -38,7 +43,7 @@ function badges(parent, e) {
 }
 function identity(e) {
   const box = node('div','venue-identity');
-  const name = node('span','venue-name',e.edition || e.name); badges(name,e); box.append(name);
+  const name = node('span','venue-name',e.edition || e.name); const mark = plannedMark(e); if (mark) name.prepend(mark); badges(name,e); box.append(name);
   box.append(node('span','venue-full',e.full));
   if (e.submissionNote) box.append(node('p','small',e.submissionNote));
   return box;
@@ -133,7 +138,7 @@ function renderVenues(editions) {
     article.append(node('p','venue-full',first.full));
     const editionsList=node('div','edition-list');
     for(const e of list) {
-      const line=node('div','edition-line'); line.append(link(e.edition,e.url));
+      const line=node('div','edition-line'); const mark=plannedMark(e); if(mark) line.append(mark); line.append(link(e.edition,e.url));
       line.append(node('span','',`${eventDates(e)}${e.location ? ` · ${e.location}` : ''}${e.prospective ? ' · prospective' : e.confirmed ? '' : ' · estimated'}`));
       editionsList.append(line);
     }
@@ -182,7 +187,8 @@ function renderCalendar(editions) {
     const date=`${selectedMonth}-${String(day).padStart(2,'0')}`;const cell=node('div',`calendar-day${date===keyDate(clock)?' today':''}`);cell.append(node('span','day-number',day));
     for(const event of events.filter(e=>e.conference ? date>=e.date && date<=e.end : e.date===date)) {
       const a=node('span',`calendar-event${event.conference?' conference-event':''}`,event.e.name);
-      a.title=`${event.e.edition} · ${event.label}${event.e.confirmed?'':' · estimated'}`;cell.append(a);
+      const mark=plannedMark(event.e); if(mark) a.prepend(mark);
+      a.title=`${event.e.edition} · ${event.label}${event.e.confirmed?'':' · estimated'}${event.e.planned?' · scheduled submission':''}`;cell.append(a);
     }
     grid.append(cell);
   }
@@ -191,7 +197,7 @@ function renderCalendar(editions) {
   const agenda=node('ul','agenda');
   for(const event of events) {
     const row=node('li'); const date=node('time','',event.conference ? `${calendarDate(event.date)}${event.end!==event.date?' – '+calendarDate(event.end):''}` : fmt(event.instant,{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}));date.dateTime=event.date;
-    const info=node('div');info.append(link(event.e.edition,event.e.url),node('span','agenda-kind',`${event.label}${event.e.confirmed?'':' · estimated'}${!event.conference && event.instant<clock?' · passed':''}`));row.append(date,info);agenda.append(row);
+    const info=node('div');const mark=plannedMark(event.e);if(mark)info.append(mark);info.append(link(event.e.edition,event.e.url),node('span','agenda-kind',`${event.label}${event.e.confirmed?'':' · estimated'}${!event.conference && event.instant<clock?' · passed':''}`));row.append(date,info);agenda.append(row);
   }
   $('#stage').replaceChildren(toolbar,grid,legend,events.length?agenda:node('p','small','No matching deadlines or conferences in this month.'));
 }
@@ -238,4 +244,4 @@ function setTheme() {
   const dark=document.documentElement.dataset.theme==='dark';$('#theme').setAttribute('aria-label',`Switch to ${dark?'light':'dark'} mode`);$('#theme').textContent=dark?'☼':'◐';
 }
 $('#theme').addEventListener('click',()=>{const theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=theme;try{localStorage.setItem('conference-theme',theme);}catch{}setTheme();});setTheme();
-fetch('./data.json?v=20261114-23').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});
+fetch('./data.json?v=20261114-24').then(response=>{if(!response.ok)throw new Error('Dataset unavailable');return response.json();}).then(json=>{data=json;init();}).catch(()=>{$('#result-count').textContent='Directory unavailable';$('#stage').replaceChildren(node('p','','The conference data could not be loaded. Please refresh this page.'));$('#export').disabled=true;});

@@ -5,13 +5,16 @@
   --accent: var(--link); --soft: #f6f6f6; --hover: #fafafa;
   --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px;
   --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
+  --gold: #a87900;
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
   --background: #1c1c1c; --text: #e7e7e7; --muted: #b4b4b4;
   --rule: #414141; --link: #e7a2a8; --link-hover: #f0c2c6;
   --soft: #282828; --hover: #242424;
+  --gold: #e0b43c;
 }
+.planned-mark { color: var(--gold); margin-right: 0.35em; font-size: 0.8em; vertical-align: 0.08em; }
 button, input, select { font: inherit; color: inherit; }
 button { cursor: pointer; background: none; border: 0; }
 button:disabled { opacity: .45; cursor: default; }
