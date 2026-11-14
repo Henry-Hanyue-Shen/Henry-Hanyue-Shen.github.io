@@ -692,6 +692,59 @@
           "url": "https://www.ams.org/proc"
         }
       ]
+    },
+    {
+      "id": "ieee-ojits",
+      "name": "IEEE OJ-ITS",
+      "full": "IEEE Open Journal of Intelligent Transportation Systems",
+      "publisher": "IEEE Intelligent Transportation Systems Society",
+      "url": "https://ieee-itss.org/pub/oj-its/",
+      "openAccess": true,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Submit a manuscript",
+          "url": "https://mc.manuscriptcentral.com/oj-its"
+        },
+        {
+          "label": "IEEE Xplore",
+          "url": "https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8784355"
+        },
+        {
+          "label": "IEEE Author Center",
+          "url": "https://ieeeauthorcenter.ieee.org/"
+        }
+      ]
+    },
+    {
+      "id": "jgr-mlc",
+      "name": "JGR: Machine Learning and Computation",
+      "full": "Journal of Geophysical Research: Machine Learning and Computation",
+      "publisher": "American Geophysical Union (AGU) / Wiley",
+      "url": "https://agupubs.onlinelibrary.wiley.com/journal/29935210",
+      "openAccess": true,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "AGU submission checklists",
+          "url": "https://www.agu.org/publications/authors/journals/submission-checklists"
+        }
+      ]
+    },
+    {
+      "id": "jcam",
+      "name": "JCAM",
+      "full": "Journal of Computational and Applied Mathematics",
+      "publisher": "Elsevier",
+      "url": "https://www.sciencedirect.com/journal/journal-of-computational-and-applied-mathematics",
+      "openAccess": false,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Guide for authors",
+          "url": "https://www.sciencedirect.com/journal/journal-of-computational-and-applied-mathematics/publish/guide-for-authors"
+        }
+      ]
     }
   ]
 }
