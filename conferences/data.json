@@ -649,6 +649,176 @@
       "source": "https://computing.llnl.gov/about/newsroom/sc27-general-chair",
       "sourceLabel": "SC27 general chair announcement (LLNL)",
       "deadlines": []
+    },
+    {
+      "id": "ics-2027",
+      "name": "ICS",
+      "edition": "ACM ICS 2027",
+      "full": "ACM International Conference on Supercomputing",
+      "submissionNote": "Abstract December 1, 2026; paper December 7, 2026 (AoE). Part of ACM FCRC 2027 in Atlanta; venue to be announced.",
+      "confirmed": true,
+      "start": "2027-06-05",
+      "end": "2027-06-11",
+      "location": "Atlanta, Georgia, USA (ACM FCRC 2027)",
+      "url": "https://klab-ai3.github.io/ics2027/",
+      "source": "https://ics-conference.org/",
+      "sourceLabel": "ICS conference series",
+      "deadlines": [
+        {
+          "label": "Abstract submission",
+          "date": "2026-12-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Paper submission",
+          "date": "2026-12-07",
+          "tz": "AoE",
+          "primary": true
+        }
+      ]
+    },
+    {
+      "id": "hpdc-2027",
+      "name": "HPDC",
+      "edition": "HPDC 2027",
+      "full": "ACM International Symposium on High-Performance Parallel and Distributed Computing",
+      "submissionNote": "Paper submission deadline not yet published.",
+      "prospective": true,
+      "confirmed": true,
+      "start": "2027-06-07",
+      "end": "2027-06-09",
+      "location": "Atlanta Hyatt Regency, Atlanta, Georgia, USA",
+      "url": "https://hpdc.sci.utah.edu/2027/",
+      "source": "https://hpdc.sci.utah.edu/2026/calls-cfp.html",
+      "sourceLabel": "HPDC 2026 call for papers (previous edition)",
+      "deadlines": []
+    },
+    {
+      "id": "isc-2027",
+      "name": "ISC",
+      "edition": "ISC 2027 · Research Papers",
+      "full": "ISC High Performance (research paper track)",
+      "submissionNote": "Research paper abstract December 14, 2026; full paper December 21, 2026 (no extension). No time zone given; shown as AoE. Research paper sessions June 8–10, 2027.",
+      "confirmed": true,
+      "start": "2027-06-07",
+      "end": "2027-06-11",
+      "location": "Hamburg, Germany",
+      "url": "https://www.isc-hpc.com/",
+      "source": "https://isc-hpc.com/submissions/",
+      "sourceLabel": "Submissions",
+      "deadlines": [
+        {
+          "label": "Research paper abstract",
+          "date": "2026-12-14",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Research paper full submission",
+          "date": "2026-12-21",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Author rebuttals",
+          "date": "2027-03-01",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Notification of acceptance",
+          "date": "2027-03-15",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready",
+          "date": "2027-04-08",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "ppopp-2027",
+      "name": "PPoPP",
+      "edition": "PPoPP 2027",
+      "full": "ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming",
+      "submissionNote": "Paper submission closed August 3, 2026 (AoE); final papers due December 18, 2026. Co-located with HPCA/CGO/CC 2027.",
+      "confirmed": true,
+      "start": "2027-03-20",
+      "end": "2027-03-24",
+      "location": "Salt Lake City, Utah, USA",
+      "url": "https://ppopp27.sigplan.org/",
+      "source": "https://ppopp27.sigplan.org/track/PPoPP-2027-papers",
+      "sourceLabel": "Call for papers",
+      "deadlines": [
+        {
+          "label": "Paper submission",
+          "date": "2026-08-03",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Author notification",
+          "date": "2026-10-26",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Final paper",
+          "date": "2026-12-18",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
+    },
+    {
+      "id": "ipdps-2027",
+      "name": "IPDPS",
+      "edition": "IPDPS 2027",
+      "full": "IEEE International Parallel and Distributed Processing Symposium",
+      "submissionNote": "Abstract registration closed October 1 and full manuscripts October 8, 2026 (AoE). Revised submissions due January 18, 2027; final decisions February 2, 2027.",
+      "confirmed": true,
+      "start": "2027-06-01",
+      "end": "2027-06-05",
+      "location": "Seattle, Washington, USA",
+      "url": "https://www.ipdps.org/",
+      "source": "https://www.ipdps.org/ipdps2027/2027-call-for-papers.html",
+      "sourceLabel": "Call for papers",
+      "deadlines": [
+        {
+          "label": "Abstract registration",
+          "date": "2026-10-01",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Full manuscript",
+          "date": "2026-10-08",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Author rebuttal",
+          "date": "2026-12-03",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Revised submission",
+          "date": "2027-01-18",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready",
+          "date": "2027-02-20",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
     }
   ],
   "journals": [
@@ -759,6 +929,21 @@
         {
           "label": "Guide for authors",
           "url": "https://www.sciencedirect.com/journal/journal-of-computational-and-applied-mathematics/publish/guide-for-authors"
+        }
+      ]
+    },
+    {
+      "id": "sicon",
+      "name": "SICON",
+      "full": "SIAM Journal on Control and Optimization",
+      "publisher": "Society for Industrial and Applied Mathematics (SIAM)",
+      "url": "https://epubs.siam.org/journal/sicon",
+      "openAccess": false,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Editorial policy",
+          "url": "https://epubs.siam.org/journal/sicon/editorial-policy"
         }
       ]
     }
