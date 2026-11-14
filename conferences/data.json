@@ -633,6 +633,22 @@
       "source": "https://sigspatial2026.sigspatial.org/research-submission.html",
       "sourceLabel": "SIGSPATIAL 2026 research call (previous edition)",
       "deadlines": []
+    },
+    {
+      "id": "sc-2027",
+      "name": "SC",
+      "edition": "SC27",
+      "full": "International Conference for High Performance Computing, Networking, Storage, and Analysis (Supercomputing)",
+      "submissionNote": "Held annually in November. The SC27 host city and theme are to be unveiled near the end of SC26 (Chicago, November 2026); the technical paper call is not yet published.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://supercomputing.org/",
+      "source": "https://computing.llnl.gov/about/newsroom/sc27-general-chair",
+      "sourceLabel": "SC27 general chair announcement (LLNL)",
+      "deadlines": []
     }
   ],
   "journals": [
