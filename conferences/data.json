@@ -673,6 +673,25 @@
           "url": "https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors"
         }
       ]
+    },
+    {
+      "id": "proc-ams",
+      "name": "Proc. AMS",
+      "full": "Proceedings of the American Mathematical Society",
+      "publisher": "American Mathematical Society",
+      "url": "https://pubs.ams.org/journals/proc/",
+      "openAccess": false,
+      "submission": "Rolling submissions",
+      "additionalLinks": [
+        {
+          "label": "Submit a manuscript",
+          "url": "https://www.ams.org/procsubmit"
+        },
+        {
+          "label": "Journal overview",
+          "url": "https://www.ams.org/proc"
+        }
+      ]
     }
   ]
 }
