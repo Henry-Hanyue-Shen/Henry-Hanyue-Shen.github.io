@@ -19,39 +19,6 @@
       "deadlines": []
     },
     {
-      "id": "visapp-2027",
-      "name": "VISAPP",
-      "edition": "VISAPP 2027",
-      "full": "International Conference on Computer Vision Theory and Applications",
-      "submissionNote": "Full paper deadline: October 22, 2026 (AoE), second submission stage.",
-      "confirmed": true,
-      "start": "2027-02-26",
-      "end": "2027-02-28",
-      "location": "Valletta, Malta",
-      "url": "https://visapp.scitevents.org/Home.aspx",
-      "source": "https://visapp.scitevents.org/ImportantDates.aspx",
-      "deadlines": [
-        {
-          "label": "Full paper (2nd stage)",
-          "date": "2026-10-22",
-          "tz": "AoE",
-          "primary": true
-        },
-        {
-          "label": "Author notification",
-          "date": "2026-12-04",
-          "tz": "AoE",
-          "primary": false
-        },
-        {
-          "label": "Camera-ready and registration",
-          "date": "2026-12-18",
-          "tz": "AoE",
-          "primary": false
-        }
-      ]
-    },
-    {
       "id": "bibm-2027",
       "name": "BIBM",
       "edition": "BIBM 2027",
@@ -145,61 +112,6 @@
           "date": "2027-05-03",
           "tz": "AoE",
           "primary": false
-        }
-      ]
-    },
-    {
-      "id": "mlsys-2027",
-      "name": "MLSys",
-      "edition": "MLSys 2027",
-      "full": "Conference on Machine Learning and Systems",
-      "submissionNote": "Full paper deadline: October 30, 2026, 20:00 UTC per the call for papers. The official dates page lists 19:00 UTC; confirm the time before submitting.",
-      "confirmed": true,
-      "start": "2027-06-21",
-      "end": "2027-06-25",
-      "location": "Bellevue, Washington, USA",
-      "url": "https://mlsys.org/Conferences/2027",
-      "source": "https://mlsys.org/Conferences/2027/CallForResearchPapers",
-      "additionalLinks": [
-        {
-          "label": "Official dates",
-          "url": "https://mlsys.org/Conferences/2027/Dates"
-        }
-      ],
-      "deadlines": [
-        {
-          "label": "Full paper submission",
-          "date": "2026-10-30",
-          "time": "20:00",
-          "tz": "UTC",
-          "primary": true
-        }
-      ]
-    },
-    {
-      "id": "bigcomp-2027",
-      "name": "BigComp",
-      "edition": "IEEE BigComp 2027",
-      "full": "IEEE International Conference on Big Data and Smart Computing",
-      "submissionNote": "Title and abstract registration: October 16, 2026. Full paper submission: October 30, 2026 (extended). Both dates are AoE. New submissions registered after October 16 may not be accepted.",
-      "confirmed": true,
-      "start": "2027-01-25",
-      "end": "2027-01-28",
-      "location": "Fukuoka International Congress Center, Fukuoka, Japan",
-      "url": "https://bigcomp2027-website.pages.dev/",
-      "source": "https://bigcomp2027-website.pages.dev/call-for-papers/",
-      "deadlines": [
-        {
-          "label": "Title and abstract registration",
-          "date": "2026-10-16",
-          "tz": "AoE",
-          "primary": true
-        },
-        {
-          "label": "Full paper submission",
-          "date": "2026-10-30",
-          "tz": "AoE",
-          "primary": true
         }
       ]
     },
@@ -562,41 +474,6 @@
       ]
     },
     {
-      "id": "icra-2027",
-      "name": "ICRA",
-      "edition": "ICRA 2027",
-      "full": "IEEE International Conference on Robotics and Automation",
-      "submissionNote": "Technical paper deadline (extended) was September 16, 2026, 23:59 PST, via PaperPlaza. Journal (RA-L) paper transfers until December 31, 2026. On-site conference.",
-      "confirmed": true,
-      "start": "2027-05-24",
-      "end": "2027-05-28",
-      "location": "Seoul, Republic of Korea",
-      "url": "https://2027.ieee-icra.org/",
-      "source": "https://2027.ieee-icra.org/?p=1964",
-      "sourceLabel": "Technical paper information",
-      "deadlines": [
-        {
-          "label": "Technical paper submission (extended)",
-          "date": "2026-09-16",
-          "time": "23:59",
-          "tz": "PST",
-          "primary": true
-        },
-        {
-          "label": "Journal paper transfer",
-          "date": "2026-12-31",
-          "tz": "AoE",
-          "primary": false
-        },
-        {
-          "label": "Acceptance notification",
-          "date": "2027-01-31",
-          "tz": "AoE",
-          "primary": false
-        }
-      ]
-    },
-    {
       "id": "iros-2027",
       "name": "IROS",
       "edition": "IROS 2027",
@@ -741,80 +618,138 @@
       ]
     },
     {
-      "id": "ppopp-2027",
-      "name": "PPoPP",
-      "edition": "PPoPP 2027",
-      "full": "ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming",
-      "submissionNote": "Paper submission closed August 3, 2026 (AoE); final papers due December 18, 2026. Co-located with HPCA/CGO/CC 2027.",
+      "id": "soda-2028",
+      "name": "SODA",
+      "edition": "SODA28",
+      "full": "ACM-SIAM Symposium on Discrete Algorithms",
+      "submissionNote": "SODA27 (Philadelphia, January 24–27, 2027) closed submissions on July 9, 2026. SODA28 is not yet announced.",
+      "prospective": true,
       "confirmed": true,
-      "start": "2027-03-20",
-      "end": "2027-03-24",
-      "location": "Salt Lake City, Utah, USA",
-      "url": "https://ppopp27.sigplan.org/",
-      "source": "https://ppopp27.sigplan.org/track/PPoPP-2027-papers",
-      "sourceLabel": "Call for papers",
-      "deadlines": [
-        {
-          "label": "Paper submission",
-          "date": "2026-08-03",
-          "tz": "AoE",
-          "primary": true
-        },
-        {
-          "label": "Author notification",
-          "date": "2026-10-26",
-          "tz": "AoE",
-          "primary": false
-        },
-        {
-          "label": "Final paper",
-          "date": "2026-12-18",
-          "tz": "AoE",
-          "primary": false
-        }
-      ]
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+      "source": "https://www.siam.org/conferences-events/siam-conferences/soda27/",
+      "sourceLabel": "SODA27 (previous call)",
+      "deadlines": []
     },
     {
-      "id": "ipdps-2027",
-      "name": "IPDPS",
-      "edition": "IPDPS 2027",
-      "full": "IEEE International Parallel and Distributed Processing Symposium",
-      "submissionNote": "Abstract registration closed October 1 and full manuscripts October 8, 2026 (AoE). Revised submissions due January 18, 2027; final decisions February 2, 2027.",
+      "id": "sosa-2028",
+      "name": "SOSA",
+      "edition": "SOSA28",
+      "full": "SIAM Symposium on Simplicity in Algorithms",
+      "submissionNote": "Held jointly with SODA. SOSA27 (Philadelphia, January 25–27, 2027) closed submissions on August 6, 2026. SOSA28 is not yet announced.",
+      "prospective": true,
       "confirmed": true,
-      "start": "2027-06-01",
-      "end": "2027-06-05",
-      "location": "Seattle, Washington, USA",
-      "url": "https://www.ipdps.org/",
-      "source": "https://www.ipdps.org/ipdps2027/2027-call-for-papers.html",
-      "sourceLabel": "Call for papers",
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/sosa27/",
+      "source": "https://www.siam.org/conferences-events/siam-conferences/sosa27/",
+      "sourceLabel": "SOSA27 (previous call)",
+      "deadlines": []
+    },
+    {
+      "id": "acda-next",
+      "name": "ACDA",
+      "edition": "ACDA (next meeting)",
+      "full": "SIAM Conference on Applied and Computational Discrete Algorithms",
+      "submissionNote": "ACDA27 (Pittsburgh, February 22–24, 2027) closed paper submissions on September 15, 2026. The next ACDA meeting is not yet announced.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/acda27/",
+      "source": "https://www.siam.org/conferences-events/siam-conferences/acda27/",
+      "sourceLabel": "ACDA27 (previous call)",
+      "deadlines": []
+    },
+    {
+      "id": "pp-2028",
+      "name": "SIAM PP",
+      "edition": "SIAM PP28",
+      "full": "SIAM Conference on Parallel Processing for Scientific Computing",
+      "submissionNote": "Held every two years. PP28 is not yet announced on the SIAM website.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/",
+      "source": "https://www.siam.org/conferences-events/siam-conferences/",
+      "sourceLabel": "SIAM conferences",
+      "deadlines": []
+    },
+    {
+      "id": "sdm-2027",
+      "name": "SIAM SDM",
+      "edition": "SIAM SDM27",
+      "full": "SIAM International Conference on Data Mining",
+      "submissionNote": "SDM27 is not yet announced on the SIAM website.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": null,
+      "url": "https://www.siam.org/conferences-events/siam-conferences/",
+      "source": "https://www.siam.org/conferences-events/siam-conferences/",
+      "sourceLabel": "SIAM conferences",
+      "deadlines": []
+    },
+    {
+      "id": "sosp-2027",
+      "name": "SOSP",
+      "edition": "SOSP 2027",
+      "full": "ACM Symposium on Operating Systems Principles",
+      "submissionNote": "The SIGOPS newsletter lists Vancouver, Canada for SOSP 2027; dates and the call for papers are not yet published.",
+      "prospective": true,
+      "confirmed": true,
+      "start": null,
+      "end": null,
+      "location": "Vancouver, Canada",
+      "url": "https://sigops.org/s/conferences/sosp/",
+      "source": "https://www.sigops.org/newsletter-issue/3952/",
+      "sourceLabel": "SIGOPS newsletter",
+      "deadlines": []
+    },
+    {
+      "id": "osdi-2027",
+      "name": "OSDI",
+      "edition": "OSDI 2027",
+      "full": "USENIX Symposium on Operating Systems Design and Implementation",
+      "submissionNote": "Abstract registration December 1, 2026; full paper December 8, 2026, both 5:59 pm EST (preliminary call). Notification March 16, 2027.",
+      "confirmed": true,
+      "start": "2027-07-07",
+      "end": "2027-07-09",
+      "location": "Hyatt Regency Baltimore Inner Harbor, Baltimore, Maryland, USA",
+      "url": "https://www.usenix.org/conference/osdi27",
+      "source": "https://www.usenix.org/node/321091",
+      "sourceLabel": "Call for papers (preliminary)",
       "deadlines": [
         {
           "label": "Abstract registration",
-          "date": "2026-10-01",
-          "tz": "AoE",
+          "date": "2026-12-01",
+          "time": "17:59",
+          "tz": "ET",
           "primary": true
         },
         {
-          "label": "Full manuscript",
-          "date": "2026-10-08",
-          "tz": "AoE",
+          "label": "Full paper submission",
+          "date": "2026-12-08",
+          "time": "17:59",
+          "tz": "ET",
           "primary": true
         },
         {
-          "label": "Author rebuttal",
-          "date": "2026-12-03",
+          "label": "Notification to authors",
+          "date": "2027-03-16",
           "tz": "AoE",
           "primary": false
         },
         {
-          "label": "Revised submission",
-          "date": "2027-01-18",
-          "tz": "AoE",
-          "primary": false
-        },
-        {
-          "label": "Camera-ready",
-          "date": "2027-02-20",
+          "label": "Final papers",
+          "date": "2027-06-03",
           "tz": "AoE",
           "primary": false
         }
