@@ -165,8 +165,11 @@
   }
   lanes.append(axis);
 
+  // Two levels: decisions (accepted, and scheduled decision dates) above,
+  // submissions and presentations below, so filled and open dots don't overlap.
+  const decisionRow = el('div', 'ov-row ov-events ov-events-decisions');
   const eventRow = el('div', 'ov-row ov-events');
-  labels.append(el('span', 'ov-label', 'Papers'));
+  labels.append(el('span', 'ov-label ov-label-events', 'Decisions'), el('span', 'ov-label ov-label-events', 'Submissions'));
   const dots = entries.map((item, index) => {
     const dot = el('button', 'ov-dot');
     dot.type = 'button';
@@ -177,10 +180,10 @@
     dot.title = name;
     dot.setAttribute('aria-label', `${item.accepted === true ? 'Accepted: ' : ''}${name}`);
     dot.addEventListener('click', event => { event.stopPropagation(); select(index, true); });
-    eventRow.append(dot);
+    (item.accepted === true || item.scheduled === true ? decisionRow : eventRow).append(dot);
     return dot;
   });
-  lanes.append(eventRow);
+  lanes.append(decisionRow, eventRow);
 
   for (const exp of experiences) {
     const s = toTime(exp.start);

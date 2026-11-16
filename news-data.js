@@ -252,6 +252,24 @@ window.PROFILE_NEWS = [
 
   // Submission milestones. Each date is the venue's official submission deadline.
   {
+    date: "2026-09-23",
+    title: "IEEE ICASSP 2027 · Paper submissions",
+    conferenceUrl: "https://2027.ieeeicassp.org/call-for-papers/",
+    text: "Two papers submitted to IEEE ICASSP 2027 (Toronto, Canada, May 16–21, 2027). Under review. The date follows the official full paper submission deadline.",
+    papers: [
+      {
+        title: "Certifying Retained Detector Outputs under Shared Context",
+        text: "Coauthored with Xinling Liao (Lfff09).",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }]
+      },
+      {
+        title: "Endpoint Stability of Standardized Ridge Readouts",
+        text: "Coauthored with Xinling Liao (Lfff09).",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }]
+      }
+    ]
+  },
+  {
     date: "2026-10-01",
     title: "IEEE BigData 2026 · CONSTRAINT workshop submission",
     conferenceUrl: "https://lc4workshop.github.io/constraint.html",
@@ -348,6 +366,17 @@ window.PROFILE_NEWS = [
     title: "EMO 2027 · Author notification (scheduled)",
     conferenceUrl: "https://www.emo2027.org/",
     text: "Official author notification date for the EMO 2027 submission. Decision pending."
+  },
+  {
+    date: "2027-01-13",
+    scheduled: true,
+    title: "IEEE ICASSP 2027 · Paper acceptance notification (scheduled)",
+    conferenceUrl: "https://2027.ieeeicassp.org/eventtype/important-dates/",
+    text: "Official paper acceptance notification date for the two ICASSP 2027 submissions. Decision pending.",
+    papers: [
+      { title: "Certifying Retained Detector Outputs under Shared Context" },
+      { title: "Endpoint Stability of Standardized Ridge Readouts" }
+    ]
   },
   {
     date: "2027-02-28",
