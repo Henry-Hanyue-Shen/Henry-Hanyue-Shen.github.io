@@ -754,6 +754,46 @@
           "primary": false
         }
       ]
+    },
+    {
+      "id": "pakdd-2027",
+      "name": "PAKDD",
+      "edition": "PAKDD 2027",
+      "full": "Pacific-Asia Conference on Knowledge Discovery and Data Mining",
+      "submissionNote": "Paper submission extended to December 4, 2026, 23:59 AoE (was November 20). One deadline for the Research, Applied Data Science, Survey, and LLM & Agentic AI tracks.",
+      "confirmed": true,
+      "start": "2027-06-29",
+      "end": "2027-07-02",
+      "location": "Wellington, New Zealand",
+      "url": "https://pakdd2027.org/",
+      "source": "https://pakdd2027.org/pages/dates",
+      "sourceLabel": "Important dates",
+      "additionalLinks": [
+        {
+          "label": "Research track call",
+          "url": "https://pakdd2027.org/pages/calls/research"
+        }
+      ],
+      "deadlines": [
+        {
+          "label": "Paper submission (extended)",
+          "date": "2026-12-04",
+          "tz": "AoE",
+          "primary": true
+        },
+        {
+          "label": "Acceptance notification",
+          "date": "2027-02-26",
+          "tz": "AoE",
+          "primary": false
+        },
+        {
+          "label": "Camera-ready",
+          "date": "2027-03-19",
+          "tz": "AoE",
+          "primary": false
+        }
+      ]
     }
   ],
   "journals": [
