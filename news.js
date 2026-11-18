@@ -165,8 +165,20 @@
   }
   lanes.append(axis);
 
-  // Two levels: decisions (accepted, and scheduled decision dates) above,
-  // submissions and presentations below, so filled and open dots don't overlap.
+  // Outline triangle for posted preprints, drawn in the current text color.
+  function triangle() {
+    const ns = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('viewBox', '0 0 12 12');
+    svg.setAttribute('aria-hidden', 'true');
+    const shape = document.createElementNS(ns, 'polygon');
+    shape.setAttribute('points', '6,1.5 11,10.5 1,10.5');
+    svg.append(shape);
+    return svg;
+  }
+
+  // Two levels: decisions (accepted, scheduled decision dates) and posted
+  // preprints above; submissions and presentations below, so marks don't overlap.
   const decisionRow = el('div', 'ov-row ov-events ov-events-decisions');
   const eventRow = el('div', 'ov-row ov-events');
   labels.append(el('span', 'ov-label ov-label-events', 'Decisions'), el('span', 'ov-label ov-label-events', 'Submissions'));
@@ -176,11 +188,12 @@
     dot.style.left = pct(times[index]);
     if (item.accepted === true) dot.classList.add('is-accepted');
     else if (item.scheduled === true) dot.classList.add('is-scheduled');
+    else if (item.preprint === true) { dot.classList.add('is-preprint'); dot.append(triangle()); }
     const name = `${item.date} · ${hasText(item.title) ? item.title.trim() : 'Update'}`;
     dot.title = name;
     dot.setAttribute('aria-label', `${item.accepted === true ? 'Accepted: ' : ''}${name}`);
     dot.addEventListener('click', event => { event.stopPropagation(); select(index, true); });
-    (item.accepted === true || item.scheduled === true ? decisionRow : eventRow).append(dot);
+    (item.accepted === true || item.scheduled === true || item.preprint === true ? decisionRow : eventRow).append(dot);
     return dot;
   });
   lanes.append(decisionRow, eventRow);
@@ -249,6 +262,10 @@
     } else if (item.scheduled === true) {
       card.classList.add('is-scheduled');
       card.setAttribute('aria-label', `Scheduled: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
+    } else if (item.preprint === true) {
+      card.classList.add('is-preprint');
+      dot.append(triangle());
+      card.setAttribute('aria-label', `Preprint: ${hasText(item.title) ? item.title.trim() : 'Update'}, ${item.date}`);
     }
     card.append(dot, time,
       el('span', 'timeline-title', hasText(item.title) ? item.title.trim() : 'Update'),

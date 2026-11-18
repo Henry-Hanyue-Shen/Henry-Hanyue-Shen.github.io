@@ -5,6 +5,7 @@
 // image ({ src: "assets/<file>.jpg", alt, caption }).
 // Set accepted: true to show the green acceptance marker on the timeline.
 // Set scheduled: true for a future official decision date (shown dashed).
+// Set preprint: true for a posted preprint (green outline triangle, top row).
 // Submission dates use the official submission deadline; acceptance dates use
 // the official notification date.
 // Each paper may have title, text, inlineLinks, reference, doi, and resources.
@@ -76,6 +77,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-11-01",
+    preprint: true,
     title: "ESS Open Archive · Preprint",
     text: "Our preprint was posted on ESS Open Archive on November 1, 2026. It extends the work behind our AGU26 abstract.",
     papers: [
@@ -92,6 +94,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-10-30",
+    preprint: true,
     title: "MLSys 2027 · Submission and arXiv preprint",
     text: "Submitted to MLSys 2027 and posted on arXiv on October 30, 2026. Under peer review.",
     papers: [
@@ -115,6 +118,7 @@ window.PROFILE_NEWS = [
   },
   {
     date: "2026-10-07",
+    preprint: true,
     title: "arXiv · New preprint",
     text: "Our preprint is now available on arXiv. First submitted October 7, 2026.",
     papers: [
