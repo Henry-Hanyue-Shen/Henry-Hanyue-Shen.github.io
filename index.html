@@ -6,9 +6,9 @@
   <meta name="color-scheme" content="light">
   <meta name="description" content="Hanyue Shen — Mathematics undergraduate at Stevens Institute of Technology, expecting to graduate in Fall 2027, Pinnacle Scholar, and founder of YH Intelligence Technology, Co., Ltd. Research interests in mathematics, artificial intelligence, and engineering.">
   <title>Hanyue Shen</title>
-  <link rel="stylesheet" href="styles.css?v=20261118-19">
-  <script src="news-data.js?v=20261118-19" defer></script>
-  <script src="news.js?v=20261118-19" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261118-20">
+  <script src="news-data.js?v=20261118-20" defer></script>
+  <script src="news.js?v=20261118-20" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -18,7 +18,7 @@
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#news">Updates</a>
-        <a href="#software">Software</a>
+        <a href="#models">Models</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -77,14 +77,26 @@
         <h3><a href="https://www.spaceappschallenge.org/">NASA Space Apps Challenge 2026</a></h3>
         <p class="work-type">New York Metro local event · Team Poseidon SAR</p>
         <p>Sea Level Detective, with Maxim Zyskin and Ningzi Chen.</p>
-        <p class="resource-links"><a href="https://henry-hanyue-shen.github.io/spaceapps26/">Project website</a> · <a href="https://github.com/Henry-Hanyue-Shen/spaceapps26">Code and data</a></p>
+        <p class="resource-links"><a href="https://henry-hanyue-shen.github.io/spaceapps26/">Project website</a> · <a href="https://github.com/Henry-Hanyue-Shen/spaceapps26">Code and data</a> · <a href="assets/nasa-space-apps-2026-participation.pdf">Participation certificate (PDF)</a></p>
       </article>
     </section>
 
-    <section id="software" aria-labelledby="software-title">
-      <h2 id="software-title">Research Software</h2>
+    <section id="models" aria-labelledby="models-title">
+      <h2 id="models-title">Models and Datasets</h2>
+      <p>Released on <a href="https://huggingface.co/HanyueShen">Hugging Face</a>.</p>
+      <h3>Models</h3>
       <ul class="software-list">
-        <li><a href="https://github.com/Henry-Hanyue-Shen/idea-triage-gate">Idea Triage Gate</a> — tools for assessing research ideas and their suitability for target venues.</li>
+        <li><a href="https://huggingface.co/HanyueShen/risa-recaptured-image-detection">RISA Recaptured-Image Detection</a> — a binary classifier that tells single-captured images from images recaptured through a display–camera chain.</li>
+        <li><a href="https://huggingface.co/HanyueShen/tiny-seastate-latent-int8">TinySeaState-LatentINT8</a> — a 24,984-parameter sea-state encoder with an INT8 latent readout.</li>
+        <li><a href="https://huggingface.co/HanyueShen/mhist-vote-count-deit-s16">MHIST Vote-Count DeiT-S/16</a> — pathologist vote-count regression with a rotation-consistent transformer for MHIST, with Xinling Liao.</li>
+        <li><a href="https://huggingface.co/HanyueShen/PAM-Cloud-Forecasting">PAM Cloud Forecasting</a> — 24–72-hour satellite cloud-probability forecasts from Himawari cloud fields and GFS guidance, with Xinling Liao.</li>
+      </ul>
+      <h3>Datasets</h3>
+      <ul class="software-list">
+        <li><a href="https://huggingface.co/datasets/HanyueShen/YunXiaoHe-LongBench-Eval">YunXiaoHe LongBench Eval</a> — results, item-level traces and recomputation code for a 200-example LongBench v1 HotpotQA run (<a href="https://huggingface.co/spaces/HanyueShen/YunXiaoHe-LongBench-Eval">Space</a>).</li>
+        <li><a href="https://huggingface.co/datasets/HanyueShen/YunXiaoHe-LongBench-v2-Comparison">YunXiaoHe LongBench-v2 Comparison</a> — results on the 503 LongBench-v2 questions, set beside published model rows.</li>
+        <li><a href="https://huggingface.co/datasets/HanyueShen/YunXiaoHe-HarnessAudit-Vision-Results">YunXiaoHe HarnessAudit Vision Results</a> — case-level results and content-quality judgments for a 60-case HarnessAudit Vision batch.</li>
+        <li><a href="https://huggingface.co/datasets/HanyueShen/YunXiaoHe-RISA-Avalon-Eval">YunXiaoHe RISA–Avalon Eval</a> — results on cross-dataset tabular modelling and stateful supply-chain decision tasks.</li>
       </ul>
     </section>
 
