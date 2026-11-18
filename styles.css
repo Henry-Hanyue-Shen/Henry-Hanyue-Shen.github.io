@@ -143,6 +143,11 @@ li + li { margin-top: 8px; }
 .news-paper { margin-top: var(--space-md); padding-left: var(--space-md); border-left: 2px solid var(--rule); }
 .news-figure { margin: var(--space-md) 0 0; }
 .news-figure img { display: block; width: 100%; height: auto; border-radius: 4px; }
+.photo-toggle > summary { display: inline-flex; align-items: center; min-height: 44px; color: var(--link); font-size: 14px; cursor: pointer; }
+.photo-toggle > summary:hover { color: var(--link-hover); }
+.photo-toggle > summary::-webkit-details-marker { display: none; }
+.photo-toggle > summary::after { content: "+"; margin-left: 6px; }
+.photo-toggle[open] > summary::after { content: "−"; }
 .news-figure figcaption { margin-top: var(--space-xs); color: var(--muted); font-size: 14px; }
 .news-paper + .news-paper { margin-top: var(--space-lg); }
 .news-paper-title { margin: 0; font-size: 16px; font-weight: 600; line-height: 1.5; }

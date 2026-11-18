@@ -13,6 +13,20 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-11-18",
+    accepted: true,
+    title: "SpaceOps 2027 · Abstract acceptance (oral presentation)",
+    conferenceUrl: "https://spaceops2027.org/",
+    conferenceLabel: "Conference website",
+    text: "Abstract accepted for an oral presentation at SpaceOps 2027, the 19th International Conference on Space Operations, Munich, Germany, May 10–14, 2027. Notification received November 18, 2026.",
+    papers: [
+      {
+        title: "One-Contact Pooled Spacecraft Detection for Bandwidth-Limited Mission Operation",
+        reference: "Abstract ID: 191069"
+      }
+    ]
+  },
+  {
     date: "2026-11-13",
     accepted: true,
     title: "VISAPP 2027 · Short paper acceptance",
@@ -251,6 +265,14 @@ window.PROFILE_NEWS = [
   },
 
   // Submission milestones. Each date is the venue's official submission deadline.
+  {
+    date: "2026-09-29",
+    title: "SpaceOps 2027 · Abstract submission",
+    conferenceUrl: "https://spaceops2027.org/",
+    conferenceLabel: "Conference website",
+    text: "Abstract submitted to SpaceOps 2027, the 19th International Conference on Space Operations. The date follows the official abstract submission deadline.",
+    papers: [{ title: "One-Contact Pooled Spacecraft Detection for Bandwidth-Limited Mission Operation" }]
+  },
   {
     date: "2026-09-23",
     title: "IEEE ICASSP 2027 · Paper submissions",
