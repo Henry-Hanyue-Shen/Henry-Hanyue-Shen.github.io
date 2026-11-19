@@ -270,6 +270,20 @@ window.PROFILE_NEWS = [
 
   // Submission milestones. Each date is the venue's official submission deadline.
   {
+    date: "2026-11-09",
+    title: "ECC 2027 · Paper submission",
+    conferenceUrl: "https://ecc27.euca-ecc.org/",
+    conferenceLabel: "Conference website",
+    text: "Contributed paper submitted to the 25th European Control Conference (ECC 2027), Brussels, Belgium, July 13–16, 2027. Under review. The date follows the official (extended) paper submission deadline.",
+    papers: [
+      {
+        title: "Admission and Delay of Hypersonic Vehicles in a Mixed Air Transportation Corridor",
+        text: "Coauthored with Jason Rabinovitch.",
+        reference: "ECC 2027 submission #1199"
+      }
+    ]
+  },
+  {
     date: "2026-09-29",
     title: "SpaceOps 2027 · Abstract submission",
     conferenceUrl: "https://spaceops2027.org/",
@@ -403,6 +417,15 @@ window.PROFILE_NEWS = [
       { title: "Certifying Retained Detector Outputs under Shared Context" },
       { title: "Endpoint Stability of Standardized Ridge Readouts" }
     ]
+  },
+  {
+    date: "2027-03-05",
+    scheduled: true,
+    title: "ECC 2027 · Acceptance notification (scheduled)",
+    conferenceUrl: "https://ecc27.euca-ecc.org/",
+    conferenceLabel: "Conference website",
+    text: "Official acceptance notification date for the ECC 2027 submission. Decision pending.",
+    papers: [{ title: "Admission and Delay of Hypersonic Vehicles in a Mixed Air Transportation Corridor" }]
   },
   {
     date: "2027-02-28",
