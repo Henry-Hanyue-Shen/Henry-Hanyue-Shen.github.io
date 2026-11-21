@@ -14,6 +14,22 @@
 
 window.PROFILE_NEWS = [
   {
+    date: "2026-11-20",
+    accepted: true,
+    title: "ISOPE-2027 · Abstract acceptance",
+    conferenceUrl: "https://www.isope.org/",
+    conferenceLabel: "Conference website",
+    text: "Our abstract was accepted for the 37th International Ocean and Polar Engineering Conference (ISOPE-2027), Osaka, Japan, June 15–19, 2027. The full manuscript is to be submitted for review next.",
+    papers: [
+      {
+        title: "Conditional Bounds and Pressure-Tap Design for Airfoil Suction Minima",
+        text: "Xinling Liao (Lfff09, King's College London), Yi'ou Yu (University College London) and Hanyue Shen (Stevens Institute of Technology); equal contribution.",
+        inlineLinks: [{ text: "Lfff09", url: "https://github.com/Lfff09" }],
+        reference: "Paper No. 2027-TPC-0700"
+      }
+    ]
+  },
+  {
     date: "2026-11-18",
     accepted: true,
     title: "SpaceOps 2027 · Abstract acceptance (oral presentation)",
@@ -269,6 +285,14 @@ window.PROFILE_NEWS = [
   },
 
   // Submission milestones. Each date is the venue's official submission deadline.
+  {
+    date: "2026-10-30",
+    title: "ISOPE-2027 · Abstract submission",
+    conferenceUrl: "https://www.isope.org/",
+    conferenceLabel: "Conference website",
+    text: "Abstract submitted to the 37th International Ocean and Polar Engineering Conference (ISOPE-2027). The date follows the official abstract submission deadline.",
+    papers: [{ title: "Conditional Bounds and Pressure-Tap Design for Airfoil Suction Minima" }]
+  },
   {
     date: "2026-11-09",
     title: "ECC 2027 · Paper submission",
